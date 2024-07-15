@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "D:\\minhaz\\demo\\TestApplication\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\minhaz\\demo\\TestApplication\\app\\.cxx\\RelWithDebInfo\\3l1v4d5h\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\minhaz\\demo\\TestApplication\\app\\.cxx\\RelWithDebInfo\\3l1v4d5h\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cpuinfo-libs::@6890427a1f51a3e7e1df": {
+      "artifactName": "cpuinfo-libs",
+      "abi": "x86",
+      "output": "D:\\minhaz\\demo\\TestApplication\\app\\build\\intermediates\\cxx\\RelWithDebInfo\\3l1v4d5h\\obj\\x86\\libcpuinfo-libs.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,3 @@
+D:/minhaz/demo/TestApplication/app/.cxx/RelWithDebInfo/3l1v4d5h/x86/CMakeFiles/cpuinfo-libs.dir
+D:/minhaz/demo/TestApplication/app/.cxx/RelWithDebInfo/3l1v4d5h/x86/CMakeFiles/edit_cache.dir
+D:/minhaz/demo/TestApplication/app/.cxx/RelWithDebInfo/3l1v4d5h/x86/CMakeFiles/rebuild_cache.dir

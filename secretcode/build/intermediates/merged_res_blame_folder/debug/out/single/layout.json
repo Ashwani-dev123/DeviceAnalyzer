@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_mobile_brands.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_mobile_brands.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_volume_up.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_volume_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_secret_code.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_secret_code.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_accelerometer.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_accelerometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\code_list_adapter.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\code_list_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\app_list_item.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\app_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_loud_speaker.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_loud_speaker.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\mobile_tricks_list_adapter.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\mobile_tricks_list_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_vibration.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_vibration.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_charging.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_charging.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_microphone.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_microphone.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\battery_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\battery_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\item_cpu_progress.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\item_cpu_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_device_testing.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_device_testing.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_mobile_tricks.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_mobile_tricks.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\mobile_brands_item_layout.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\mobile_brands_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\device_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\device_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\dashboard_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\dashboard_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_app_list.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_app_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_device_testing_result.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_device_testing_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\storage_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\storage_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\system_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\system_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_container.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_flashlight.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_flashlight.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_display_preview.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_display_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_volume_down.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_volume_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\progressdialog.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\progressdialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\item_list_layout.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\item_list_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_android_tips_details.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_android_tips_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_light_sensor.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_light_sensor.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_deviceinfo.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_deviceinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_ear_speaker.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_ear_speaker.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_secret_code_list.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_secret_code_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_bluetooth.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_bluetooth.xml"
+    },
+    {
+        "merged": "com.example.githhubdemo.app-mergeDebugResources-68:/layout/item_cpu_progress.xml",
+        "source": "com.example.githhubdemo.app-main-71:/layout/item_cpu_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\cpu_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\cpu_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\screen_fragment.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\screen_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_mobile_trick_details.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_mobile_trick_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_module_main.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_module_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_display.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_display.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\item_information.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\item_information.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\activity_android_tips.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\activity_android_tips.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-mergeDebugResources-68:\\layout\\fragment_ear_proximity.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.2\\com.example.githhubdemo.app-main-71:\\layout\\fragment_ear_proximity.xml"
+    }
+]

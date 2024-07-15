@@ -1,0 +1,3 @@
+com.example.githhubdemo.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

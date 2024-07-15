@@ -1,0 +1,5 @@
+com.example.githhubdemo.test.app-core-1.6.1-0 C:\Users\PC\.gradle\caches\transforms-3\5ab21c707b6d142915197f322c3d96e3\transformed\core-1.6.1\res
+com.example.githhubdemo.test.app-androidTest-1 D:\minhaz\demo\GIthHubDemo\app\build\generated\res\resValues\androidTest\debug
+com.example.githhubdemo.test.app-mergeDebugAndroidTestResources-2 D:\minhaz\demo\GIthHubDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.githhubdemo.test.app-mergeDebugAndroidTestResources-3 D:\minhaz\demo\GIthHubDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.githhubdemo.test.app-merged_res-4 D:\minhaz\demo\GIthHubDemo\app\build\intermediates\merged_res\debugAndroidTest

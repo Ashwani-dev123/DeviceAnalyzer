@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\minhaz\demo\GIthHubDemo\app\.cxx\Debug\3w4k2i14\armeabi-v7a'
+ninja: no work to do.

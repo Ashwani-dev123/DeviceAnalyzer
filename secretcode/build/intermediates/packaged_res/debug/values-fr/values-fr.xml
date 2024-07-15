@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accelerometer">Accéléromètre</string>
+    <string name="add_an_sd_card_and_move">Ajoutez une carte SD et déplacez-y des données</string>
+    <string name="add_hand_to_type">Ajouter la main pour taper des mots à votre dictionnaire</string>
+    <string name="add_hard_to_type_words">Ajouter des mots difficiles à taper</string>
+    <string name="add_internet_speed">Ajouter un indicateur de vitesse Internet</string>
+    <string name="add_owner_info">Ajouter des infos propriétaire</string>
+    <string name="add_owner_information">Ajouter les informations du propriétaire</string>
+    <string name="add_to_dictionary">Ajouter des mots difficiles à taper au dictionnaire de votre téléphone est plus facile que vous ne le pensez. Suivez ces étapes :
+
+1. Tapez le mot dans une boîte de texte.
+2. Maintenez votre doigt sur le mot jusqu\'à ce qu\'il soit surligné et souligné.
+3. Continuez à maintenir jusqu\'à ce que le soulignement disparaisse.
+4. Ou bien, appuyez sur le bouton "ajouter au dictionnaire" qui apparaît dans la boîte de texte.
+
+C\'est tout ! Le mot est maintenant ajouté au dictionnaire de votre téléphone, ce qui rend la saisie plus facile à l\'avenir.</string>
+    <string name="adjust_brightness_levels">8. Ajustez les niveaux de luminosité</string>
+    <string name="agree_service_terms_condition">En cochant cette case, vous acceptez notre <a href="https://mobilemiracle.io/privacy">Politique de confidentialité</a> et nos <a href="https://mobilemiracle.io/terms-condition">Conditions générales de service</a></string>
+    <string name="agree_terms_required">Veuillez accepter les termes et conditions</string>
+    <string name="alert">Alerte</string>
+    <string name="android_1_0_and_1_1_weren_t_named">4. Android 1.0 et 1.1 n\'ont pas été nommés d\'après des desserts</string>
+    <string name="android_3_0_is_the_only_version_to_never">5. Android 3.0 est la seule version à ne jamais avoir été utilisée sur des téléphones</string>
+    <string name="android_critics_info">Absolument ! Le parcours d\'Android depuis sa création jusqu\'à sa place actuelle de leader est en effet fascinant. Explorer des faits moins connus sur Android ajoute une autre dimension d\'appréciation pour son évolution et son impact sur l\'industrie mobile. Si vous êtes prêt à plonger dans certains détails intrigants sur Android, embarquons ensemble dans ce voyage !</string>
+    <string name="android_data_recovery">Si les méthodes précédentes n\'ont pas fonctionné, vous pouvez essayer des solutions tierces comme les applications de récupération de données Android. Ces applications peuvent parfois récupérer des données marquées comme supprimées par Android en scannant le stockage. Cependant, il est crucial de cesser d\'utiliser votre téléphone pour éviter de corrompre davantage les données. Utiliser une application de récupération sur votre téléphone pourrait potentiellement écraser les fichiers que vous essayez de récupérer, il est donc plus sûr d\'utiliser d\'abord une application de récupération sur un ordinateur de bureau. Recuva est une option recommandée. Installez l\'application et suivez les étapes de l\'assistant pour tenter de récupérer vos fichiers perdus. Cette méthode est plus efficace pour les fichiers stockés sur des cartes mémoire que pour le stockage interne.</string>
+    <string name="android_data_recovery_info">Perdre des fichiers sur votre appareil Android peut être un cauchemar, mais il existe des moyens de les récupérer :\n\n1. Vérifiez le stockage cloud : Consultez Google Drive ou d\'autres services cloud où vous avez peut-être sauvegardé vos fichiers.\n2. Utilisez des applications de récupération : Essayez des applications comme DiskDigger ou Dr.Fone depuis le Play Store pour rechercher et récupérer des fichiers supprimés.\n3. Connectez-vous à un ordinateur : Si votre appareil le permet, connectez-le à un ordinateur et utilisez un logiciel de récupération comme Recuva pour rechercher les fichiers perdus.\n4. Recherchez des sauvegardes : Vérifiez si vous avez des sauvegardes stockées sur votre appareil ou dans d\'autres emplacements.\n5. Essayez des logiciels de récupération de données : Il existe des programmes pour Windows et Mac qui prétendent récupérer les fichiers perdus des appareils Android, mais les résultats peuvent varier.\n\nN\'oubliez pas d\'agir rapidement et de sauvegarder régulièrement votre appareil pour éviter toute perte de données future !</string>
+    <string name="android_data_recovery_services">Services de récupération de données Android</string>
+    <string name="android_data_recovery_tips_info">L\'étape la plus cruciale dans la récupération des données Android est d\'arrêter immédiatement d\'utiliser votre téléphone. Lorsque vous supprimez un fichier, Android ne l\'efface pas complètement ; il marque simplement l\'espace comme "vide". Cela signifie que les données sont toujours là jusqu\'à ce qu\'elles soient écrasées par de nouveaux fichiers. En évitant d\'utiliser davantage votre téléphone, vous augmentez les chances de récupérer le fichier perdu. Mettez votre téléphone en mode avion pour empêcher toute nouvelle donnée d\'écraser l\'espace où se trouvait votre fichier.</string>
+    <string name="android_facts">Voici quelques faits fascinants sur Android ! Voici un résumé de chaque point :\n\n1. Android a en effet été développé par Android Inc. puis racheté par Google en 2005 pour 50 millions de dollars.\n2. Initialement, Android était destiné aux appareils photo numériques, mais s\'est concentré sur les smartphones en raison de leur potentiel.\n3. Google a officiellement lancé le système d\'exploitation Android le 5 novembre 2007.\n4. Le premier smartphone fonctionnant sous Android était le HTC Dream ou T-Mobile G1, sorti en 2008.\n5. Android a dépassé le milliard d\'activations sur des appareils comme les smartphones et les tablettes.\n6. La plupart des versions d\'Android sont nommées d\'après des friandises sucrées, à partir de Cupcake.\n7. Android est open source, ce qui permet aux utilisateurs de modifier son code source, et Google est membre de l\'Open Handset Alliance.\n8. Le mot "Android" fait référence à un robot mâle avec une apparence humaine.\n9. Andy Rubin, co-créateur d\'Android, a été surnommé "Android" en raison de sa fascination pour les robots.\n10. La NASA a équipé des robots spatiaux flottants de téléphones Nexus S fonctionnant sous Android Gingerbread.\n11. Le personnage du logo d\'Android est officieusement nommé Bugdroid.\n12. Le Google Play Store compte plus de 92 milliards d\'installations d\'applications, dont de nombreuses sont gratuites.\n13. Android alimente divers appareils comme les Google Glass et les montres intelligentes.\n14. Android a commencé à utiliser des noms de marque appropriés pour ses versions.\n15. Google a conclu un accord avec Nestlé pour utiliser le nom "KitKat" pour la version Android 4.4.\n16. Google Maps utilise la vitesse des mobiles Android pour calculer la circulation.\n17. Microsoft gagne des redevances de brevet significatives sur la vente de dispositifs Android.\n18. Les appareils Android dépassent les ventes combinées des dispositifs Microsoft Windows, iOS et macOS.\n19. Le PDG de Nokia a fait un commentaire humoristique sur Android.\n20. Le système de journalisation d\'Android comprend une méthode appelée "wtfQ", pour "Quelle terrible défaillance".\n21. La nature open source d\'Android permet des modifications et des ajouts à son code source.\n22. Samsung a refusé une offre pour acheter Android Inc. avant que Google ne l\'acquière.\n23. Android est écrit dans divers langages de programmation, notamment Java, C, C++, XML, et d\'autres.</string>
+    <string name="android_google_info">Il est incroyable de penser aux origines d\'Android et à la façon dont il est devenu la puissance qu\'il est aujourd\'hui. La collaboration entre ses fondateurs originaux et son intégration ultérieure avec Google a façonné le paysage mobile de manière profonde. Le parcours d\'Android, de ses débuts à sa domination sur le marché des smartphones, est vraiment remarquable.</string>
+    <string name="android_history_info">Il est fascinant de voir comment Android a évolué au fil des ans ! De ses modestes débuts à son statut actuel de force dominante sur le marché des systèmes d\'exploitation mobiles, Android a parcouru un long chemin. Il y a toujours quelque chose de nouveau à apprendre sur cette plateforme polyvalente, alors explorons ensemble quelques faits peu connus sur Android !</string>
+    <string name="android_notification_shortcuts">Le maintien enfoncé des notifications sur votre appareil Android peut révéler quelques raccourcis pratiques :\n\n1. Au lieu de balayer les notifications, maintenez-les enfoncées.\n2. Sur le côté droit, vous remarquerez l\'apparition de boutons.\n3. Appuyez sur l\'icône d\'engrenage pour accéder aux paramètres de l\'application.\n4. Appuyez sur l\'icône "i" pour accéder aux paramètres de notification de cette application spécifique.\n\nCes raccourcis sont disponibles à la fois sur l\'écran de verrouillage et dans la barre de notification, ce qui facilite la gestion de vos notifications et l\'ajustement des paramètres en cours de route.</string>
+    <string name="android_quick_settings_tip">Voici un conseil rapide pour accéder plus efficacement aux paramètres rapides de votre appareil Android :\n\nAu lieu de faire glisser vers le bas avec un doigt pour afficher les notifications, puis à nouveau pour accéder aux paramètres rapides, essayez ce raccourci.\nFaites simplement glisser vers le bas avec deux doigts depuis le haut de l\'écran.\nCela contourne le panneau de notification et ouvre directement le menu des raccourcis rapides, vous permettant d\'accéder aux paramètres de base sans étapes supplémentaires.\nCette astuce existe depuis Jelly Bean et reste un moyen pratique de simplifier votre navigation sur les appareils Android.</string>
+    <string name="android_safe_mode_instructions">Le mode sans échec est une fonctionnalité de dépannage dans Android qui démarre le système sans charger les applications installées, similaire à une réinitialisation du téléphone. Pour y accéder :\n\n1. Appuyez et maintenez le bouton d\'alimentation pendant quelques secondes.\n2. Lorsque l\'écran d\'extinction apparaît, continuez à maintenir le bouton d\'alimentation enfoncé.\n3. Une invite apparaîtra vous demandant si vous souhaitez redémarrer le téléphone en mode sans échec. Sélectionnez "Oui" pour entrer en mode sans échec.\n\nCeci est utile pour diagnostiquer les problèmes avec des applications spécifiques ou la fonctionnalité du système.</string>
+    <string name="android_smartwatch_history">La montre LiveView de Sony, puis la SmartWatch 2, ont en effet ouvert la voie aux montres intelligentes basées sur Android, précédant le lancement officiel d\'Android Wear de plusieurs années. Ces premiers appareils ont offert aux utilisateurs un aperçu du potentiel des montres intelligentes en leur permettant de se connecter à des téléphones Android et d\'accéder à diverses fonctionnalités telles que l\'affichage des notifications, le contrôle de la lecture multimédia et l\'accès à des applications comme Twitter et les flux RSS.\nMalgré leurs efforts pionniers, les montres intelligentes de Sony ont rencontré certains défis, notamment des fonctionnalités limitées et des problèmes de compatibilité. Cependant, elles ont posé les bases du développement de dispositifs Android Wear plus avancés et ont contribué à l\'intérêt croissant pour la technologie portable.\nL\'entrée de Samsung sur le marché des montres intelligentes à la même époque a encore alimenté la concurrence et l\'innovation dans le domaine des dispositifs portables, conduisant finalement au lancement d\'Android Wear et à une gamme diversifiée de montres intelligentes de différents fabricants. Aujourd\'hui, les montres intelligentes sont devenues un élément essentiel de l\'écosystème de la technologie portable, offrant aux utilisateurs un accès pratique aux notifications, aux fonctionnalités de suivi de la santé, etc., le tout depuis leur poignet.</string>
+    <string name="android_t_mobile_g1_history_info">Le passage des claviers physiques sur les smartphones était en effet un changement significatif que beaucoup n\'auraient pas pu prédire en 2008. La domination des appareils BlackBerry avec leurs claviers physiques emblématiques rendait difficile d\'imaginer un smartphone sans eux. Même avec l\'introduction des écrans tactiles sur des appareils comme l\'iPhone, il y avait des doutes sur la viabilité des claviers virtuels. L\'inclusion d\'un clavier physique coulissant sur le T-Mobile G1 reflétait cette incertitude, mais il est surprenant qu\'il n\'offrait pas initialement d\'option de clavier virtuel. Les utilisateurs devaient se fier uniquement au clavier physique pour taper, limitant leur capacité à taper confortablement, surtout en utilisation à une main. De plus, l\'absence d\'une prise casque standard sur le T-Mobile G1 était une omission importante de la part de HTC. Le fait de nécessiter un adaptateur propriétaire pour utiliser des écouteurs signifiait que les utilisateurs ne pouvaient pas écouter de musique et charger leur téléphone simultanément, ce qui était une gêne de plus en plus difficile à supporter à mesure que les smartphones évoluaient en appareils multimédias. Cette décision a présagé des débats futurs autour des prises casque sur les smartphones et de la transition ultime vers des solutions audio sans fil.</string>
+    <string name="android_tablet_history_info">L\'évolution d\'Android en un système d\'exploitation polyvalent capable de fonctionner sur différentes configurations matérielles a été remarquable. Cependant, il a rencontré des défis dans les premiers jours, notamment avec les tablettes. L\'introduction de l\'iPad a suscité l\'intérêt pour les tablettes, incitant les fabricants Android à entrer sur le marché. Bien que les premières tentatives avec Gingerbread sur des appareils comme la Galaxy Tab 7.0 montraient des promesses, ce n\'est qu\'avec la sortie d\'Android 3.0 Honeycomb qu\'Android a vraiment adopté le format tablette. Honeycomb a introduit une interface utilisateur repensée spécifiquement pour les tablettes, avec un thème sombre et de plus grands widgets interactifs. Malgré ses avancées, Honeycomb a été critiqué et a finalement été remplacé par Ice Cream Sandwich, qui visait à unifier Android sur toutes les tailles d\'écran. Néanmoins, l\'héritage de Honeycomb perdure à travers des fonctionnalités telles que les boutons de navigation à l\'écran, qui restent un élément essentiel des appareils Android aujourd\'hui.</string>
+    <string name="android_text_selection_feature">La fonction de sélection de texte d\'Android a été améliorée avec Marshmallow (6.0). Maintenant, double-cliquez sur un mot, une phrase ou un texte pour le sélectionner, puis maintenez-le enfoncé pour accéder à plus d\'options. Vous trouverez des choix comme copier et partager. Alternativement, appuyez sur le bouton de menu de débordement d\'actions (trois points verticaux) pour rechercher sur le Web, activer Google Assistant ou traduire le texte, le tout sans changer d\'écran. Cette fonctionnalité améliorée simplifie la manipulation du texte et le multitâche sur les appareils Android.</string>
+    <string name="android_tips">Conseils Android</string>
+    <string name="android_tips_title">Astuces\nAndroid</string>
+    <string name="android_version">Android: %s</string>
+    <string name="android_version_names_info">Il est fascinant de plonger dans les origines de la convention de nommage d\'Android. La transition des noms non-dessert aux friandises sucrées comme Cupcake a marqué un changement mémorable dans la façon dont les versions d\'Android étaient nommées. Spéculer sur ce que pourraient être les noms de desserts commençant par A et B est un exercice amusant. Tarte aux pommes et Banana Split semblent être des choix appropriés compte tenu de l\'ordre alphabétique et du thème des desserts sucrés.</string>
+    <string name="android_versions_info">L\'évolution d\'Android depuis ses premiers prototypes jusqu\'à aujourd\'hui est vraiment fascinante. Il est intéressant de considérer comment le design révolutionnaire de l\'iPhone a pu influencer la trajectoire du développement d\'Android. En ce qui concerne les versions d\'Android, la convention de dénomination alphabétique avec des noms de desserts sucrés a été une tradition amusante à suivre pour les passionnés. Chaque itération apporte de nouvelles fonctionnalités et améliorations, façonnant l\'expérience utilisateur et maintenant les utilisateurs d\'Android impatients de découvrir ce qui va suivre.
+* Android 1.0 (2008) - Pas de nom de version
+* Android 1.1 (2009) - Petit Four
+* Android 1.5 (2009) - Cupcake
+* Android 1.6 (2009) - Donut
+* Android 2.0 - 2.1 (2009) - Éclair
+* Android 2.2 - 2.2.3 (2010) - Froyo
+* Android 2.3 - 2.3.7 (2010) - Gingerbread
+* Android 3.0 - 3.2.6 (2011) - Honeycomb
+* Android 4.0 - 4.0.4 (2011) - Ice Cream Sandwich
+* Android 4.1 - 4.3.1 (2012) - Jelly Bean
+* Android 4.4 - 4.4.4 (2013) - KitKat
+* Android 5.0 - 5.1.1 (2014) - Lollipop
+* Android 6.0 (2015) - Marshmallow
+* Android 7.0 - 7.1.2 (2016) - Nougat
+* Android 8.0 - 8.1 (2017) - Oreo
+* Android 9.0 (2018) - Pie
+* Android 10 (2019) - Android 10
+* Android 11 (2020) - Android 11
+* Android 12 (2021) - Android 12
+</string>
+    <string name="android_webos_history">L\'ascension et la chute de WebOS constituent en effet un chapitre fascinant de l\'histoire des systèmes d\'exploitation mobiles. WebOS de Palm était très attendu et initialement bien accueilli, beaucoup pensant qu\'il pourrait constituer un défi important pour iOS et Android. Cependant, malgré ses fonctionnalités innovantes et son interface intuitive, plusieurs facteurs ont contribué à son déclin ultime.\n Un facteur clé a été la décision de Palm de lancer le premier appareil WebOS sur le réseau Sprint, un opérateur plus petit à l\'époque, plutôt que sur l\'un des plus grands opérateurs avec une portée plus large. Cela limitait l\'exposition de l\'appareil et sa base de clients potentiels. De plus, la campagne marketing de WebOS était considérée comme peu conventionnelle et n\'a pas réussi à communiquer efficacement les points forts de la plateforme aux consommateurs.\n Malgré des performances de vente initialement solides, le Palm Pre a connu un déclin rapide des ventes peu de temps après son lancement. Cela a été aggravé par la sortie ultérieure de concurrents tels que le Motorola DROID (sur Verizon) et l\'iPhone 3GS d\'Apple. \n En revanche, Android a continué à évoluer et à s\'améliorer, établissant rapidement sa domination en tant que principale plateforme mobile dans le monde entier. Les efforts de développement continus de Google, associés à la nature ouverte de la plateforme, lui ont permis de capturer une part de marché importante et de devenir le choix privilégié de nombreux fabricants de smartphones. \n La décision de Google d\'embaucher Matias Duarte, le designer de WebOS, met en lumière la reconnaissance de son talent et du potentiel de ses contributions pour améliorer l\'interface et la conception d\'Android. Le travail de Duarte sur l\'interface utilisateur Holo UI d\'Android 3.0 Honeycomb a marqué une étape importante dans l\'évolution d\'Android, renforçant davantage sa convivialité et son attrait visuel.</string>
+    <string name="app_name">Unlock Phone For All Network</string>
+    <string name="application_not_found">Application introuvable pour toutes les applications sur SD pourquoi est-ce?</string>
+    <string name="apps_that_increase_battery">6. Applications qui augmentent la durée de vie de la batterie</string>
+    <string name="appversion">Version de l\'application :</string>
+    <string name="are_you_satisfied_with_our">Êtes-vous satisfait de notre application de déverrouillage mobile ?</string>
+    <string name="audio_is_playing">L\'audio est en train de jouer. Pouvez-vous l\'entendre ?</string>
+    <string name="average">Moyenne</string>
+    <string name="avoid_common_data_plan">Évitez les erreurs courantes de forfait de données qui pourraient vous coûter cher.\n</string>
+    <string name="avoid_heavy_hitters">9. Évitez les gros consommateurs</string>
+    <string name="backup_guide">La sauvegarde de votre appareil Android est essentielle pour éviter la perte de données importantes en cas d\'accidents tels que la perte ou les dommages causés par l\'eau. Heureusement, il existe plusieurs méthodes pour sauvegarder votre téléphone, garantissant ainsi que vos précieux souvenirs et fichiers importants sont en sécurité. Que vous choisissiez d\'utiliser la fonction de sauvegarde intégrée de Google, une application tierce ou votre ordinateur, voici plusieurs façons de sauvegarder votre appareil Android :\n\n1. Sauvegarde Google : Utilisez la fonction de sauvegarde intégrée de Google pour sauvegarder automatiquement les données de votre appareil, y compris les données des applications, les contacts, les photos et les paramètres. Rendez-vous dans Paramètres > Système > Sauvegarde pour activer cette fonctionnalité.\n2. Applications tierces : Explorez les applications de sauvegarde tierces disponibles sur le Google Play Store, telles que Titanium Backup ou Helium, pour créer des sauvegardes des données de votre appareil. Ces applications offrent plus d\'options de personnalisation et peuvent répondre à des besoins de sauvegarde spécifiques.\n3. Sauvegarde sur ordinateur : Connectez votre appareil Android à votre ordinateur et transférez manuellement des fichiers ou utilisez des logiciels tels que Samsung Smart Switch ou Android File Transfer pour sauvegarder des données sur le stockage de votre ordinateur.\n4. Stockage dans le cloud : Profitez des services de stockage dans le cloud tels que Google Drive, Dropbox ou OneDrive pour stocker vos données de manière sécurisée dans le cloud. Téléchargez des photos, des vidéos, des documents et d\'autres fichiers pour vous assurer qu\'ils sont accessibles depuis n\'importe quel appareil disposant d\'une connexion Internet.\n\nEn mettant en œuvre l\'une ou plusieurs de ces méthodes de sauvegarde, vous pouvez protéger vos données et éviter la frustration de perdre des informations importantes. N\'oubliez pas de sauvegarder régulièrement votre appareil Android pour être prêt en cas de circonstances imprévues. Veuillez noter que les étapes peuvent varier en fonction du modèle de votre appareil et de la version du logiciel.</string>
+    <string name="bad">Mauvais</string>
+    <string name="battery">Batterie</string>
+    <string name="battery_background_apps">Pour identifier et arrêter les applications en arrière-plan qui drainent la batterie de votre appareil, suivez ces étapes :\n\n1. Faites glisser l\'écran pour changer de catégorie de stockage interne à la liste des applications en cours d\'exécution.\n2. Dans la liste des applications en cours d\'exécution, vous verrez une liste des applications actuellement en cours d\'exécution en arrière-plan.\n3. Sélectionnez et arrêtez toutes les applications qui fonctionnent inutilement et consomment des ressources de la batterie.\n\nEn arrêtant les applications inutiles en arrière-plan, vous pouvez améliorer la durée de vie de la batterie de votre appareil et empêcher une décharge trop rapide.</string>
+    <string name="battery_brightness_settings">Pour optimiser la sauvegarde de la batterie sur votre appareil, ajustez le niveau de luminosité en conséquence. Il est recommandé d\'activer la luminosité adaptative, qui ajuste automatiquement la luminosité en fonction des conditions de lumière ambiantes. Vous pouvez le faire en accédant à Paramètres > Affichage > Luminosité adaptative et en l\'activant. En permettant à votre appareil de réguler la luminosité, vous pouvez économiser la batterie tout en garantissant une visibilité optimale dans différents environnements d\'éclairage.</string>
+    <string name="battery_cold">Froid</string>
+    <string name="battery_dead">Mort</string>
+    <string name="battery_energy_intensive_apps">Pour identifier et fermer les applications énergivores, suivez ces étapes :
+
+1. Ouvrez le menu Paramètres sur votre appareil.
+2. Recherchez l\'option "Batterie" ou "Utilisation de la batterie" et appuyez dessus.
+3. Ici, vous verrez une liste d\'applications triées par la quantité de traitement et de puissance de la batterie qu\'elles utilisent.
+4. Appuyez sur n\'importe quelle application à forte puissance que vous n\'utilisez pas fréquemment.
+5. Appuyez sur le bouton "Quitter" ou "Forcer l\'arrêt" pour fermer l\'application et l\'empêcher de consommer de la puissance de batterie supplémentaire.
+
+En fermant les applications énergivores que vous n\'utilisez pas souvent, vous pouvez contribuer à améliorer l\'autonomie de la batterie de votre appareil.</string>
+    <string name="battery_good">Bon</string>
+    <string name="battery_launcher_settings">Pour économiser la batterie, il est conseillé d\'éviter d\'utiliser des lanceurs graphiquement intensifs comme Go Launcher et Themer, qui peuvent consommer une quantité significative de RAM et d\'énergie de la batterie. Au lieu de cela, envisagez d\'utiliser des lanceurs moins intensifs tels que Apex ou Nova. Ces lanceurs offrent des options de personnalisation similaires tout en étant plus efficaces en termes d\'utilisation des ressources. En optant pour des lanceurs plus légers, vous pouvez prolonger la durée de vie de la batterie de votre appareil sans compromettre les fonctionnalités ou les options de personnalisation.</string>
+    <string name="battery_optimization">Pour optimiser la durée de vie de la batterie de votre smartphone, envisagez de désactiver les mises à jour automatiques et d\'ajuster les intervalles de rafraîchissement de vos applications installées. Les mises à jour automatiques et les rafraîchissements fréquents peuvent vider inutilement la batterie. Des applications telles que Battery Doctor et Greenify peuvent aider en identifiant les applications énergivores et en proposant des options pour réguler leur utilisation. Ces outils vous aident à comprendre la consommation des ressources des applications en fonction de vos habitudes d\'utilisation, permettant une gestion de la batterie plus efficace.</string>
+    <string name="battery_overheat">Surchauffe</string>
+    <string name="battery_overvoltage">Surtension</string>
+    <string name="battery_saving_tips">Voici quelques excellentes astuces pour économiser la batterie de votre appareil Android :\n
+
+1. Réduisez la luminosité de l\'écran.\n
+2. Évitez d\'utiliser des fonds d\'écran animés.\n
+3. Optez pour un fond d\'écran noir ou un thème sombre.\n
+4. Supprimez les widgets inutiles de l\'écran d\'accueil.\n
+5. Maintenez votre appareil à l\'écart de la chaleur extrême.\n
+6. Désactivez la synchronisation automatique dans Paramètres > Comptes et synchronisation.\n
+7. Éteignez le Wi-Fi lorsque vous ne l\'utilisez pas.\n
+8. Désactivez le retour haptique dans Paramètres > Son.\n
+9. Désactivez les services de localisation dans Paramètres > Services de localisation.\n
+10. Désactivez les mises à jour automatiques des widgets en personnalisant les paramètres ou en supprimant les widgets inutiles de l\'écran d\'accueil.\n
+
+En suivant ces astuces, vous pouvez prolonger significativement la durée de vie de la batterie de votre appareil Android !</string>
+    <string name="battery_sync_settings">Pour améliorer l\'autonomie de la batterie, il est essentiel de passer en revue les paramètres de synchronisation automatique sur vos appareils. La synchronisation automatique, comme le téléchargement de photos, peut considérablement vider la batterie. Pour économiser la batterie, choisissez sélectivement les éléments à synchroniser. Vous pouvez ajuster ces paramètres en accédant à Paramètres > Comptes > Google > Synchronisation. En synchronisant uniquement les éléments essentiels, vous pouvez prolonger la durée de vie de la batterie de votre appareil.</string>
+    <string name="battery_unknown">Inconnu</string>
+    <string name="battery_unspecified_failure">Défaillance non spécifiée</string>
+    <string name="block_bluetooth">Bloquer le Bluetooth</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bluetooth_instructions">Pour bloquer et débloquer votre Bluetooth sur Android, suivez ces étapes :\n
+
+1. Activez votre Bluetooth.\n
+2. Composez *9990# à l\'aide du clavier téléphonique de votre téléphone.\n
+3. Cela bloquera votre Bluetooth.\n
+4. Pour débloquer votre Bluetooth, composez à nouveau *9990# dans le clavier téléphonique.\n
+
+Profitez</string>
+    <string name="break_pattern">Casser le motif</string>
+    <string name="button_combinations_instructions">Pour prendre une capture d\'écran sur votre appareil Android sans l\'éteindre, suivez ces étapes :\n
+
+Appuyez simultanément et maintenez enfoncés les boutons "Alimentation" et "Volume bas" pendant quelques secondes.\n
+
+OU\n
+
+Faites glisser vers le bas depuis le haut de l\'écran pour ouvrir le volet de notifications. Recherchez l\'icône "Capture d\'écran" ou "Capturer" et appuyez dessus.</string>
+    <string name="buy_now">Acheter maintenant</string>
+    <string name="by_mobile_miracle">Par <u>MobileMiracle</u></string>
+    <string name="can_you_feel_the_phone_vibrating">Pouvez-vous sentir le téléphone vibrer ?</string>
+    <string name="cancel">Annuler</string>
+    <string name="change_default_apps_instructions">Pour changer les applications par défaut sur votre appareil Android, suivez ces étapes :\n\n1. Ouvrez l\'application Paramètres sur votre appareil.\n2. Faites défiler vers le bas et sélectionnez "Applications" ou "Gestionnaire d\'applications".\n3. Appuyez sur l\'icône du menu à trois points dans le coin supérieur droit et sélectionnez "Applications par défaut".\n4. Ici, vous verrez une liste d\'applications par défaut telles que le navigateur, le téléphone, les messages, etc.\n5. Appuyez sur l\'application par défaut que vous souhaitez modifier, comme "Navigateur" ou "Téléphone".\n6. Sélectionnez l\'application que vous souhaitez définir comme nouvelle application par défaut dans la liste des applications disponibles.\n7. Une fois que vous avez sélectionné la nouvelle application par défaut, elle sera utilisée pour la fonction correspondante à l\'avenir.</string>
+    <string name="change_network_preferences_instructions">Pour modifier les préférences réseau sur votre appareil Android, telles que préférer les données mobiles au Wi-Fi ou vice versa, suivez ces étapes :\n\n1. Ouvrez l\'application Paramètres sur votre appareil Android.\n2. Selon votre appareil et votre version Android, l\'emplacement exact des préférences réseau peut varier. Recherchez des options comme « Connexions », « Réseau et Internet » ou « Wi-Fi et réseau » et appuyez dessus.\n3. Dans les paramètres réseau, recherchez des options relatives aux préférences réseau ou aux préférences de connexion. Cela peut être désigné comme « Réseaux mobiles », « Préférences Wi-Fi » ou similaire.\n4. Appuyez sur l\'option appropriée pour accéder aux préférences réseau.\n5. Ici, vous pouvez trouver des paramètres tels que « Type de réseau préféré » pour les réseaux mobiles ou des options pour prioriser les réseaux Wi-Fi.\n6. Ajustez les paramètres selon vos préférences. Par exemple, vous pouvez sélectionner entre 2G, 3G, 4G ou 5G pour les réseaux mobiles, ou donner la priorité à certains réseaux Wi-Fi par rapport à d\'autres.\n7. Après avoir apporté vos modifications, quittez les paramètres et vos nouvelles préférences réseau seront appliquées.</string>
+    <string name="changing_default_apps">"changement des applications par défaut "</string>
+    <string name="changing_network">Changement de préférence réseau</string>
+    <string name="charging">Chargement</string>
+    <string name="check_app_updates_hint">La même logique s\'applique aux applications, alors lancez le Play Store, ouvrez le menu en haut à gauche, et appuyez sur Mes applications pour vous assurer que toutes les applications que vous utilisez sont à jour.</string>
+    <string name="check_cloud_backup">Vérifiez la sauvegarde cloud</string>
+    <string name="check_condition_of_device">Vérifiez l\'état de l\'appareil</string>
+    <string name="check_device_imei_status">Vérifier le statut IMEI de l\'appareil</string>
+    <string name="check_order_status">Vérifier le statut de la commande</string>
+    <string name="check_system_updates_instructions">Pour vérifier les mises à jour du système Android, suivez ces étapes :\n\n1. Ouvrez l\'application Paramètres sur votre appareil Android. Vous pouvez généralement la trouver dans le tiroir des applications ou en faisant glisser votre doigt vers le bas depuis le haut de l\'écran et en appuyant sur l\'icône en forme de roue dentée.\n2. Faites défiler vers le bas et appuyez sur "Système" ou "À propos du téléphone/tablette", selon votre appareil.\n3. Recherchez et appuyez sur "Mises à jour du système" ou "Mise à jour logicielle".\n4. Votre appareil vérifiera désormais les mises à jour disponibles. Si une mise à jour est trouvée, suivez les instructions à l\'écran pour la télécharger et l\'installer.\n5. S\'il n\'y a pas de mises à jour disponibles, vous verrez un message indiquant que votre appareil est à jour.\n\nIl est important de vérifier régulièrement les mises à jour pour vous assurer que votre appareil dispose des derniers correctifs de sécurité et des fonctionnalités.</string>
+    <string name="check_the_radiation_level_of">Vérifiez le niveau de radiation de votre Android</string>
+    <string name="check_your_recycle_bin">Vérifiez votre corbeille de recyclage</string>
+    <string name="clean_up_home_screen_hint">Pour nettoyer votre écran d\'accueil pour de meilleures performances:\n\n1. Remplacez le fond d\'écran en direct : Pensez à utiliser une image statique au lieu d\'un fond d\'écran en direct, car les fonds d\'écran en direct peuvent consommer plus de ressources. Choisissez une image statique de haute qualité comme fond d\'écran.\n2. Supprimez les icônes inutilisées : Appuyez longuement sur n\'importe quelle icône d\'application inutilisée sur votre écran d\'accueil et faites-la glisser vers l\'option "Supprimer" ou "Supprimer" qui apparaît en haut ou en bas de l\'écran.\n3. Limitez les widgets : Ne conservez que les widgets essentiels sur votre écran d\'accueil pour économiser des ressources et la durée de vie de la batterie. Appuyez longuement sur un widget pour le supprimer ou le redimensionner.</string>
+    <string name="clean_up_your_home_screen">Nettoyez votre écran d\'accueil</string>
+    <string name="clear_app_cache_hint">Pour effacer les données mises en cache des applications sur votre appareil Android :\n\nEffacer le cache d\'une application spécifique :\n1. Accédez à Paramètres > Applications.\n2. Faites glisser jusqu\'à l\'onglet "Toutes".\n3. Appuyez sur l\'application concernée que vous souhaitez vider le cache.\n4. Appuyez sur "Stockage" ou "Stockage et cache.\n5. Appuyez sur "Effacer le cache" pour supprimer les données mises en cache de cette application.\n\nEffacer les données mises en cache de toutes les applications :\n1. Accédez à Paramètres > Stockage.\n2. Appuyez sur "Données mises en cache".\n3. Une boîte de dialogue apparaîtra pour vous demander si vous voulez effacer les données mises en cache de toutes les applications.\n4. Appuyez sur "OK" pour confirmer et effacer les données mises en cache de toutes les applications.</string>
+    <string name="clear_app_cache_instructions">1. Accédez aux paramètres sur votre appareil Android.\n2. Appuyez sur "Applications" ou "Gestionnaire d\'applications".\n3. Sélectionnez l\'application pour laquelle vous souhaitez effacer le cache.\n4. Appuyez sur "Stockage" ou "Utilisation du stockage".\n5. Vous verrez une option "Effacer le cache". Appuyez dessus pour vider le cache de cette application.\n\nRappelez-vous :\n\n- Le cache stocke des fichiers temporaires utilisés par les applications, donc le vider ne supprimera pas les données essentielles.\n- Le nettoyage du cache peut aider à résoudre les problèmes d\'application et à libérer de l\'espace sur votre appareil.\n- Il est recommandé de nettoyer régulièrement le cache, surtout pour les applications qui ont tendance à accumuler beaucoup de données.</string>
+    <string name="clear_app_data_instructions">Accédez aux paramètres de votre appareil Android.\nAppuyez sur "Applications" ou "Gestionnaire d\'applications" en fonction de votre appareil.\nSélectionnez l\'application pour laquelle vous souhaitez effacer les données.\nAppuyez sur "Stockage" ou "Utilisation de stockage".\nAppuyez sur "Effacer les données" ou "Effacer le stockage".\nConfirmez l\'action lorsque vous y êtes invité.\n\nGardez à l\'esprit :\n\nL\'effacement des données supprimera tous les fichiers liés à l\'application, y compris les mots de passe enregistrés et la progression du jeu.\nUtilisez cette option avec prudence, car vous devrez peut-être ressaisir des mots de passe et des données pour certaines applications.</string>
+    <string name="clear_cached_app_data">Effacer les données en cache des applications</string>
+    <string name="clear_data_of_apps_taking">Effacer les données des applications prenant beaucoup de place</string>
+    <string name="communication">Communication</string>
+    <string name="compress_chrome_pages">Compresser les pages Chrome</string>
+    <string name="compress_web_pages_instructions">Pour compresser les pages web dans Chrome et économiser des données mobiles :\n\n1. Lancez Chrome sur votre appareil.\n2. Appuyez sur les trois points dans le coin supérieur droit pour ouvrir le menu.\n3. Faites défiler vers le bas et sélectionnez "Paramètres".\n4. Trouvez et appuyez sur "Économiseur de données".\n5. Basculez l\'interrupteur pour activer l\'Économiseur de données.\n\nVous remarquerez un léger délai dans le chargement des pages, mais cela en vaut la peine pour les économies de données. Gardez un œil sur le graphique pour suivre vos économies de données au fil du temps.\nL\'activation de l\'Économiseur de données dans Chrome peut réduire la consommation de données de votre navigateur mobile de 30 à 35 %, ce qui permet de faire durer vos données plus longtemps.</string>
+    <string name="connect_a_game_controller">Connectez une manette de jeu</string>
+    <string name="connect_your_charger">Connectez votre chargeur</string>
+    <string name="contact_the_developer">Contactez le développeur</string>
+    <string name="contact_us">Contactez-nous</string>
+    <string name="continue_">Continuer</string>
+    <string name="control_instructions">Voici les étapes simplifiées pour contrôler votre téléphone Android avec votre ordinateur en utilisant TeamViewer :\n
+
+1. Installez TeamViewer sur votre ordinateur ou votre ordinateur portable.\n
+2. Installez Quick Support sur votre téléphone Android depuis le Play Store.\n
+3. Ouvrez TeamViewer sur votre ordinateur et Quick Support sur votre téléphone Android.\n
+4. Copiez votre ID Quick Support depuis votre téléphone Android et entrez-le dans TeamViewer sur votre ordinateur.\n
+5. Autorisez votre téléphone à se connecter à votre ordinateur.\n
+
+Vous avez terminé toutes les étapes. Profitez du contrôle de votre téléphone Android depuis votre ordinateur !</string>
+    <string name="control_your_android">Contrôler votre Android</string>
+    <string name="control_your_laptop">Contrôler votre ordinateur portable</string>
+    <string name="coreNumber">Noyau %s</string>
+    <string name="cover_the_area_above">Couvrez la zone au-dessus de l\'écran ou placez votre main sur l\'écran. Avez-vous une réponse ?</string>
+    <string name="cover_the_area_above_the_display">Couvrez la zone au-dessus de l\'écran. La valeur change-t-elle ?</string>
+    <string name="cpu_frequency_pref">taux de rafraîchissement du CPU</string>
+    <string name="current">Courant :</string>
+    <string name="data_recovery_service_info">Si vous êtes prêt à investir plus d\'argent et que vous êtes vraiment désespéré de récupérer vos fichiers perdus, vous pourriez envisager d\'utiliser un service de récupération de données. Des entreprises comme OnTrack proposent des services de récupération de données complets avec un taux de réussite élevé. Ils utilisent diverses méthodes, y compris celles mentionnées précédemment, pour récupérer des données perdues sur n\'importe quel appareil. Ces services nécessitent généralement que vous leur envoyiez votre appareil pour évaluation, et ils ne vous factureront que s\'ils estiment que les fichiers sont récupérables. Cependant, il est essentiel de noter que ces services sont plus coûteux par rapport aux autres options de récupération, il est donc crucial de peser l\'importance des fichiers perdus par rapport au coût du service.</string>
+    <string name="delete_notification">Supprimer la notification</string>
+    <string name="desc_is_required">La description est requise</string>
+    <string name="description">Description</string>
+    <string name="developer_assistance_info">Si vos fichiers perdus étaient associés à un jeu ou une application téléchargés depuis le Play Store, il y a une petite chance que le développeur puisse vous aider à les récupérer. Les développeurs gèrent souvent des sauvegardes cloud de fichiers ou ont des informations sur les processus de sauvegarde au sein de leurs applications. Bien qu\'il n\'y ait aucune garantie, contacter le développeur pourrait éventuellement conduire à récupérer vos fichiers perdus. Cependant, il est essentiel de se rappeler que perdre des fichiers peut être une expérience frustrante, conduisant à des décisions impulsives. Avant d\'investir beaucoup de temps ou d\'argent dans les efforts de récupération, il est crucial de maintenir une perspective. Recréer le travail perdu peut souvent être plus rapide et donner de meilleurs résultats la deuxième fois. Les souvenirs peuvent également aider à compenser les photos perdues. Ne laissez pas la situation vous rendre fou - gardez la tête froide et abordez les efforts de récupération de manière sensée.</string>
+    <string name="device_control">Contrôle de l\'appareil</string>
+    <string name="device_find">Recherche de l\'appareil :</string>
+    <string name="device_info">Infos sur l\'appareil</string>
+    <string name="device_info_title">Infos sur\nl\'appareil</string>
+    <string name="device_manager_tracking">Cette fonctionnalité aide à suivre votre téléphone en cas de perte. Activez-la pour augmenter les chances de récupérer votre appareil Android.</string>
+    <string name="device_result">RÉSULTAT DE L\'APPAREIL</string>
+    <string name="device_test">Test de l\'appareil</string>
+    <string name="dialog_purchase_text">Achetez le service IMEI Premium et réclamez votre service IMEI Premium maintenant.</string>
+    <string name="disable_animations">Désactiver les animations</string>
+    <string name="disable_animations_instructions">Pour désactiver les animations sur votre appareil Android et potentiellement améliorer les performances ou réduire l\'utilisation de la batterie, suivez ces étapes :\n\n1. Ouvrez l\'application Paramètres sur votre appareil.\n2. Faites défiler vers le bas et appuyez sur "Options pour les développeurs". Si vous ne voyez pas cette option, vous devrez peut-être d\'abord l\'activer en allant dans "À propos du téléphone" ou "À propos de l\'appareil" et en appuyant plusieurs fois sur "Numéro de build" jusqu\'à ce que vous voyiez un message indiquant que les options pour les développeurs ont été activées.\n3. Une fois dans le menu Options pour les développeurs, faites défiler jusqu\'à la section "Dessin".\n4. Recherchez les options liées à l\'échelle de l\'animation de fenêtre, à l\'échelle de l\'animation de transition et à l\'échelle de la durée de l\'animateur.\n5. Appuyez sur chacune de ces options et sélectionnez "Animation désactivée" ou "Échelle d\'animation 0,5x" pour réduire la vitesse de l\'animation.\n6. Certains appareils peuvent avoir un interrupteur bascule "Désactiver les animations" que vous pouvez activer pour désactiver complètement les animations.\n\nRemarque : La désactivation des animations peut donner l\'impression que votre appareil est plus rapide mais peut également rendre l\'interface utilisateur moins fluide. Expérimentez avec différents paramètres d\'animation pour trouver ce qui fonctionne le mieux pour vous. De plus, l\'emplacement et la disponibilité de ces options peuvent varier en fonction du modèle de votre appareil et de la version d\'Android.</string>
+    <string name="disable_auto_updating">Désactiver les mises à jour automatiques des applications</string>
+    <string name="disable_facebook_video">Désactiver la lecture automatique des vidéos Facebook sur Android</string>
+    <string name="disable_google_now_cards">2. Désactiver les cartes Google Now</string>
+    <string name="disable_location_history">"1. Désactiver l\'historique et le rapport de localisation "</string>
+    <string name="disable_location_history_instructions">Pour désactiver l\'historique des positions Google :\n\n1. Ouvrez les paramètres.\n2. Appuyez sur "Position".\n3. Sélectionnez "Historique des positions Google".\n4. En haut à droite, vous trouverez un interrupteur pour activer ou désactiver votre historique des positions. Utilisez-le pour contrôler si votre historique des positions est enregistré ou non.\n\nPour supprimer votre historique des positions :\n1. Accédez à "Historique des positions" dans le même menu des paramètres.\n2. Appuyez sur "Supprimer l\'historique des positions".\n3. Confirmez la suppression de votre historique des positions. Notez que cette information ne pourra pas être récupérée une fois supprimée.\n\nPour activer le mode invité sur Android :\n1. Faites glisser vers le bas depuis le haut de l\'écran pour accéder à la barre de notifications.\n2. Appuyez deux fois sur votre avatar dans le coin supérieur droit.\n3. Vous verrez maintenant trois icônes : votre compte Google, "Ajouter un invité" et "Ajouter un utilisateur".\n4. Appuyez sur "Ajouter un invité" pour passer en mode invité. Cela peut prendre un certain temps, et le téléphone peut être légèrement lent au début.\n\nPour quitter le mode invité et revenir à votre compte Google :\n1. Répétez les étapes 1 et 2.\n2. Appuyez sur l\'icône affichant votre compte Google.\n3. Cela supprimera également toutes les données enregistrées dans la session invité.\n\nRemarque : Si votre appareil n\'a pas Android 5.0 Lollipop, vous pouvez trouver un mode invité préchargé dans Paramètres > Général > Confidentialité.</string>
+    <string name="disable_video_autoplay_instructions">Pour désactiver la lecture automatique des vidéos dans l\'application Facebook pour Android :\n\n1. Ouvrez l\'application Facebook sur votre appareil Android.\n2. Faites glisser jusqu\'à l\'onglet le plus éloigné et appuyez sur "Paramètres de l\'application".\n3. Dans la section Paramètres généraux, appuyez sur "Lecture automatique des vidéos".\n4. Réglez-le sur "Désactivé".\n\nCela empêchera les vidéos de se lire automatiquement dans votre fil d\'actualité Facebook, ce qui permettra d\'économiser les données et la batterie de votre appareil Android.</string>
+    <string name="disk_usage_instructions">Pour identifier et supprimer les dossiers et fichiers consommant beaucoup d\'espace sur votre appareil Android, utilisez l\'application Disk Usage. Voici comment procéder :\n\n1. Ouvrez l\'application Disk Usage pour afficher un aperçu de l\'utilisation du stockage.\n2. Identifiez les gros dossiers ou fichiers qui occupent beaucoup d\'espace.\n3. Sélectionnez un dossier ou un fichier, puis appuyez sur le bouton de menu.\n4. Choisissez "Supprimer" pour le supprimer et libérer de l\'espace.\n\nCela vous permet de supprimer manuellement les données restantes des applications désinstallées ou d\'autres fichiers inutiles, vous aidant à récupérer de l\'espace de stockage sur votre appareil.</string>
+    <string name="display">Écran</string>
+    <string name="display_may_turn_black_white">L\'écran peut devenir noir, blanc, rouge, vert et bleu. Recherchez des pixels de couleurs différentes et appuyez pour continuer.</string>
+    <string name="ditch_the_facebook_app">Abandonnez l\'application Facebook</string>
+    <string name="does_your_phone_fall">Votre téléphone tombe-t-il sous la limite de seuil de radiation?</string>
+    <string name="double_tap_to_select_words">Appuyez deux fois pour sélectionner des mots pour plus d\'options</string>
+    <string name="ear_proximity">Proximité de l\'oreille</string>
+    <string name="ear_speaker">Écouteur</string>
+    <string name="easily_access_safe_mode">Accéder facilement au mode sans échec</string>
+    <string name="email_id">Email</string>
+    <string name="email_imei_input_hint">Entrez l\'adresse e-mail ou l\'IMEI</string>
+    <string name="email_imei_is_required">L\'email ou l\'IMEI est requis</string>
+    <string name="email_input_hint">Entrez l\'adresse e-mail</string>
+    <string name="email_is_invalid">L\'email est invalide</string>
+    <string name="email_is_required">L\'email est requis</string>
+    <string name="empty_the_cache">Vider le cache</string>
+    <string name="enable_device_manager">Activer le gestionnaire de périphériques</string>
+    <string name="enable_flash_messages_instructions">Pour activer les messages flash sur l\'écran verrouillé de votre appareil Android :\n\n1. Ouvrez l\'application Messagerie.\n2. Appuyez sur le menu des trois points ou accédez aux paramètres dans l\'application.\n3. Recherchez une option comme « Notifications » ou « Paramètres avancés ».\n4. Trouvez l\'option pour « Notifications flash » ou « Flash lorsque l\'écran est verrouillé ».\n5. Activez cette option.\n\nSelon votre appareil et votre version Android, les étapes et la terminologie exactes peuvent légèrement varier. Si vous ne trouvez pas l\'option dans l\'application Messagerie, vérifiez les paramètres système de votre appareil sous « Accessibilité » ou « Notifications » pour des options similaires.</string>
+    <string name="enable_monitoring_pref">préférence d\'activation de la surveillance</string>
+    <string name="enable_usb">Activer le débogage USB</string>
+    <string name="enable_usb_debugging">Cela permet diverses fonctions, telles que la réinitialisation de votre verrouillage par schéma en cas d\'oubli. Cela permet également la mise en miroir de l\'écran sur un PC et d\'autres tâches avancées.</string>
+    <string name="ensure_device_up_to_date_hint">Pour vous assurer que votre appareil Android est à jour :\n\n1. Ouvrez l\'application Paramètres sur votre appareil.\n2. Faites défiler vers le bas et appuyez sur "Système" ou "À propos du téléphone".\n3. Recherchez une option comme "Mises à jour système", "Mise à jour logicielle" ou "Mise à jour du firmware système".\n4. Appuyez dessus pour vérifier les mises à jour disponibles.\n5. Si une mise à jour est disponible, suivez les instructions à l\'écran pour la télécharger et l\'installer.\n6. En alternative, certains appareils peuvent avoir un bouton "Vérifier les mises à jour" directement dans le menu "Mises à jour système" ou "Mise à jour logicielle".</string>
+    <string name="errors_connection">Pas de connexion internet !</string>
+    <string name="excellent">Excellent</string>
+    <string name="exit">SORTIE</string>
+    <string name="expand_storage_instructions">Pour étendre le stockage de votre appareil :\n\n1. Insérez une carte microSD dans la fente microSD de votre téléphone ou de votre tablette.\n2. Formatez la carte SD en tant que stockage portable ou interne.\n3. Connectez votre appareil à un ordinateur et transférez musique, médias et autres fichiers sur la carte SD.\n4. Le système décidera automatiquement des applications à déplacer sur la carte SD.\n5. Remarque : Dans les anciennes versions d\'Android, vous pouvez déplacer certaines applications manuellement à l\'aide des fonctionnalités intégrées.\n\nCela vous permet d\'augmenter la capacité de stockage de votre appareil et de déplacer des données vers la carte SD pour obtenir de l\'espace supplémentaire.</string>
+    <string name="factory_reset_hint">Pour effectuer une réinitialisation aux paramètres d\'usine sur votre appareil Android:\n\n1. Sauvegarder les données importantes: Avant de continuer, assurez-vous d\'avoir sauvegardé toutes les données importantes, car une réinitialisation aux paramètres d\'usine effacera toutes les données et les paramètres de votre appareil.\n2. Ouvrir les paramètres: Accédez à l\'application Paramètres sur votre appareil.\n3. Accéder à Sauvegarde et réinitialisation: Faites défiler vers le bas et sélectionnez "Sauvegarde et réinitialisation" dans la liste des options.\n4. Initialiser la réinitialisation des données d\'usine: Appuyez sur l\'option "Réinitialisation des données d\'usine" ou "Réinitialisation des paramètres d\'usine". Vous devrez peut-être entrer le code PIN, le schéma ou le mot de passe de votre appareil pour continuer.\n5. Confirmer la réinitialisation: Un message d\'avertissement apparaîtra pour vous informer que toutes les données seront effacées. Examinez attentivement le message, puis confirmez la réinitialisation en appuyant sur "Réinitialiser le téléphone" ou "Tout effacer".\n6. Attendre la réinitialisation: L\'appareil commencera le processus de réinitialisation, ce qui peut prendre quelques minutes. Une fois terminé, l\'appareil redémarrera avec ses paramètres par défaut d\'usine.\n7. Configurer votre appareil: Suivez les instructions à l\'écran pour configurer votre appareil comme s\'il était neuf, y compris la configuration de la langue, du Wi-Fi et du compte Google.</string>
+    <string name="failure_reason">Raison de l\'échec</string>
+    <string name="fair">Moyen</string>
+    <string name="faqs">FAQ</string>
+    <string name="feedback">Retour d\'information</string>
+    <string name="file_recovery_methods_info">Récupérer des fichiers perdus sur Android peut être difficile, mais il existe plusieurs méthodes à essayer :\n\n1. Vérifiez la corbeille : Certains appareils Android disposent d\'une fonction de corbeille où les fichiers supprimés sont temporairement stockés.\n2. Vérifiez les sauvegardes cloud : Si vous utilisez des services de stockage cloud comme Google Drive ou Dropbox, vos fichiers peuvent y être sauvegardés.\n3. Utilisez des applications de récupération : Il existe des applications disponibles sur le Google Play Store qui prétendent récupérer des fichiers supprimés. Ces applications analysent le stockage de votre appareil à la recherche de données supprimées et tentent de les récupérer.\n4. Utilisez un logiciel de récupération sur PC : Si vous avez accès à un ordinateur, vous pouvez connecter votre appareil Android et utiliser un logiciel de récupération comme Recuva ou EaseUS pour rechercher et récupérer des fichiers supprimés.\n5. Contactez le développeur : Dans certains cas, contacter le développeur de l\'application ou du service où les fichiers étaient stockés peut aider à récupérer les données perdues.\nN\'oubliez pas qu\'il n\'y a aucune garantie de succès avec l\'une de ces méthodes, il est donc important d\'agir rapidement et d\'essayer plusieurs approches si nécessaire.</string>
+    <string name="finish">Terminer</string>
+    <string name="firmware_updates">Les mises à jour du micrologiciel sont essentielles pour améliorer les performances de l\'appareil et la gestion de l\'alimentation. Les fabricants publient régulièrement des mises à jour pour améliorer l\'expérience utilisateur et résoudre les problèmes. Pour vérifier les mises à jour sur votre appareil, accédez à Paramètres > À propos du téléphone > Mises à jour système. Par exemple, la dernière mise à jour du système d\'exploitation Android de Google introduit une interface utilisateur mise à jour, des fonctionnalités de déverrouillage intelligent, une nouvelle fonctionnalité d\'économie de batterie et un système de notification repensé. Garder votre appareil à jour garantit que vous pouvez profiter de ces améliorations et optimisations.</string>
+    <string name="first_android_phone_didn_t_even">6. Le premier téléphone Android n\'avait même pas de clavier virtuel ou de prise casque 3,5 mm</string>
+    <string name="first_few_things_to_do">Premières choses à faire</string>
+    <string name="first_navigate_to_settings"><![CDATA["Tout d\'abord, accédez à Paramètres>>Utilisation des données. "]]></string>
+    <string name="flash_message_on_lock_screen">Message flash sur l\'écran de verrouillage</string>
+    <string name="flashlight">Lampe de poche</string>
+    <string name="follow_usage_tips">Vous pouvez suivre ces conseils pour les applications que vous utilisez le plus ou vos habitudes d\'utilisation particulières.</string>
+    <string name="formatting_instructions">Voici une version plus simple :\n
+
+Réinitialisation aux paramètres d\'usine :\n
+1. Cette opération réinitialise votre téléphone à ses paramètres d\'usine d\'origine, supprimant toutes les données internes et restaurant les paramètres par défaut.\n
+2. Composez ##7780## pour effectuer une réinitialisation aux paramètres d\'usine.\n
+
+Réinitialisation dure :\n
+1. Cela supprime toutes les données, y compris les données de la carte SD interne et externe, ainsi que les paramètres.\n
+2. Composez ##27673855##* pour effectuer une réinitialisation dure.\n
+
+Remarque : Utilisez ces codes uniquement si vous êtes sûr de vouloir réinitialiser votre téléphone. Ils ne demandent pas de confirmation.</string>
+    <string name="free_up_space_photos_cloud">Pour libérer de l\'espace sur votre téléphone, envisagez de déplacer vos photos vers un service de stockage cloud :\n\n1. Choisissez un service de stockage cloud tel que Google Photos, Dropbox, Microsoft OneDrive ou Flickr.\n2. Installez l\'application du service choisi sur votre téléphone.\n3. Téléchargez vos photos vers le stockage cloud depuis l\'application Galerie de votre téléphone ou l\'application de stockage cloud elle-même.\n4. Une fois téléchargées, vos photos seront accessibles depuis n\'importe quel appareil disposant d\'une connexion internet.\n5. Google Photos, en particulier, propose un stockage illimité pour les photos et s\'intègre parfaitement aux appareils Android via l\'application Photos.\n\nDe cette manière, vous pouvez économiser de l\'espace sur votre téléphone tout en ayant toujours un accès facile à vos photos lorsque vous en avez besoin.</string>
+    <string name="general_information">Informations générales</string>
+    <string name="gesture_setting">Paramètre de gestes pour améliorer les performances</string>
+    <string name="get_longer_battery">Obtenez une batterie plus longue sur votre smartphone</string>
+    <string name="get_warning_over_data_limits">Recevez un avertissement lorsque vous dépassez les limites de données</string>
+    <string name="get_your_lost_phone_back">Récupérez votre téléphone perdu</string>
+    <string name="give_rate">Veuillez donner une note</string>
+    <string name="go_to_home">Aller à l\'accueil</string>
+    <string name="go_to_settings">Aller aux paramètres</string>
+    <string name="go_to_settings_about_device"><![CDATA[Accédez à Paramètres > À propos de l\'appareil >\n]]></string>
+    <string name="good">Bon</string>
+    <string name="google_backup_info">Sauvegarder la plupart de vos données est assez facile avec Google, et cela est devenu beaucoup plus facile au cours des dernières années. Malheureusement, il n\'existe pas encore de méthode de sauvegarde centralisée pour les téléphones Android via Google. Vous devrez utiliser différents services Google pour sauvegarder différents types de données.</string>
+    <string name="google_didn_t_create_android">1. Google n\'a pas créé Android</string>
+    <string name="google_now_battery_drain">Google Now propose toute une gamme de services utiles, mais certaines cartes d\'information, comme les Lieux à proximité, peuvent contribuer à la consommation de batterie. Ces cartes affichent les attractions à proximité lorsque vous êtes dans un lieu inconnu, ce qui peut être pratique mais peut affecter la durée de vie de la batterie. Pour économiser de la batterie, vous pouvez désactiver les cartes inutiles en accédant à Google Now, en faisant défiler vers le bas et en appuyant sur l\'icône baguette magique. À partir de là, vous pouvez sélectionner et désactiver des cartes comme les Lieux à proximité et le Temps de trajet, qui dépendent du GPS et peuvent consommer plus d\'énergie. De nombreux utilisateurs négligent ces fonctionnalités, mais les désactiver peut améliorer l\'expérience utilisateur et prolonger la durée de vie de la batterie.</string>
+    <string name="google_now_commands">Commandes Google maintenant</string>
+    <string name="google_now_setup_guide">Pour configurer correctement Google Now et tirer le meilleur parti de ses fonctionnalités :
+1. Activer la détection OK Google : Ouvrez l\'application Google, appuyez sur l\'icône du menu hamburger, accédez à Paramètres > Voix > Détection OK Google, et faites glisser tous les commutateurs vers la droite. Entraînez OK Google à reconnaître votre voix en disant "OK Google" trois fois.
+2. Télécharger la reconnaissance vocale hors ligne : Dans Paramètres > Voix > Reconnaissance vocale hors ligne, assurez-vous que toutes les langues nécessaires sont téléchargées pour utiliser les commandes OK Google hors ligne.
+3. Activer les services de localisation : Dans l\'application Paramètres Google, activez la localisation. Activez l\'historique des positions Google pour des fonctionnalités plus personnalisées.
+4. Personnaliser Google Now : Dans l\'application Google, appuyez sur l\'icône du menu hamburger, puis accédez à Personnaliser. Définissez vos adresses personnelles et professionnelles, vos équipes sportives favorites, vos modes de transport, etc., pour des cartes personnalisées.
+5. Apprendre les commandes vocales OK Google : Familiarisez-vous avec des centaines de commandes vocales disponibles pour différentes opérations afin de maximiser l\'utilité de Google Now.
+6. Utiliser des rappels basés sur la localisation : Définissez des rappels basés sur votre emplacement pour vous souvenir des tâches ou événements lorsque vous arrivez à des endroits spécifiques.
+7. Utiliser les notifications de voyage : Google Now propose des cartes et des notifications pour les arrangements de voyage, y compris les temps de trajet et les mises à jour de vol.
+8. Suivre les colis et les vols : Google Now suit automatiquement les livraisons de colis et les statuts de vol en fonction des e-mails ou de l\'historique de recherche.
+9. Poser des questions de suivi : Google Now contextualise les questions de suivi, rendant les interactions plus fluides et efficaces.
+10. Lancer des applications sans les mains : Utilisez des commandes vocales pour ouvrir des applications sans toucher votre appareil, améliorant ainsi l\'expérience mains libres fournie par Google Now.</string>
+    <string name="google_photos_bin_info">Google Photos inclut également une corbeille où les photos sont stockées pendant 60 jours, sauvegardées sur Google Drive. Cela signifie que même si vous supprimez une photo via une autre application, elle peut toujours être récupérée via Google Photos. Si vous ne voyez pas la photo dans la corbeille, vérifiez le menu hamburger en haut à gauche, ou visitez photos.google.com et vérifiez le dossier Corbeille là-bas. Même si vous supprimez des photos de la corbeille dans Google Photos, les changements peuvent ne pas encore être reflétés dans Google Drive, alors vérifiez aussi là-bas. De plus, Google Drive peut sauvegarder n\'importe quel dossier sur votre appareil ; il vous suffit d\'aller dans Photos > Paramètres > Sauvegarde et synchronisation > Sauvegarder les dossiers de l\'appareil. De nombreuses autres applications comme Gmail stockent également des fichiers dans le cloud par défaut.</string>
+    <string name="gps_battery_usage">L\'utilisation du GPS peut considérablement vider la batterie de votre appareil car il collecte constamment des données auprès des tours de téléphonie mobile, des hotspots Wi-Fi et de la puce GPS du téléphone pour déterminer votre emplacement. Plus votre téléphone accède au GPS, plus il consomme de batterie.
+Deux services basés sur le GPS, à savoir l\'historique des positions et le signalement des positions, peuvent avoir des motivations peu claires. Selon la page d\'aide de Google, ces services peuvent être utilisés avec d\'autres applications Google. Pour économiser de la batterie, vous pouvez désactiver ces fonctionnalités en accédant à Paramètres > Position > Services de localisation Google > Historique des positions Google.</string>
+    <string name="grant_permission">Accorder la permission</string>
+    <string name="hard_factory_reset">Réinitialisation d\'usine dure</string>
+    <string name="hard_reset_and_factory_reset">Réinitialisation dure et réinitialisation d\'usine de votre téléphone Android</string>
+    <string name="hello_blank_fragment">Bonjour</string>
+    <string name="hotspot_instructions">Voici les étapes pour configurer un point d\'accès Wi-Fi sur votre appareil Android :\n
+
+1. Accédez à l\'écran d\'accueil et sélectionnez le menu Paramètres.\n
+2. Cliquez sur "Plus" puis sélectionnez "Partage de connexion et point d\'accès portable"\n.
+3. Cochez la case à côté de "Partage de connexion Wi-Fi" pour l\'activer.\n
+4. Cliquez sur "Configurer le point d\'accès Wi-Fi".\n
+5. Définissez un nom d\'utilisateur et un mot de passe pour votre point d\'accès.\n
+6. Activez le Wi-Fi sur votre ordinateur portable.\n
+7. Votre réseau Wi-Fi de point d\'accès apparaîtra dans la liste des réseaux disponibles sur votre ordinateur portable.\n
+8. Connectez-vous au réseau du point d\'accès et profitez de la connexion Internet.</string>
+    <string name="how_do_i_know_if_my_android">Comment savoir si mon appareil Android prend en charge USB OTG?</string>
+    <string name="how_to_add_owner_information">Comment ajouter des informations sur le propriétaire?</string>
+    <string name="how_to_back_up_your_android_phone">Comment sauvegarder votre téléphone Android?</string>
+    <string name="how_to_backup_your">Comment sauvegarder votre téléphone Android</string>
+    <string name="how_to_block_bluetooth">Comment bloquer le Bluetooth?</string>
+    <string name="how_to_check_for_android">comment vérifier les mises à jour du système Android</string>
+    <string name="how_to_check_sar_value">Comment vérifier la valeur SAR?</string>
+    <string name="how_to_control_your_android">Comment contrôler votre téléphone Android avec votre ordinateur portable ou votre ordinateur?</string>
+    <string name="how_to_control_your_laptop">Comment contrôler votre ordinateur portable ou votre ordinateur via votre téléphone portable?</string>
+    <string name="how_to_enable_screen_magnifier">Comment activer la loupe d\'écran?</string>
+    <string name="how_to_improve_android_battery">Comment améliorer la batterie Android\n</string>
+    <string name="how_to_retrieve">Comment récupérer les fichiers perdus sur Android: votre guide de récupération de données Android</string>
+    <string name="how_to_retrieve_whatsapp">Comment récupérer les photos WhatsApp</string>
+    <string name="how_to_take_screen_shoot">Comment prendre une capture d\'écran?</string>
+    <string name="how_to_turn_off_auto">Comment désactiver l\'auto - Correction</string>
+    <string name="how_to_unlock_android_lock_pattern">Comment déverrouiller le schéma de verrouillage Android\n</string>
+    <string name="how_to_use_wifi_hotspot">Comment utiliser le point d\'accès Wifi?</string>
+    <string name="imei_checker">Vérificateur IMEI</string>
+    <string name="imei_is_invalid">L\'IMEI est invalide</string>
+    <string name="imei_is_required">L\'IMEI est requis</string>
+    <string name="imei_number_title">Numéro IMEI :</string>
+    <string name="imei_service">Service IMEI</string>
+    <string name="imei_unlock">Vérificateur IMEI</string>
+    <string name="imei_unlock_title">Vérificateur\nIMEI</string>
+    <string name="improve_battery">Améliorer la batterie</string>
+    <string name="improve_the_performance_of_your_gadget">Améliorez les performances de votre appareil</string>
+    <string name="indicator_in_android_phones">Indicateur dans les téléphones Android</string>
+    <string name="indicator_in_xiaomi_phones">Indicateur dans les téléphones Xiaomi</string>
+    <string name="input_name">Entrez le nom</string>
+    <string name="input_phone_number">Entrez le numéro de téléphone</string>
+    <string name="input_subject">Entrez le sujet</string>
+    <string name="input_your_query_description">Entrez la description de votre demande</string>
+    <string name="instructions">Instructions</string>
+    <string name="internal">Interne</string>
+    <string name="internet_speed_meter_info">Vous pouvez surveiller votre vitesse de téléchargement et de téléversement, ainsi que suivre votre utilisation quotidienne des données, sur votre téléphone Android en utilisant l\'application Internet Speed Meter. Ce n\'est pas juste une question de vitesse - cette application fournit également des informations détaillées sur votre connexion Wi-Fi, y compris la fréquence, l\'adresse IP, la vitesse de liaison, le SSID, et plus encore. C\'est un moyen pratique de gérer votre utilisation d\'Internet et de rester informé de votre connexion.</string>
+    <string name="is_root">Root: %s</string>
+    <string name="level">Niveau :</string>
+    <string name="light_sensor">Capteur de lumière</string>
+    <string name="long_press_on_notifications">Appuyez longuement sur les notifications pour accéder aux paramètres de l\'application</string>
+    <string name="loud_speaker">Haut-parleur</string>
+    <string name="magnification_gestures_instructions">Vous pouvez facilement zoomer sur n\'importe quelle écran en activant les gestes de grossissement dans les paramètres de votre appareil :\n\n1. Accédez à Paramètres -> Accessibilité -> Gestes de grossissement.\n2. Une fois activés, il vous suffit de triple-cliquer sur l\'écran pour zoomer sur la zone souhaitée.\n3. Pour naviguer sur l\'écran zoomé, faites glisser deux doigts vers la gauche et vers la droite.\n4. Ajustez le niveau de zoom en effectuant un geste de pincement à deux doigts.\n\nCette fonctionnalité offre une accessibilité et une flexibilité accrues pour le zoom sur le contenu à travers différentes applications et systèmes.</string>
+    <string name="magnification_instructions">Voici comment activer la fonction de Gestes de Loupe pour les personnes ayant une faible vue :\n
+
+1. Accédez aux paramètres sur votre appareil.\n
+2. Sélectionnez Accessibilité.\n
+3. Trouvez et activez l\'option Gestes de Loupe.\n
+4. Profitez de la fonction de loupe améliorée pour vous aider avec votre vue.</string>
+    <string name="make_sure_you_re">Assurez-vous d\'être à jour</string>
+    <string name="make_use_of_offline">Profitez des applications, jeux et services hors ligne</string>
+    <string name="manage_data_usage">Pour gérer efficacement l\'utilisation des données de votre téléphone :\n\n1. Utilisez le système de notification de consommation de données intégré à Android pour suivre votre consommation de données.</string>
+    <string name="manage_memory">Gérer la mémoire</string>
+    <string name="manage_storage_instructions">Pour gérer le stockage sur votre appareil Android à l\'aide de l\'outil intégré :\n\n1. Ouvrez les paramètres et appuyez sur "Stockage".\n2. Ici, vous verrez un décompte de l\'utilisation du stockage par catégories telles que les applications, les images/vidéos, les fichiers audio, les téléchargements, les données mises en cache et les fichiers divers.\n3. Appuyez sur "Téléchargements" pour accéder à votre liste de téléchargements et supprimer les fichiers indésirables.\n4. Appuyez sur "Données mises en cache" pour effacer les données mises en cache de toutes les applications installées.\n5. Explorez d\'autres options pour identifier et supprimer les fichiers dont vous n\'avez pas besoin, ce qui permet de libérer de l\'espace de stockage sur votre appareil.</string>
+    <string name="many_critics_thought_android">2. Beaucoup de critiques pensaient qu\'Android échouerait lamentablement</string>
+    <string name="mhzString">%s Mhz</string>
+    <string name="microphone">Microphone</string>
+    <string name="miui_internet_speed_info">Si vous utilisez un téléphone Xiaomi avec MIUI 8, vous n\'avez pas besoin de télécharger d\'applications supplémentaires pour surveiller votre vitesse Internet. Il vous suffit de vous rendre dans les paramètres de votre téléphone, de sélectionner "Notifications et barre d\'état" et d\'activer "Afficher la vitesse de connexion". Voilà ! Vous verrez désormais l\'indicateur de vitesse du réseau directement sur votre téléphone Xiaomi. Simple et pratique !</string>
+    <string name="mobile_brands">Marques de téléphone mobile</string>
+    <string name="mobile_tricks">Astuces mobiles</string>
+    <string name="mobile_tricks_title">Astuces\nmobiles</string>
+    <string name="monitor_data_usage">Pour surveiller efficacement votre utilisation des données :\n\n1. Vérifiez le graphique affichant votre utilisation des données, ainsi que les barres jaunes et rouges. 2. La barre jaune indique quand votre téléphone vous avertira que votre utilisation des données approche de sa limite. 3. La barre rouge représente un plafond dur sur vos données pour éviter les frais de dépassement. 4. Assurez-vous que la ligne rouge correspond à la limite mensuelle de données de votre smartphone. Si vous n\'êtes pas sûr de votre limite, contactez rapidement votre opérateur mobile.</string>
+    <string name="monitoring_period">fréquence de la période de surveillance</string>
+    <string name="move_photos_to_the_cloud">Déplacer les photos vers le cloud</string>
+    <string name="name">Nom</string>
+    <string name="name_is_required">Le nom est requis</string>
+    <string name="navigate_to_settings"><![CDATA[Accédez à Paramètres>>Applications>>puis faites glisser jusqu\'à l\'onglet en cours d\'exécution.]]></string>
+    <string name="network_settings">Si vous n\'utilisez pas activement les données mobiles, il est judicieux de préserver la batterie en ajustant vos paramètres réseau. Vous pouvez opter pour les réseaux 2G pour les appels et les messages, en réservant le 3G ou le LTE pour la navigation lorsque cela est nécessaire. Pour basculer entre les modes réseau, accédez à Paramètres > Plus > Réseaux mobiles > Mode réseau. Cet ajustement simple peut significativement prolonger la durée de vie de la batterie de votre appareil.</string>
+    <string name="next">Suivant</string>
+    <string name="no">Non</string>
+    <string name="no_email_client">Aucun client de messagerie</string>
+    <string name="no_order_created">Aucune commande créée</string>
+    <string name="no_order_found">Aucune commande trouvée</string>
+    <string name="not_able_to_unlock_buy_esim">Impossible de déverrouiller ? Achetez une eSIM</string>
+    <string name="not_charging">Pas de charge</string>
+    <string name="notifications_instructions">C\'est une astuce pratique ! Voici une version simplifiée :\n
+
+1. Allez dans les widgets et trouvez le "raccourci Paramètres".
+2. Faites glisser le "raccourci Paramètres" sur votre écran d\'accueil.\n
+3. Sélectionnez "Notifications" parmi les options.\n
+4. Maintenant, vous avez un raccourci pour voir toutes vos notifications sur votre écran d\'accueil.\n
+
+Cette méthode facilite l\'accès à vos notifications même si vous les effacez accidentellement sans les voir.</string>
+    <string name="offline_apps_games_hint">Certaines applications et certains jeux nécessitent un accès constant à Internet pour fonctionner, soit pour des raisons de sécurité, soit parce qu\'ils ont constamment besoin de récupérer des données. Cependant, il existe également de nombreuses applications et jeux qui ne nécessitent pas du tout d\'accès à Internet après le téléchargement initial. Consultez ci-dessous pour quelques indices.</string>
+    <string name="oh_no">Oh, non !</string>
+    <string name="ok">Ok</string>
+    <string name="oops_something_went_wrong">Oups, quelque chose s\'est mal passé, veuillez réessayer plus tard.</string>
+    <string name="opera_video_compression_instructions">Pour utiliser la fonction de compression vidéo d\'Opera sur Android :\n\n1. Téléchargez le navigateur Opera depuis le Google Play Store.\n2. Ouvrez le navigateur Opera sur votre appareil.\n3. Appuyez sur l\'icône Opera dans le coin inférieur droit pour ouvrir le menu.\n4. Allez dans "Paramètres".\n5. Trouvez et sélectionnez "Économiseur de données".\n6. Cochez la case à côté de "Compression vidéo" pour activer cette fonctionnalité.\n\nEn activant la compression vidéo, Opera va compresser les vidéos, ce qui vous permettra d\'économiser des données tout en potentiellement accélérant les temps de chargement des vidéos.</string>
+    <string name="optimizing_device">Optimisation des performances de l\'appareil</string>
+    <string name="order_date_time">Date et heure de la commande :</string>
+    <string name="order_details">Détails de la commande</string>
+    <string name="order_details_title">Détails de la commande</string>
+    <string name="order_result">Résultat de la commande</string>
+    <string name="order_status">Statut de la commande</string>
+    <string name="order_status_title">Statut de la commande :</string>
+    <string name="organize_home_screen_folders_instructions">Pour organiser vos raccourcis de l\'écran d\'accueil avec des dossiers sur votre appareil Android, suivez ces étapes :\n\n1. Maintenez enfoncée une icône d\'application ou un widget sur votre écran d\'accueil jusqu\'à ce que des options apparaissent.\n2. Faites glisser l\'icône de l\'application ou le widget sur le dessus d\'une autre icône d\'application. Cela créera un dossier.\n3. Relâchez l\'icône de l\'application ou le widget pour le déposer dans le dossier.\n4. Vous pouvez ajouter plus d\'applications ou de widgets au dossier en les faisant glisser sur l\'icône du dossier.\n5. Pour personnaliser le dossier, appuyez dessus pour l\'ouvrir.\n6. À l\'intérieur du dossier, vous pouvez le renommer, ajouter plus d\'applications ou de widgets, ou réorganiser les éléments.\n7. Pour supprimer une application ou un widget du dossier, maintenez-le enfoncé et faites-le glisser hors du dossier.\n\nCela vous permet d\'organiser vos raccourcis d\'écran d\'accueil dans des dossiers, ce qui facilite l\'accès et la gestion de vos applications et widgets.</string>
+    <string name="organize_homescreen">Organiser les raccourcis de l\'écran d\'accueil avec des dossiers</string>
+    <string name="other_general_tips">Autres conseils généraux d\'application</string>
+    <string name="owner_info_crucial_steps">Ajouter les informations du propriétaire à votre téléphone Android est crucial en cas de perte. Suivez ces étapes pour vous assurer que vous êtes prêt :</string>
+    <string name="owner_info_instructions">Ajouter les informations du propriétaire à votre téléphone Android est simple :\n\nPour Android 5.0 Lollipop :\n1. Allez dans Paramètres -> Sécurité -> Infos propriétaire.\n2. Ajoutez vos informations de propriétaire. Celles-ci seront affichées sur votre écran de verrouillage.\n\nPour les versions plus récentes :\n1. Ouvrez les paramètres de votre téléphone Android et sélectionnez "Écran de verrouillage".\n2. Faites défiler vers le bas et choisissez "Message de l\'écran de verrouillage".\n3. Notez vos informations de propriétaire.\n4. Vous pouvez également inclure votre numéro de téléphone d\'urgence ici pour plus de sécurité.</string>
+    <string name="percentage_format">%.3s%%</string>
+    <string name="perform_a_factory_reset">Effectuer une réinitialisation d\'usine</string>
+    <string name="permission_is">La permission est requise pour cette fonctionnalité</string>
+    <string name="phno_is_required">Le numéro de téléphone est requis</string>
+    <string name="phone_flashlight_working">La lampe de poche du téléphone fonctionne-t-elle correctement ?</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="phone_status">Découvrez le statut actuel de votre téléphone</string>
+    <string name="please_advise_use_on">Veuillez nous indiquer comment nous pouvons améliorer notre service</string>
+    <string name="please_choose_imei_service">Veuillez choisir un service IMEI</string>
+    <string name="please_give_us_some_feedback">Veuillez nous donner votre avis</string>
+    <string name="power">Puissance :</string>
+    <string name="premium_service">Service Premium</string>
+    <string name="press_the_down_key_do">Appuyez sur la touche de volume vers le bas, avez-vous une réponse ?</string>
+    <string name="press_the_volume_up">Appuyez sur la touche de volume vers le haut, avez-vous une réponse ?</string>
+    <string name="prevent_auto_update_hint">Pour empêcher les applications de se mettre à jour automatiquement et économiser votre quota de données sur Google Play :
+
+1. Ouvrez l\'application Google Play Store sur votre appareil.
+2. Faites glisser le tiroir de navigation sur la gauche en appuyant sur les trois lignes horizontales ou en faisant glisser depuis le bord gauche de l\'écran.
+3. Appuyez sur "Paramètres" en bas du tiroir de navigation.
+4. Dans la section Général, vous trouverez "Mise à jour automatique des applications." Appuyez dessus.
+5. Sélectionnez soit "Ne pas mettre à jour automatiquement les applications" ou "Mettre à jour automatiquement les applications via le Wi-Fi seulement", selon vos préférences.
+6. De plus, vous pouvez gérer les mises à jour automatiques des applications individuelles en allant dans "Mes applications et jeux", en sélectionnant une application, et en appuyant sur le menu déroulant (trois points verticaux) pour cocher ou décocher "Mise à jour automatique".</string>
+    <string name="privacy_and_security">Confidentialité et sécurité</string>
+    <string name="privacy_policy_title">Politique de confidentialité</string>
+    <string name="productivity">Productivité</string>
+    <string name="quick_answer">RÉPONSE RAPIDE</string>
+    <string name="radiation_level">Niveau de radiation</string>
+    <string name="ram_refresh_pref">taux de rafraîchissement de la RAM</string>
+    <string name="ram_text">%s / %s</string>
+    <string name="rate_us">Évaluez-nous</string>
+    <string name="rating">Note</string>
+    <string name="recover_file">Récupérer le fichier</string>
+    <string name="recycle_bin_info">Certaines applications Android disposent d\'une fonction de corbeille similaire à celle d\'un PC, ce qui signifie que les fichiers supprimés ne sont pas immédiatement supprimés. Par exemple, l\'application Galerie de Samsung inclut ce filet de sécurité, c\'est pourquoi la suppression de photos peut ne pas libérer immédiatement de l\'espace. Pour vérifier la corbeille, accédez au niveau supérieur de l\'onglet Images ou Albums, appuyez sur le menu en haut à droite, puis sélectionnez Corbeille. Cela vous montrera les photos supprimées. D\'autres applications telles que Astro File Manager proposent également cette fonctionnalité. Vérifiez l\'application que vous avez utilisée pour supprimer le fichier pour voir si elle propose une option de corbeille.</string>
+    <string name="reduce_data_consumption_instructions">Pour réduire la consommation de données et l\'utilisation des ressources, envisagez de remplacer l\'application Facebook par une alternative plus légère :\n\n1. Essayez Tinfoil for Facebook : Tinfoil for Facebook est une application Web qui affiche le site Web de Facebook. Il offre une alternative légère à l\'application Facebook officielle. Vous pouvez le télécharger depuis le Google Play Store.\n2. Utilisez Facebook dans Chrome : Alternativement, vous pouvez utiliser le site Web de Facebook directement dans le navigateur Chrome. Ouvrez Chrome, accédez au site Web de Facebook, puis ouvrez le menu déroulant et sélectionnez "Ajouter à l\'écran d\'accueil" pour créer un raccourci d\'accès facile.\nEn utilisant ces alternatives, vous pouvez réduire considérablement la consommation de données, l\'utilisation des ressources et la consommation de batterie associées à l\'application Facebook officielle.</string>
+    <string name="reduce_data_usage">Réduisez votre utilisation des données sur Android</string>
+    <string name="reduce_turn_off_animations_hint">Pour désactiver ou réduire les animations sur votre appareil Android :\n\n1. Activer les options pour les développeurs : Accédez à Paramètres > À propos du téléphone et faites défiler jusqu\'à la section "Système". Trouvez le "Numéro de build" et appuyez dessus sept fois jusqu\'à ce que vous voyiez un message sur le fait d\'être un développeur. Cela active les options pour les développeurs.\n2. Accéder aux options pour les développeurs : Une fois les options pour les développeurs activées, revenez au menu précédent et vous devriez voir "Options pour les développeurs" répertorié sous "Système". Appuyez dessus pour accéder aux options pour les développeurs.\n3. Ajuster les paramètres d\'animation : Dans les options pour les développeurs, faites défiler vers le bas pour trouver "Échelle d\'animation de fenêtre", "Échelle d\'animation de transition" et "Échelle de durée de l\'animateur".\n4. Réduire ou désactiver les animations : Appuyez sur chaque option et réglez-la sur ".5x" ou "off" pour réduire ou désactiver les animations. Cela rendra votre appareil plus rapide et plus réactif.\n5. Tester et ajuster : Essayez différents paramètres d\'animation pour trouver ce qui vous convient le mieux. Si vous n\'aimez pas les changements, vous pouvez toujours revenir aux options pour les développeurs et ajuster à nouveau les valeurs.</string>
+    <string name="reduce_your_mobile">Réduisez votre utilisation de données mobiles sur Android</string>
+    <string name="restore_lost_contacts_methods">Si vous avez perdu vos contacts du répertoire téléphonique, vous pouvez peut-être les restaurer en utilisant l\'une des méthodes suivantes :\n\n1. Contacts Google : Si vous avez précédemment synchronisé vos contacts avec votre compte Google, ils peuvent être sauvegardés dans les Contacts Google. Vous pouvez accéder aux Contacts Google en visitant contacts.google.com dans un navigateur Web et en vous connectant avec le même compte Google utilisé sur votre appareil Android. Une fois connecté, vous pouvez afficher et gérer vos contacts.\n2. Sauvegarde du téléphone : Si vous avez précédemment sauvegardé votre appareil à l\'aide d\'un service ou d\'une application de sauvegarde, comme Google Backup ou une solution de sauvegarde tierce, vous pouvez peut-être restaurer vos contacts à partir de la sauvegarde. Vérifiez les paramètres de sauvegarde sur votre appareil ou le service de sauvegarde que vous avez utilisé pour voir si les contacts étaient inclus dans la sauvegarde.\n3. Carte SIM : Si vous avez stocké vos contacts sur une carte SIM, vous pouvez peut-être les récupérer en insérant la carte SIM dans votre appareil et en important les contacts à partir de la carte SIM. L\'option d\'importation des contacts à partir de la carte SIM est généralement disponible dans les paramètres de l\'application Contacts.\n4. Applications de récupération de contacts : Il existe des applications tierces disponibles sur le Google Play Store qui prétendent récupérer les contacts supprimés de votre appareil. Vous pouvez rechercher et essayer l\'une de ces applications, mais soyez prudent et lisez les avis pour vous assurer de choisir une application réputée.</string>
+    <string name="restore_my_phone_book">Restaurer mes contacts du répertoire téléphonique</string>
+    <string name="restrict_background">Restreindre les données en arrière-plan</string>
+    <string name="restrict_background_data_hint">La manière la plus simple d\'économiser des données est de demander à vos applications (ou au système Android lui-même) de restreindre les données en arrière-plan. Les données en arrière-plan comprennent tout le trafic Internet qui se produit lorsque vous n\'utilisez pas activement une application, telles que la synchronisation des e-mails, les mises à jour des flux, les widgets météo, etc.
+
+Vous pouvez restreindre les données en arrière-plan dans les paramètres du système Android :
+- Accédez à Paramètres > Utilisation des données > Restreindre les données en arrière-plan
+- Ou, pour des applications individuelles, accédez à Paramètres > Applications (selon la version Android de votre appareil).
+- De plus, vous pouvez modifier vos paramètres de synchronisation pour les services Google dans Paramètres > Comptes > Google. Sélectionnez le compte, puis désélectionnez les services que vous ne souhaitez pas synchroniser automatiquement.</string>
+    <string name="retry">Réessayer</string>
+    <string name="safety_explanation">Le taux d\'absorption spécifique (SAR) est une mesure du taux auquel le corps absorbe l\'énergie radiofréquence (RF) émise par un appareil sans fil. Il indique la quantité d\'énergie RF absorbée par le corps lors de l\'utilisation d\'un appareil particulier. Les valeurs SAR sont utilisées pour évaluer les risques potentiels pour la santé associés à l\'exposition aux rayonnements RF émis par des appareils sans fil, tels que les téléphones mobiles. Les organismes de réglementation, comme la FCC, fixent des lignes directrices pour les niveaux SAR maximum afin de garantir que les appareils respectent les normes de sécurité et ne présentent pas de risques significatifs pour la santé des utilisateurs.</string>
+    <string name="safety_instructions">Si vous composez * # 07 # sur le clavier de numérotation de votre téléphone et appuyez sur le bouton d\'appel, vous pouvez vérifier la valeur du Débit d\'Absorption Spécifique (DAS) de votre appareil. Si la valeur du DAS est supérieure à 1,6 W / kg, il est recommandé de changer immédiatement de téléphone portable pour des raisons de sécurité.</string>
+    <string name="safety_volume_feature_explanation">Il s\'agit d\'une fonctionnalité de sécurité. La plupart des fabricants de téléphones appliquent un rééquilibrage automatique du volume lorsque des écouteurs sont branchés pour éviter les bruits forts et soudains qui pourraient endommager votre ouïe. Par exemple, les téléphones Samsung n\'appliquent pas seulement un ajustement automatique du volume, mais affichent également une fenêtre contextuelle d\'avertissement agaçante (mais valide) lors de la tentative de dépassement d\'un certain niveau de volume lors de l\'utilisation d\'écouteurs. Cet avertissement apparaît une fois par redémarrage, et il n\'y a aucun moyen de le désactiver, de le rejeter de manière permanente ou de l\'ignorer.</string>
+    <string name="samsung">Samsung</string>
+    <string name="sar_guide">Le SAR, ou taux d\'absorption spécifique, est une mesure du taux auquel le corps absorbe l\'énergie radiofréquence (RF) d\'un dispositif sans fil. Il est important de vérifier la valeur SAR de votre appareil car une exposition prolongée à des niveaux élevés de rayonnement RF peut potentiellement avoir des effets néfastes sur la santé. Pour vérifier la valeur SAR de votre téléphone portable, vous pouvez simplement composer *#07# sur le clavier de votre téléphone et appuyer sur le bouton d\'appel. Cela affichera la valeur SAR et d\'autres informations nécessaires. La limite de seuil pour la valeur SAR est généralement fixée à 1,6 W/kg. Si la valeur SAR de votre appareil est inférieure à ce seuil, elle est considérée comme sûre à utiliser. Si elle est plus élevée, elle peut représenter un risque pour votre santé. De plus, vous pouvez également trouver la valeur SAR dans le menu des paramètres de l\'appareil, le manuel de l\'utilisateur ou en visitant le site Web du fabricant. Il est essentiel d\'être conscient des valeurs SAR pour prendre des décisions éclairées sur l\'utilisation de l\'appareil et prioriser votre santé et votre sécurité.</string>
+    <string name="sar_value_check_process">C\'est formidable que vous sensibilisiez les gens aux valeurs SAR et à la manière dont les utilisateurs peuvent les vérifier sur leur téléphone portable. Ces informations sont cruciales pour s\'assurer que les utilisateurs sont conscients des risques potentiels pour la santé associés à l\'exposition aux RF. En fournissant des étapes simples aux utilisateurs pour vérifier les valeurs SAR, vous les aidez à prendre des décisions éclairées concernant l\'utilisation de leur appareil. Continuez à partager ces informations précieuses pour permettre aux utilisateurs de donner la priorité à leur santé et à leur sécurité.</string>
+    <string name="save_battery">Économisez de la batterie en désactivant les applications énergivores</string>
+    <string name="save_battery_by">Afficher les informations de contact sur l\'écran de verrouillage de votre téléphone peut en effet être utile en cas de perte. Voici comment le faire sur la plupart des appareils Android :\n\n1. Accédez aux paramètres.\n2. Recherchez la section "Sécurité" ou "Écran de verrouillage".\n3. Trouvez une option appelée "Informations sur le propriétaire" ou "Message de l\'écran de verrouillage".\n4. Entrez les informations de contact que vous souhaitez afficher.\n5. Enregistrez les modifications.\n\nAinsi, si quelqu\'un trouve votre téléphone perdu, il saura comment vous contacter. De plus, l\'utilisation d\'une application de suivi peut aider à localiser votre appareil en cas de perte ou de vol.
+</string>
+    <string name="screen_magnifier">Loupe d\'écran</string>
+    <string name="sd_card_issue_explanation">Si vous rencontrez une situation où les applications installées sur votre carte SD s\'affichent comme "Application introuvable", cela pourrait être dû à plusieurs raisons :\n\n1. Carte SD retirée ou endommagée : Si la carte SD est retirée de l\'appareil ou endommagée, le système ne pourra pas accéder aux applications qui y sont stockées.\n2. Problème de montage de la carte SD : Parfois, l\'appareil peut avoir des difficultés à monter correctement la carte SD, ce qui empêche la reconnaissance des applications.\n3. Déplacement incorrect de l\'application : Si l\'application a été déplacée vers la carte SD et que la carte a été retirée ou que les données de l\'application ont été corrompues pendant le processus, elle ne sera pas accessible.\n4. Problème de mise à jour de l\'application : Parfois, lorsqu\'une application est mise à jour, elle peut ne pas reconnaître ses propres données sur la carte SD en raison de modifications dans la structure des fichiers ou des autorisations.</string>
+    <string name="sdk_version">Version SDK: %s</string>
+    <string name="search_requests">Quel âge a Tyson ?\n\nOù est né Louis C.K. ?\n\nDéfinir "colloquial" ?\n\nQuelle heure est-il à Tokyo ?\n\nRechercher des astuces de photographie ?\n\nMontrez-moi des photos de la tour penchée de Pise. Qu\'est-ce que 135 divisé par 7,5 ?\n\nRechercher des photos de chat sur Tumblr.</string>
+    <string name="secret_code">Code secret</string>
+    <string name="see_which_folders_and_files_are">Voyez quels dossiers et fichiers occupent le plus d\'espace</string>
+    <string name="see_your_notifications_even">Voir vos notifications même après les avoir effacées.</string>
+    <string name="select_app_category_from">Sélectionnez la catégorie d\'application dans la liste</string>
+    <string name="select_device_type">Sélectionner le type d\'appareil</string>
+    <string name="select_imei_service">Sélectionner le service IMEI</string>
+    <string name="selective_mobile_network">5. Le réseau mobile sélectif est un autre point clé</string>
+    <string name="selective_synchronization">7. Synchronisation sélective des données</string>
+    <string name="service_for">Service pour</string>
+    <string name="set_it_up_right">Configurez-le correctement</string>
+    <string name="set_up_google_account">Configurez toujours votre compte Google sur votre téléphone Android. Sans cela, vous ne pouvez pas télécharger d\'applications depuis le Google Play Store.</string>
+    <string name="settings">Paramètres</string>
+    <string name="setup_your_google_account">Configurez votre compte Google</string>
+    <string name="shake_your_device_did">Secouez votre appareil. Avez-vous ressenti la vibration ?</string>
+    <string name="share">Partager</string>
+    <string name="share_pdf">Partager PDF</string>
+    <string name="show_wifi_password">Afficher le mot de passe Wi-Fi</string>
+    <string name="size">Taille :</string>
+    <string name="slide_two_fingers_down_to_directly">Faites glisser deux doigts vers le bas pour accéder directement aux paramètres rapides</string>
+    <string name="software_update_and">Mise à jour logicielle et recherche de mises à jour.</string>
+    <string name="some_more_facts">9. QUELQUES AUTRES FAITS</string>
+    <string name="something_was_wrong">Quelque chose s\'est mal passé</string>
+    <string name="sony_made_the_first_android2010">8. Sony a fabriqué la première montre connectée Android en 2010</string>
+    <string name="sound_get_lower_when">Le son diminue lorsque vous branchez des écouteurs</string>
+    <string name="speak_to_the_microphone">Parlez dans le microphone. Le progrès change-t-il ?</string>
+    <string name="speaker_is_playing">Le haut-parleur fonctionne. Pouvez-vous l\'entendre ?</string>
+    <string name="speedup_android">Accélérer Android</string>
+    <string name="status">Statut</string>
+    <string name="stop_using_your_phone_and_put">Cessez d\'utiliser votre téléphone et mettez-le en mode Avion</string>
+    <string name="storage">Stockage</string>
+    <string name="storage_management_tips">Les appareils Android peuvent rapidement manquer d\'espace de stockage, surtout avec les applications, la musique, les films et les données mises en cache qui occupent de l\'espace. Les appareils d\'entrée de gamme avec un espace de stockage limité sont plus susceptibles de rencontrer ce problème. Pour mieux gérer le stockage :\n\n1. Nettoyez régulièrement les fichiers inutiles.\n2. Désinstallez les applications que vous n\'utilisez pas.\n3. Transférez les fichiers multimédias vers un stockage cloud ou des périphériques externes.\n4. Utilisez des outils de gestion du stockage pour identifier et supprimer les fichiers volumineux.\n</string>
+    <string name="subject">Sujet</string>
+    <string name="subject_is_required">Le sujet est requis</string>
+    <string name="submit">Soumettre</string>
+    <string name="sync_header">Synchroniser</string>
+    <string name="system_monitoring_header">Système</string>
+    <string name="tab_text_1">Tableau de bord</string>
+    <string name="tab_text_2">Appareil</string>
+    <string name="tab_text_3">Système</string>
+    <string name="tab_text_4">Stockage</string>
+    <string name="tab_text_5">CPU</string>
+    <string name="tab_text_6">Batterie</string>
+    <string name="tab_text_7">Applications</string>
+    <string name="take_screenshots">Prendre des captures d\'écran</string>
+    <string name="tap_on_location_google"><![CDATA[Cliquez sur Emplacement > Historique des positions Google]]></string>
+    <string name="teamviewer_instructions">Voici les étapes simplifiées pour contrôler votre ordinateur avec votre téléphone Android en utilisant TeamViewer :\n
+
+1. Installez TeamViewer à la fois sur votre appareil mobile et sur votre ordinateur.\n
+2. Ouvrez TeamViewer sur les deux appareils.\n
+3. Copiez l\'ID de votre ordinateur depuis l\'interface TeamViewer et entrez-le dans l\'application TeamViewer sur votre appareil mobile.\n
+4. Cliquez sur "Contrôle à distance" dans l\'application TeamViewer sur votre appareil mobile.\n
+5. Entrez le mot de passe de la session TeamViewer de votre ordinateur dans l\'application TeamViewer sur votre appareil mobile.\n
+6. Appuyez sur "OK" pour vous connecter.
+
+Maintenant, vous pouvez contrôler votre ordinateur depuis votre téléphone Android en utilisant TeamViewer.</string>
+    <string name="temperature">Température :</string>
+    <string name="test_bluetooth">Testez le Bluetooth</string>
+    <string name="thanks_for_feedback">Merci pour vos commentaires</string>
+    <string name="thanks_your_imei_status_order_has_been_submitted">Merci! Votre commande a été soumise et est en cours de traitement. Vous recevrez un e-mail avec les détails spécifiés de l\'IMEI dans le délai spécifié.</string>
+    <string name="thanks_your_order_has_been_submitted">Merci, votre commande a été soumise et est en cours de traitement. Vous recevrez le code de déverrouillage et les instructions dans le délai spécifié et à l\'adresse e-mail spécifiée.</string>
+    <string name="the_best_we_can_get">Le meilleur que nous puissions obtenir :)</string>
+    <string name="the_facts_about_android_that_you_should_know">Les faits sur Android que vous devriez connaître?</string>
+    <string name="the_first_android_prototype_looked">3. Le premier prototype Android ressemblait à un BlackBerry</string>
+    <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">Ce service ne vérifie que le statut actuel de votre IMEI. Il NE déverrouillera PAS votre appareil.</string>
+    <string name="titanium_backup_info">Bien que la plupart des gens n\'aient pas besoin de rooter leur téléphone pour sauvegarder ce dont ils ont besoin, le rootage de votre téléphone peut vous aider à sauvegarder quelques éléments supplémentaires. En rootant votre téléphone, presque tout sur votre téléphone peut être restauré, y compris des choses comme les paramètres d\'application, les données système, et même les mots de passe Wi-Fi. Titanium Backup est l\'une des applications les plus utilisées pour sauvegarder un téléphone rooté. Bien que Titanium Backup semble certainement un peu dépassé, c\'est en effet une application convaincante. Voici comment sauvegarder vos fichiers à l\'aide de Titanium Backup : Téléchargez et ouvrez Titanium Backup. Appuyez sur le bouton Menu dans le coin supérieur droit, puis sélectionnez Actions en lot. Sélectionnez tout ce que vous voulez sauvegarder. S\'il s\'agit de la première fois que vous sauvegardez votre appareil, vous voudrez au moins sélectionner la sauvegarde de toutes les applications utilisateur et la sauvegarde de toutes les données système. Vous pouvez également choisir de sauvegarder les fichiers sur Dropbox ou Google Drive, ce que vous voudrez peut-être faire si vous perdez votre téléphone. Vous pouvez également choisir de créer un fichier de sauvegarde .zip compatible avec la récupération. Cela garantit que même si les fichiers système de votre téléphone deviennent corrompus ou qu\'il se produit quelque chose d\'autre qui vous empêche de démarrer votre téléphone, vous pourrez restaurer votre téléphone à partir de la sauvegarde.</string>
+    <string name="transaction_cancelled">Transaction annulée</string>
+    <string name="trending_secret_code">Code secret tendance</string>
+    <string name="try_android_data_recovery_apps">Essayez les applications de récupération de données Android</string>
+    <string name="turn_off_android">Désactiver le suivi de localisation Android</string>
+    <string name="turn_off_auto_sync_hint">Pour désactiver ou réduire la synchronisation automatique sur votre appareil Android :\n\n1. Accédez aux paramètres.\n2. Recherchez et appuyez sur "Comptes" ou "Comptes et synchronisation".\n\nPour désactiver complètement la synchronisation automatique :\n- Désactivez l\'option "Synchronisation automatique". Cela empêchera tous les comptes de synchroniser automatiquement les données en arrière-plan.\n\nPour réduire la fréquence de synchronisation pour des comptes individuels :\n- Appuyez sur le compte pour lequel vous souhaitez ajuster les paramètres de synchronisation.\n- Recherchez les options relatives à la fréquence de synchronisation ou aux paramètres de synchronisation dans les paramètres du compte. En fonction de l\'application, vous pourrez peut-être régler la fréquence de synchronisation sur "Manuel" ou choisir un intervalle plus long entre les synchronisations.\n\nPour certaines applications comme Facebook :\n- Ouvrez l\'application.\n- Recherchez le menu des paramètres dans l\'application.\n- Recherchez les options relatives à la fréquence de synchronisation ou à l\'utilisation des données.\n- Ajustez la fréquence de synchronisation ou désactivez la synchronisation automatique selon vos préférences.</string>
+    <string name="turn_off_autocorrection_instructions">Pour désactiver la correction automatique sur votre appareil Android, suivez ces étapes :\n\n1. Ouvrez l\'application Paramètres sur votre appareil.\n2. Faites défiler vers le bas et appuyez sur "Système" ou "Gestion générale", selon votre appareil.\n3. Appuyez sur "Langue et saisie" ou "Clavier et méthodes de saisie".\n4. Sélectionnez l\'application de clavier que vous utilisez, comme Gboard ou Samsung Keyboard.\n5. Appuyez sur "Correction de texte" ou "Correction automatique".\n6. Basculez l\'interrupteur à côté de "Correction automatique" pour le désactiver.\n\nRemarque : Les étapes exactes peuvent varier légèrement en fonction du modèle de votre appareil et de la version d\'Android que vous utilisez. Si vous utilisez une application de clavier tierce, les étapes peuvent également être différentes.</string>
+    <string name="turn_off_location_tracking_instructions">Pour désactiver le suivi de l\'emplacement sur votre appareil Android :\n\n1. Ouvrez les paramètres.\n2. Faites défiler vers le bas et sélectionnez "Emplacement".\n3. En haut à droite, vous verrez un interrupteur marche/arrêt.\n4. Utilisez cet interrupteur pour désactiver complètement les services de localisation.\n\nLa désactivation du suivi de l\'emplacement peut contribuer à préserver votre vie privée et à économiser la batterie de votre appareil Android.</string>
+    <string name="turn_off_or_reduce">Désactivez ou réduisez les animations</string>
+    <string name="turn_off_or_reduce_auto_sync">Désactiver ou réduire la synchronisation automatique</string>
+    <string name="txt_country_title">Pays</string>
+    <string name="txt_create_date_title">Date de la commande</string>
+    <string name="txt_delivery">Livraison</string>
+    <string name="txt_dial_to_get_digit">Composez *#06# pour obtenir les 15 chiffres de l\'IMEI</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_email_invaild">Adresse e-mail invalide</string>
+    <string name="txt_email_title">Email</string>
+    <string name="txt_imei">IMEI</string>
+    <string name="txt_imei_invaild">IMEI invalide - 15 chiffres</string>
+    <string name="txt_input_missing">Entrée invalide</string>
+    <string name="txt_manufacturer">Fabricant</string>
+    <string name="txt_mep_title">MEP</string>
+    <string name="txt_network">Réseau</string>
+    <string name="txt_please_wait">Veuillez patienter…</string>
+    <string name="txt_prd_title">PRD</string>
+    <string name="txt_price">Prix</string>
+    <string name="txt_select_country">Sélectionner un pays</string>
+    <string name="txt_select_network">Sélectionner un réseau</string>
+    <string name="txt_service_have_rates">Le service a un taux de réussite de 40 à 50 %</string>
+    <string name="txt_status_title">Statut</string>
+    <string name="txt_success">Succès</string>
+    <string name="txt_track_now">Suivre maintenant</string>
+    <string name="txt_unlock_code">Code de déverrouillage</string>
+    <string name="uninstall_an_app_directly">Désinstallez une application directement depuis l\'écran d\'accueil</string>
+    <string name="uninstall_and_disable">Désinstallez et désactivez les applications inutilisées</string>
+    <string name="uninstall_apps_home_screen">Désinstaller des applications directement depuis l\'écran d\'accueil est devenu plus facile :\n\n1. Appuyez longuement sur l\'icône de l\'application sur votre écran d\'accueil.\n2. Faites glisser l\'application vers l\'option "Désinstaller" qui apparaît.\n3. Relâchez l\'application pour la désinstaller directement.\n\nRemarque : Cette fonctionnalité peut varier en fonction du modèle de votre téléphone et de la version d\'Android.</string>
+    <string name="uninstall_disable_apps_hint">Pour désinstaller ou désactiver les applications inutilisées et améliorer les performances de l\'appareil :\n\n1. Accédez aux paramètres de votre appareil.\n2. Appuyez sur "Applications" ou "Applications".\n3. Faites glisser jusqu\'à l\'onglet "Tous" pour voir toutes les applications installées.\n4. Parcourez la liste des applications et identifiez celles que vous n\'utilisez pas ou dont vous n\'avez pas besoin.\n5. Appuyez sur l\'application que vous souhaitez désinstaller ou désactiver.\n6. Si l\'option est disponible, appuyez sur "Désinstaller" pour supprimer complètement l\'application. Sinon, appuyez sur "Désactiver" pour la désactiver.\n7. Les applications désactivées seront déplacées vers un onglet séparé. Vous pouvez toujours les réactiver ultérieurement si nécessaire.\n8. De plus, vérifiez l\'onglet "En cours d\'exécution" dans Paramètres > Applications pour voir quelles applications sont actuellement en cours d\'exécution en arrière-plan.\n9. Envisagez de désactiver ou de désinstaller ces applications en cours d\'exécution en arrière-plan si nécessaire.</string>
+    <string name="unknown_facts">Faits inconnus</string>
+    <string name="unlock_locked_pattern_without">Déverrouiller le modèle verrouillé sans perdre de données?</string>
+    <string name="unlock_pattern">Déverrouiller le motif</string>
+    <string name="unlock_pattern_description">Voici une version simplifiée des étapes pour déverrouiller votre appareil Android en utilisant le gestionnaire de fichiers Aroma :\n
+
+1. Téléchargez le gestionnaire de fichiers Aroma et enregistrez-le sur votre carte mémoire (carte SD). Insérez la carte mémoire dans votre appareil Android verrouillé.\n
+2. Accédez au mode de récupération en redémarrant votre appareil et en appuyant simultanément sur la touche d\'alimentation et sur la touche de volume haut. Les différents appareils peuvent avoir différentes méthodes, donc si vous rencontrez des problèmes, recherchez des instructions spécifiques à votre appareil.\n
+3. En mode de récupération, utilisez les boutons de volume haut et de volume bas pour faire défiler, et le bouton du milieu pour sélectionner.\n
+4. Sélectionnez "Installer Zip depuis la carte SD" et localisez le fichier du gestionnaire de fichiers Aroma sur votre carte SD pour l\'installer\n.
+5. Une fois installé, le gestionnaire de fichiers Aroma s\'ouvrira en mode de récupération.\n
+6. Accédez aux paramètres, faites défiler jusqu\'en bas et cliquez sur "AutoMount all devices on start". Ensuite, quittez.\n
+7. Répétez les étapes 4 et 5.\n
+8. Une fois de plus, le gestionnaire de fichiers Aroma s\'ouvrira.\n
+9. Accédez au dossier Data >> Dossier Système et localisez soit "gesture.key" soit "password.key" pour le verrouillage par motif ou le verrouillage par mot de passe, respectivement.\n
+10. Supprimez le fichier sélectionné, puis quittez le gestionnaire de fichiers Aroma et redémarrez votre appareil Android.\n
+
+Après le redémarrage, vous remarquerez que le mot de passe ou le verrouillage par motif est supprimé. Vous pouvez maintenant déverrouiller votre appareil Android en dessinant n\'importe quel motif, même si vous ne vous souvenez pas de l\'original.</string>
+    <string name="unlock_phone_instructions">Voici une version simplifiée des étapes pour déverrouiller votre téléphone Android à l\'aide d\'un ordinateur :\n
+
+1. Connectez votre téléphone Android à votre ordinateur.\n
+2. Ouvrez l\'invite de commandes en tant qu\'administrateur.\n
+3. Tapez la commande suivante exactement comme indiqué et appuyez sur Entrée :\n
+
+adb shell cd /data/data/com.android.providers.settings/databases\n
+SQLite3 settings.db\n
+update system set value=0 where name=\'lock_pattern_autolock\';\n
+update system set value=0 where name=\'lockscreen.lockedoutpermanently\';\n
+.quit\n
+
+4. Après avoir exécuté la commande, redémarrez votre téléphone.\n
+5. Lorsque votre téléphone redémarre, essayez de le déverrouiller avec n\'importe quel schéma aléatoire, cela devrait fonctionner correctement.\n
+6. Si vous rencontrez des problèmes, répétez les étapes mais au lieu de la commande précédente, utilisez :\n
+
+adb shell rm /data/system/gesture.key\n
+
+Ensuite, appuyez sur Entrée et redémarrez votre appareil.</string>
+    <string name="update">Mettre à jour</string>
+    <string name="update_all_your_software">4. Mettez à jour tous vos logiciels</string>
+    <string name="usb_otg_broken_touchscreen">Si l\'écran tactile de votre smartphone est cassé mais que l\'affichage fonctionne toujours, vous pouvez toujours utiliser votre appareil en connectant une souris via USB OTG :</string>
+    <string name="usb_otg_capabilities_info">Avec USB OTG, vous pouvez :\n\n1. Connecter une souris ou un clavier : Branchez une souris USB pour contrôler le curseur de votre appareil, ce qui peut être utile si votre écran tactile est cassé. De même, connectez un clavier externe à votre appareil, le transformant ainsi efficacement en un ordinateur portable pour les tâches de saisie.\n2. Connecter un lecteur de stockage USB : Utilisez USB OTG pour connecter un lecteur de stockage USB (tel qu\'une clé USB ou un disque dur externe) à votre appareil Android. Cela vous permet de transférer des fichiers entre votre appareil et le lecteur de stockage, augmentant ainsi la capacité de stockage de votre appareil et facilitant la gestion des fichiers en déplacement.</string>
+    <string name="usb_otg_game_controller">Connecter une manette de jeu : Utilisez USB OTG pour connecter une manette de jeu à votre appareil Android. Il suffit de brancher une manette Xbox 360 filaire à l\'aide d\'un câble USB OTG, puis de lancer un jeu sur votre appareil. La manette devrait fonctionner sans problème, sans nécessiter de configuration supplémentaire, vous offrant ainsi une expérience de jeu similaire à celle d\'une console sur votre smartphone ou votre tablette.</string>
+    <string name="usb_otg_info">USB OTG (USB On-The-Go) est une norme qui permet aux appareils mobiles de communiquer directement entre eux. Autrefois, les appareils mobiles ne pouvaient se connecter aux ordinateurs que via USB, mais USB OTG permet des connexions directes entre appareils sans nécessiter d\'ordinateur comme intermédiaire.</string>
+    <string name="usb_otg_support_info">Pour déterminer si votre appareil Android prend en charge USB OTG :\n\n1. Recherchez le logo USB OTG : Recherchez le logo USB OTG sur l\'emballage d\'origine de votre appareil. Le logo indique que l\'appareil prend en charge la fonctionnalité USB On-The-Go.\n2. Recherche en ligne : Si vous n\'avez pas accès à l\'emballage d\'origine, vous pouvez rechercher en ligne en utilisant le modèle de l\'appareil pour trouver des informations sur sa compatibilité avec USB OTG. Tapez simplement le modèle de votre appareil suivi de "prise en charge USB OTG" dans un moteur de recherche pour trouver des informations pertinentes.\n3. Âge de l\'appareil : En règle générale, la plupart des smartphones sortis au cours des deux dernières années sont susceptibles de prendre en charge USB OTG. Cependant, il est toujours préférable de confirmer la compatibilité par le biais de sources officielles ou de commentaires d\'utilisateurs.</string>
+    <string name="use_android_built_in">Utilisez l\'outil de stockage intégré d\'Android</string>
+    <string name="use_opera_video">Utiliser la compression vidéo Opera</string>
+    <string name="use_to_otg">Utiliser OTG</string>
+    <string name="use_your_broken_smartphone">Utilisez votre smartphone cassé depuis un PC</string>
+    <string name="user_details">Montrez-moi mes derniers messages. (Suivez ensuite les instructions vocales) Appeler Jon (fonctionne également avec les relations : Appeler sœur)\nAppeler Henry en mode haut-parleur.\nEnvoyer un e-mail à Robert Baratheon, sujet, chasse, message, Je ne pense pas que vous devriez boire autant lorsque vous chassez, point final\nPoster sur Twitter : Oh mon dieu l\'épisode du Mariage Rouge !\nQuel est le français pour Je suis Charlie ?\nEnvoyer un message Hangout à Papa=nEnvoyer un message Viber à Derek.</string>
+    <string name="user_request">Quel est le pourboire pour 123 dollars ?\n\nDéfinir une alarme pour 6h30 du matin\n\nDéfinir un minuteur pour 20 minutes\n\nCréer un événement dans le calendrier : Dîner avec Glenda, samedi à 21h\n\nRappelle-moi d\'acheter du café à 7h du matin\n\nPrendre une note : mettre à jour le firmware de mon routeur\n\nTrouver le numéro de téléphone de Florence Lon et montrez-moi mes factures.</string>
+    <string name="user_requests">Ouvrir greenbot.com\n\nPrendre une photo\n\nEnregistrer une vidéo\n\nOuvrir Spotify\n\nActiver/désactiver le Bluetooth, le Wi-Fi, la lampe de poche.</string>
+    <string name="using_command_prompt">Utiliser l\'invite de commandes?</string>
+    <string name="using_google_now">Utilisation de Google maintenant</string>
+    <string name="version">Version :</string>
+    <string name="vibration">Vibration</string>
+    <string name="voltage">Tension :</string>
+    <string name="volume_down">Baisser le volume</string>
+    <string name="volume_up">Augmenter le volume</string>
+    <string name="want_exit">Voulez-vous quitter ?</string>
+    <string name="we_like_you_too">Nous vous aimons aussi !</string>
+    <string name="webos_could_have_destroyed">7. WebOS aurait pu détruire Android</string>
+    <string name="were_the_screen_one_solid_color">L\'écran était-il d\'une seule couleur unie ?</string>
+    <string name="what_can_i_do_with_usb">Que puis-je faire avec USB OTG?</string>
+    <string name="what_is_sar_value">Quelle est la valeur SAR?</string>
+    <string name="whatsapp_backup_info">Si vous avez accidentellement supprimé une photo WhatsApp, il existe plusieurs façons de la récupérer. Tout d\'abord, vérifiez la fonction de sauvegarde dans WhatsApp elle-même en allant dans Paramètres > Discussions > Sauvegarde des discussions. S\'il y a une sauvegarde récente, désinstallez et réinstallez WhatsApp depuis le Play Store pour restaurer vos anciennes discussions et médias. Vous pouvez également vérifier Google Drive si vous y avez sauvegardé des photos. Si vous avez accidentellement écrasé votre dernière sauvegarde, ne vous inquiétez pas. WhatsApp conserve plusieurs fichiers de sauvegarde sur votre appareil. Accédez à WhatsApp > Bases de données à l\'aide d\'un explorateur de fichiers et renommez le fichier de sauvegarde le plus récent. WhatsApp utilisera alors le deuxième fichier de sauvegarde le plus récent pour les photos. De plus, vérifiez le dossier média WhatsApp dans votre bibliothèque Google Photos, car WhatsApp y stocke des copies des photos envoyées et reçues.</string>
+    <string name="wifi_battery_drain">Activer le Wi-Fi, même lorsqu\'il n\'est pas utilisé, peut drainer la batterie de votre appareil car il peut continuer à rechercher des réseaux. Sur les appareils Android, ce comportement peut persister même lorsque le Wi-Fi est désactivé. Pour éviter une décharge inutile de la batterie, accédez aux paramètres Wi-Fi > Avancé et décochez l\'option de balayage Wi-Fi. Bien que cela signifie que vous devrez vous connecter au Wi-Fi manuellement, le compromis est une durée de vie de la batterie plus longue.</string>
+    <string name="wifi_hotspot">Point d\'accès Wi-Fi</string>
+    <string name="wifi_password">Mot de passe Wifi?</string>
+    <string name="wifi_password_instructions">Pour afficher les mots de passe WiFi enregistrés sur votre appareil Android en utilisant ES File Explorer, suivez ces étapes :\n
+
+1. Ouvrez ES File Explorer et accédez au dossier racine.\n
+2. Accédez à data > misc > wifi.\n
+3. Localisez et ouvrez le fichier nommé wpa_supplicant.conf en utilisant le visualiseur de texte/HTML intégré à ES File Explorer.\n
+4. À l\'intérieur du fichier, vous trouverez les SSID des réseaux et leurs mots de passe.\n
+5. Notez le nom du réseau et son mot de passe.\n
+6. Veillez à ne pas modifier quoi que ce soit dans wpa_supplicant.conf pour éviter d\'affecter le fonctionnement de votre appareil ou la connectivité WiFi.</string>
+    <string name="wifi_scanning">3. Balayage WiFi</string>
+    <string name="wipe_cache_partition">Effacer la partition cache</string>
+    <string name="wipe_cache_partition_hint">Pour effacer la partition de cache sur votre appareil Android:\n\n1. Démarrer en mode de récupération: La méthode pour accéder au mode de récupération varie en fonction du modèle de votre appareil. Vous pouvez généralement y accéder en éteignant votre appareil, puis en appuyant sur des combinaisons spécifiques de boutons lors du démarrage. Vous devrez peut-être rechercher en ligne les instructions spécifiques à votre modèle d\'appareil.\n2. Naviguer à l\'aide des boutons physiques: Une fois en mode de récupération, vous naviguerez à l\'aide des boutons de volume pour faire défiler et du bouton d\'alimentation pour sélectionner.\n3. Sélectionner "Effacer la partition de cache": Utilisez les boutons de volume pour faire défiler jusqu\'à l\'option "Effacer la partition de cache". Une fois sélectionné, appuyez sur le bouton d\'alimentation pour confirmer.\n4. Confirmer l\'action: Une invite de confirmation apparaîtra pour vous demander si vous souhaitez procéder à l\'effacement de la partition de cache. Utilisez les boutons de volume pour faire défiler jusqu\'à "Oui" et appuyez sur le bouton d\'alimentation pour confirmer.\n5. Attendre la fin du processus: La partition de cache sera effacée, ce qui peut prendre quelques instants. Une fois terminé, vous retournerez au menu principal du mode de récupération.\n6. Redémarrer votre appareil: Utilisez les boutons de volume pour faire défiler jusqu\'à l\'option "Redémarrer le système maintenant" et appuyez sur le bouton d\'alimentation pour redémarrer votre appareil.</string>
+    <string name="yes">Oui</string>
+    <string name="you_already_allow">Vous avez déjà autorisé la permission</string>
+    <string name="you_will_receive_imei_status_order_confirmation">Vous recevrez des mises à jour de confirmation de statut de commande et des détails sur le statut de l\'IMEI de notre adresse e-mail: support@easysimunlocker.com. Assurez-vous que cet e-mail figure dans votre liste de courriels sûrs. Vérifiez vos dossiers de spam, indésirables, sociaux et autres filtres de courriel pour vous assurer de ne pas manquer les mises à jour importantes de notre part.</string>
+    <string name="you_will_receive_order_confirmation">Vous recevrez des mises à jour de confirmation de commande et le code de déverrouillage de notre adresse e-mail: support@easysimunlocker.com. Assurez-vous que cet e-mail figure dans votre liste de courriels sûrs. Vérifiez vos dossiers de spam, indésirables, sociaux et autres filtres de courriel pour vous assurer de ne pas manquer les mises à jour importantes de notre part.</string>
+    <string name="your_device_is_in_average">Votre appareil est en état moyen. Les performances peuvent être considérablement affectées.</string>
+    <string name="your_device_is_in_excellent">Votre appareil est en excellent état. Cela indique que l\'appareil fonctionne parfaitement.</string>
+    <string name="your_device_is_in_fair">Votre appareil est en état moyen. Vous pouvez remarquer quelques problèmes de performance.</string>
+    <string name="your_device_is_in_good">Votre appareil est en bon état. Cela indique que l\'appareil fonctionne parfaitement.</string>
+    <string name="your_device_is_in_poor">Votre appareil est en mauvais état. Il a besoin d\'améliorations.</string>
+    <string name="your_device_is_in_very_poor">Votre appareil est en très mauvais état. Il a besoin d\'améliorations.</string>
+    <string name="zoom_in_on_any_screen">Zoomer sur n\'importe quel écran</string>
+</resources>

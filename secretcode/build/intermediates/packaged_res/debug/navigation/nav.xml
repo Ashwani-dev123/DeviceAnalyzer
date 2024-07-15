@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/containerFragment">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.githhubdemo.deviceinfo.fragment.Dashboard"
+        android:label="Dashboard">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.githhubdemo.deviceinfo.fragment.SettingsFragment"
+        android:label="SettingsFragment" />
+
+        <fragment
+        android:id="@+id/containerFragment"
+        android:name="com.example.githhubdemo.deviceinfo.fragment.ContainerFragment"
+        android:label="SysInfo">
+        <action
+            android:id="@+id/action_dashboard_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+</navigation>
