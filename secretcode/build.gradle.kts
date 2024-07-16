@@ -80,6 +80,21 @@ android {
     }
 }
 
+afterEvaluate {
+    println(components*.name)
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                        groupId = group = 'com.github.Ashwani-dev123'
+                artifactId = 'secretcode'
+            }
+
+        }
+    }
+}
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.13.1")
