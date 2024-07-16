@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1885ef2a-0368-4561-b8e0-19bed34ca0a6" name="Changes" comment="16/07/2024 initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/proguard-rules.pro" afterDir="false" />
-    </list>
+    <list default="true" id="1885ef2a-0368-4561-b8e0-19bed34ca0a6" name="Changes" comment="16/07/2024 add proguard" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721121606248</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="16/07/2024 add proguard">
+      <option name="closed" value="true" />
+      <created>1721123372650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721123372650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +245,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="16/07/2024 initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="16/07/2024 initial commit" />
+    <MESSAGE value="16/07/2024 add proguard" />
+    <option name="LAST_COMMIT_MESSAGE" value="16/07/2024 add proguard" />
   </component>
 </project>
