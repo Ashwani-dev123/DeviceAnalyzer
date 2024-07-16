@@ -49,7 +49,7 @@
     <string name="agree_service_terms_condition">通过选中此框，您同意我们的<a href="https://mobilemiracle.io/privacy">隐私政策</a>和<a href="https://mobilemiracle.io/terms-condition">服务条款</a></string>
     <string name="txt_dial_to_get_digit">拨打*＃06＃获取15位IMEI</string>
     <string name="alert">警报</string>
-    <string name="errors_connection">没有网络连接！</string>
+    <string name="errors_connection_1">没有网络连接！</string>
     <string name="retry">重试</string>
     <string name="transaction_cancelled">交易已取消</string>
     <string name="something_was_wrong">出了点问题</string>

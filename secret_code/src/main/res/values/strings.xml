@@ -52,7 +52,7 @@
     <string name="agree_service_terms_condition">By checking this box, you agree to our <a href="https://mobilemiracle.io/privacy">Privacy Policy</a> and <a href="https://mobilemiracle.io/terms-condition">Terms &amp; Conditions of service</a></string>
     <string name="txt_dial_to_get_digit">Dial *#06# to get 15 Digit IMEI</string>
     <string name="alert">Alert</string>
-    <string name="errors_connection">No internet connection!</string>
+    <string name="errors_connection_1">No internet connection!</string>
     <string name="retry">Retry</string>
     <string name="transaction_cancelled">Transaction Cancelled</string>
     <string name="something_was_wrong">Something went wrong</string>

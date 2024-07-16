@@ -48,7 +48,7 @@
     <string name="agree_service_terms_condition">بالنقر على هذا المربع، فإنك توافق على <a href="https://mobilemiracle.io/privacy">سياسة الخصوصية</a> و<a href="https://mobilemiracle.io/terms-condition">شروط الخدمة</a></string>
     <string name="txt_dial_to_get_digit">اتصل بـ *#06# للحصول على رقم IMEI المكون من 15 رقمًا</string>
     <string name="alert">تنبيه</string>
-    <string name="errors_connection">لا يوجد اتصال بالإنترنت!</string>
+    <string name="errors_connection_1">لا يوجد اتصال بالإنترنت!</string>
     <string name="retry">أعد المحاولة</string>
     <string name="transaction_cancelled">تم إلغاء العملية</string>
     <string name="something_was_wrong">حدث خطأ ما</string>

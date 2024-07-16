@@ -48,7 +48,7 @@
     <string name="agree_service_terms_condition">Al marcar esta casilla, aceptas nuestra <a href="https://mobilemiracle.io/privacy">Política de privacidad</a> y nuestros <a href="https://mobilemiracle.io/terms-condition">Términos y condiciones del servicio</a></string>
     <string name="txt_dial_to_get_digit">Marca *#06# para obtener los 15 dígitos del IMEI</string>
     <string name="alert">Alerta</string>
-    <string name="errors_connection">¡Sin conexión a Internet!</string>
+    <string name="errors_connection_1">¡Sin conexión a Internet!</string>
     <string name="retry">Reintentar</string>
     <string name="transaction_cancelled">Transacción cancelada</string>
     <string name="something_was_wrong">Algo salió mal</string>

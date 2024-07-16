@@ -48,7 +48,7 @@
     <string name="agree_service_terms_condition">En cochant cette case, vous acceptez notre <a href="https://mobilemiracle.io/privacy">Politique de confidentialité</a> et nos <a href="https://mobilemiracle.io/terms-condition">Conditions générales de service</a></string>
     <string name="txt_dial_to_get_digit">Composez *#06# pour obtenir les 15 chiffres de l\'IMEI</string>
     <string name="alert">Alerte</string>
-    <string name="errors_connection">Pas de connexion internet !</string>
+    <string name="errors_connection_1">Pas de connexion internet !</string>
     <string name="retry">Réessayer</string>
     <string name="transaction_cancelled">Transaction annulée</string>
     <string name="something_was_wrong">Quelque chose s\'est mal passé</string>

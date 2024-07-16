@@ -48,7 +48,7 @@
     <string name="agree_service_terms_condition">Spuntando questa casella, accetti la nostra <a href="https://mobilemiracle.io/privacy">Informativa sulla privacy</a> e i nostri <a href="https://mobilemiracle.io/terms-condition">Termini e condizioni di servizio</a></string>
     <string name="txt_dial_to_get_digit">Componi *#06# per ottenere i 15 cifre dell\'IMEI</string>
     <string name="alert">Avviso</string>
-    <string name="errors_connection">Nessuna connessione Internet!</string>
+    <string name="errors_connection_1">Nessuna connessione Internet!</string>
     <string name="retry">Riprova</string>
     <string name="transaction_cancelled">Transazione annullata</string>
     <string name="something_was_wrong">Qualcosa è andato storto</string>

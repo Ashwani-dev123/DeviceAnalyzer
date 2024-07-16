@@ -49,7 +49,7 @@
     <string name="agree_service_terms_condition">Поставив галочку, вы соглашаетесь с нашей <a href="https://mobilemiracle.io/privacy">Политикой конфиденциальности</a> и <a href="https://mobilemiracle.io/terms-condition">Условиями обслуживания</a></string>
     <string name="txt_dial_to_get_digit">Наберите *#06#, чтобы получить 15-значный IMEI</string>
     <string name="alert">Предупреждение</string>
-    <string name="errors_connection">Нет подключения к Интернету!</string>
+    <string name="errors_connection_1">Нет подключения к Интернету!</string>
     <string name="retry">Повторить</string>
     <string name="transaction_cancelled">Транзакция отменена</string>
     <string name="something_was_wrong">Что-то пошло не так</string>
