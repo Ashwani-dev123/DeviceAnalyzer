@@ -29,6 +29,11 @@
 -keepattributes Signature
 -keepattributes Exceptions
 
+# Keep all Kotlin sealed classes
+-keep class kotlin.** { *; }
 -keep class androidx.appcompat.** { *; }
+-dontwarn kotlin.**
+-dontwarn androidx.**
+
 -keep interface androidx.appcompat.** { *; }
 -keep class androidx.appcompat.app.ActionBarDrawerToggle$1 { *; }
