@@ -1,3 +1,0 @@
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/x86/CMakeFiles/cpuinfo-libs.dir
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/x86/CMakeFiles/edit_cache.dir
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/x86/CMakeFiles/rebuild_cache.dir

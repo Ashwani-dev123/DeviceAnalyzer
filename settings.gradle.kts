@@ -41,5 +41,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "GIthHubDemo"
-include(":app")
+include(":secret_code")
  

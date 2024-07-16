@@ -1,3 +1,0 @@
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/armeabi-v7a/CMakeFiles/cpuinfo-libs.dir
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/armeabi-v7a/CMakeFiles/rebuild_cache.dir

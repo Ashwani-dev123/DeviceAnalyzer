@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/minhaz/demo/GIthHubDemo/app/.cxx/Debug/3w4k2i14/x86_64",
-  "command": "E:\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android24 --sysroot=E:/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcpuinfo_libs_EXPORTS -ID:/minhaz/demo/GIthHubDemo/app/src/main/cpp/../../../../external/cpuinfo/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -std=gnu++11 -fno-limit-debug-info  -fPIC -o CMakeFiles\\cpuinfo-libs.dir\\cpuinfo-libs.cpp.o -c D:\\minhaz\\demo\\GIthHubDemo\\app\\src\\main\\cpp\\cpuinfo-libs.cpp",
-  "file": "D:\\minhaz\\demo\\GIthHubDemo\\app\\src\\main\\cpp\\cpuinfo-libs.cpp"
-}
-]
