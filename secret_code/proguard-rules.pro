@@ -19,3 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+-keep class com.network.unlock.secret.codes.deviceinfo.model.** { *; }
+
+#15 retrofit2
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+
+-keep class androidx.appcompat.** { *; }
+-keep interface androidx.appcompat.** { *; }
+-keep class androidx.appcompat.app.ActionBarDrawerToggle$1 { *; }
