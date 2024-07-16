@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs")
+    id("maven-publish")
 }
 
 android {
@@ -87,7 +88,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "secretcode"
-                version = "0.0.4"
+                version = "0.0.5"
             }
         }
     }
