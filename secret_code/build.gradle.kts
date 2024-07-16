@@ -90,7 +90,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "SecretCode"
-                version = "0.0.6"
+                version = "1.0.1"
             }
         }
     }
