@@ -31,9 +31,13 @@
 
 # Keep all Kotlin sealed classes
 -keep class kotlin.** { *; }
+-keepclassmembers class kotlin.** { *; }
 -keep class androidx.appcompat.** { *; }
 -dontwarn kotlin.**
 -dontwarn androidx.**
 
 -keep interface androidx.appcompat.** { *; }
 -keep class androidx.appcompat.app.ActionBarDrawerToggle$1 { *; }
+
+
+
