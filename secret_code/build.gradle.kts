@@ -90,7 +90,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "secret_code"
-                version = "1.0.2"
+                version = "1.0.3"
             }
         }
     }
@@ -122,7 +122,6 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.2")
 
-    implementation ("com.github.smarteist:autoimageslider:1.4.0")
     implementation ("com.airbnb.android:epoxy:5.1.3")
     implementation ("com.airbnb.android:epoxy-databinding:5.1.3")
     implementation ("com.akexorcist:round-corner-progress-bar:2.1.2")
