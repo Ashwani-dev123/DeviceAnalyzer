@@ -89,7 +89,7 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
-                artifactId = "SecretCode"
+                artifactId = "secret_code"
                 version = "1.0.1"
             }
         }
