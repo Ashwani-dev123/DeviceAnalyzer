@@ -81,19 +81,19 @@ android {
 }
 
 afterEvaluate {
-    println(components*.name)
     publishing {
         publications {
-            release(MavenPublication) {
-                from components.release
-
-                        groupId = group = 'com.github.Ashwani-dev123'
-                artifactId = 'secretcode'
+            create<MavenPublication>("maven") {
+                from (components["release"])
+                groupId = "com.github.Ashwani-dev123"
+                artifactId = "secretcode"
+                version = "0.0.4"
             }
-
         }
     }
 }
+
+
 
 dependencies {
 
