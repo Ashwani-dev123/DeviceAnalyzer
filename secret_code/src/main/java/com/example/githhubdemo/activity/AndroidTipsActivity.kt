@@ -24,6 +24,8 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
 
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
 
+        binding.ivEdit.visibility = View.INVISIBLE
+
         initListener()
 
         itemIcons = arrayOf(
