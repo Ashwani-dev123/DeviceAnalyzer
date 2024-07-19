@@ -21,7 +21,7 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -39,7 +39,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:paddingHorizontal="@dimen/_2sdp"
             android:src="@drawable/ic_edit_profile"
             android:visibility="invisible" />
 
@@ -262,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
-                    android:text="@string/secret_code"
+                    android:text="@string/android_tips"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
 

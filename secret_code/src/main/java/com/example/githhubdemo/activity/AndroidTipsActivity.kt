@@ -6,9 +6,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import androidx.core.content.ContextCompat
+import com.ads.narayan.ads.NarayanAd
+import com.ads.narayan.ads.NarayanAdCallback
+import com.ads.narayan.ads.wrapper.NarayanAdError
+import com.ads.narayan.ads.wrapper.NarayanInterstitialAd
+import com.example.githhubdemo.BuildConfig
 import com.example.githhubdemo.R
-import com.example.githhubdemo.databinding.ActivityAndroidTipsBinding
 import com.example.githhubdemo.adapter.CustomItemListAdapter
+import com.example.githhubdemo.databinding.ActivityAndroidTipsBinding
 
 
 class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
@@ -16,6 +21,7 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding : ActivityAndroidTipsBinding
     private lateinit var itemList: Array<String>
     private lateinit var itemIcons: Array<Int>
+    private var mInterstitialAd: NarayanInterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +32,7 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.ivEdit.visibility = View.INVISIBLE
 
+        loadInterstitial()
         initListener()
 
         itemIcons = arrayOf(
@@ -56,9 +63,44 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
     private fun initListener() {
         binding.btnBack.setOnClickListener(this)
         binding.lvAndroidTipsItem.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
-            val intent = Intent(applicationContext, AndroidTipsDetailsActivity::class.java)
-            intent.putExtra("keys", i)
-            startActivity(intent)
+
+            if (mInterstitialAd!!.isReady) {
+                NarayanAd.getInstance().forceShowInterstitial(
+                    this,
+                    mInterstitialAd,
+                    object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                        override fun onAdFailedToShow(adError: NarayanAdError?) {
+                            super.onAdFailedToShow(adError)
+                            val intent = Intent(applicationContext, AndroidTipsDetailsActivity::class.java)
+                            intent.putExtra("keys", i)
+                            startActivity(intent)
+                        }
+
+                        override fun onNextAction() {
+                            super.onNextAction()
+                            val intent = Intent(applicationContext, AndroidTipsDetailsActivity::class.java)
+                            intent.putExtra("keys", i)
+                            startActivity(intent)
+                        }
+
+                    },
+                    true
+                )
+            } else {
+                loadInterstitial()
+                val intent = Intent(applicationContext, AndroidTipsDetailsActivity::class.java)
+                intent.putExtra("keys", i)
+                startActivity(intent)
+
+            }
+
+
 
         }
     }
@@ -72,4 +114,39 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+    private fun loadInterstitial() {
+        mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this, BuildConfig.ad_interstitial_splash)
+    }
+    override fun onBackPressed() {
+        if (mInterstitialAd!!.isReady) {
+            NarayanAd.getInstance().forceShowInterstitial(
+                this,
+                mInterstitialAd,
+                object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                    override fun onAdFailedToShow(adError: NarayanAdError?) {
+                        super.onAdFailedToShow(adError)
+                        finish()
+                    }
+
+                    override fun onNextAction() {
+                        super.onNextAction()
+                        finish()
+                    }
+
+                },
+                true
+            )
+        } else {
+            loadInterstitial()
+            finish()
+        }
+    }
+
 }

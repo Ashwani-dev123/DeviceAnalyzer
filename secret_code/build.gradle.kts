@@ -5,6 +5,9 @@ plugins {
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs")
     id("maven-publish")
+    id("com.google.gms.google-services")
+
+
 }
 
 android {
@@ -25,6 +28,11 @@ android {
             }
         }
 
+        manifestPlaceholders["ad_app_id"] =  "ca-app-pub-3940256099942544~3347511713"
+        buildConfigField("String", "ad_interstitial_splash", "\"ca-app-pub-oifjsdjg895yeu5jgoijn90rsdghe5\"")
+        buildConfigField("String", "ad_banner", "\"ca-app-pub-oifjsdjg895yeu5jgoijn90rsdghe5\"")
+        buildConfigField("Boolean", "env_dev", "true")
+
     }
 
     buildTypes {
@@ -36,6 +44,9 @@ android {
             )
         }
     }
+
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -44,13 +55,11 @@ android {
         jvmTarget = "17"
     }
 
+
     externalNativeBuild {
         cmake {
 //            path("src/main/cpp/CMakeLists.txt")
             path("../secret_code/src/main/cpp/CMakeLists.txt")
-
-
-
 
         }
     }
@@ -90,7 +99,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "secret_code"
-                version = "1.0.11"
+                version = "1.0.12"
             }
         }
     }
@@ -142,4 +151,7 @@ dependencies {
     implementation ("com.google.android.play:review-ktx:2.0.1")
     implementation ("org.apache.commons:commons-math3:3.6.1")
     implementation ("com.github.wendykierp:JTransforms:3.1")
+    implementation ("com.github.Ashwani-dev123:NarayanAds:1.1.2")
+
+
 }

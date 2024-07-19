@@ -18,7 +18,6 @@
 
         <ImageView
             android:id="@+id/btnBack"
-            android:layout_marginStart="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +40,6 @@
 
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_marginEnd="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
