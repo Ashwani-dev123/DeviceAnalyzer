@@ -1,15 +1,15 @@
 package com.example.githhubdemo.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.githhubdemo.BuildConfig
 import com.example.githhubdemo.R
-import com.example.githhubdemo.databinding.ActivityMobileTricksBinding
 import com.example.githhubdemo.adapter.CustomItemListAdapter
-
+import com.example.githhubdemo.databinding.ActivityMobileTricksBinding
 
 
 class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
@@ -22,6 +22,8 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+
+        binding.bannerDashboard.loadBanner(this, BuildConfig.ad_banner)
 
         initListener()
 
