@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.ads.narayan.ads.NarayanAd
 import com.ads.narayan.ads.NarayanAdCallback
 import com.ads.narayan.ads.wrapper.NarayanAdError
@@ -33,6 +34,20 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
 
         binding.ivEdit.visibility = View.INVISIBLE
+
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
+
 
         loadInterstitial()
 

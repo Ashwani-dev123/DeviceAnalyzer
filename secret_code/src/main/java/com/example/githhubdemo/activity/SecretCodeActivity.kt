@@ -5,19 +5,42 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import com.ads.narayan.ads.NarayanAd
+import com.ads.narayan.ads.NarayanAdCallback
+import com.ads.narayan.ads.wrapper.NarayanAdError
+import com.ads.narayan.ads.wrapper.NarayanInterstitialAd
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivitySecretCodeBinding
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
     private lateinit var binding : ActivitySecretCodeBinding
+    private var mInterstitialAd: NarayanInterstitialAd? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivitySecretCodeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
+
+        loadInterstitial()
 
         initListener()
     }
@@ -47,80 +70,608 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                 onBackPressed()
             }
             R.id.cvSamsung -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Samsung")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Samsung")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Samsung")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Samsung")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvOppo -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Oppo")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Oppo")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Oppo")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Oppo")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvMi -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Xiaomi")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Xiaomi")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Xiaomi")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Xiaomi")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvVivo -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Vivo")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Vivo")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Vivo")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Vivo")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvHtc -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Htc")
-                startActivity(intent)
+
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Htc")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Htc")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Htc")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvRealme -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Realme")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Realme")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Realme")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Realme")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvAsus -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Asus")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Asus")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Asus")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Asus")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvIphone -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "iPhone")
-                startActivity(intent)
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "iPhone")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "iPhone")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "iPhone")
+                    startActivity(intent)
+                }
+
             }
             R.id.cvSony -> {
-                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                intent.putExtra("keys", "Sony")
-                startActivity(intent)
+
+                if (mInterstitialAd!!.isReady) {
+                    NarayanAd.getInstance().forceShowInterstitial(
+                        this,
+                        mInterstitialAd,
+                        object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                            override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                super.onAdFailedToShow(adError)
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Sony")
+                                startActivity(intent)
+                            }
+
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                intent.putExtra("keys", "Sony")
+                                startActivity(intent)
+                            }
+
+                        },
+                        true
+                    )
+                } else {
+                    loadInterstitial()
+                    val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                    intent.putExtra("keys", "Sony")
+                    startActivity(intent)
+                }
+
+
             }
                R.id.cvHuawei -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "Huawei")
-                   startActivity(intent)
+
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Huawei")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Huawei")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "Huawei")
+                       startActivity(intent)
+                   }
+
                }
                R.id.cvLg -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "Lg")
-                   startActivity(intent)
+
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Lg")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Lg")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "Lg")
+                       startActivity(intent)
+                   }
+
+
                }
                R.id.cvOnePlus -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "OnePlus")
-                   startActivity(intent)
+
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "OnePlus")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "OnePlus")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "OnePlus")
+                       startActivity(intent)
+                   }
+
                }
                R.id.cvAcer -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "Acer")
-                   startActivity(intent)
+
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Acer")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Acer")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "Acer")
+                       startActivity(intent)
+                   }
+
                }
                R.id.cvLenovo -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "Lenovo")
-                   startActivity(intent)
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Lenovo")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Lenovo")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "Lenovo")
+                       startActivity(intent)
+                   }
+
                }
                R.id.cvZte -> {
-                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
-                   intent.putExtra("keys", "Zte")
-                   startActivity(intent)
+
+                   if (mInterstitialAd!!.isReady) {
+                       NarayanAd.getInstance().forceShowInterstitial(
+                           this,
+                           mInterstitialAd,
+                           object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                               override fun onAdFailedToShow(adError: NarayanAdError?) {
+                                   super.onAdFailedToShow(adError)
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Zte")
+                                   startActivity(intent)
+                               }
+
+                               override fun onNextAction() {
+                                   super.onNextAction()
+                                   val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                                   intent.putExtra("keys", "Zte")
+                                   startActivity(intent)
+                               }
+
+                           },
+                           true
+                       )
+                   } else {
+                       loadInterstitial()
+                       val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                       intent.putExtra("keys", "Zte")
+                       startActivity(intent)
+                   }
+
                }
+        }
+    }
+
+    private fun loadInterstitial() {
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID,"") != "") {
+                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this , SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
+            }
+        }
+
+    }
+    override fun onBackPressed() {
+        if (mInterstitialAd!!.isReady) {
+            NarayanAd.getInstance().forceShowInterstitial(
+                this,
+                mInterstitialAd,
+                object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                    override fun onAdFailedToShow(adError: NarayanAdError?) {
+                        super.onAdFailedToShow(adError)
+                        finish()
+                    }
+
+                    override fun onNextAction() {
+                        super.onNextAction()
+                        finish()
+                    }
+
+                },
+                true
+            )
+        } else {
+            loadInterstitial()
+            finish()
         }
     }
 }

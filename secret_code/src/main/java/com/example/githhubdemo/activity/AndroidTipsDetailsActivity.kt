@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityAndroidTipsDetailsBinding
 import com.example.githhubdemo.model.MobileTrickModel
 import com.example.githhubdemo.adapter.MobileTrickAdapter
-
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class AndroidTipsDetailsActivity : AppCompatActivity(), View.OnClickListener {
@@ -21,6 +24,18 @@ class AndroidTipsDetailsActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
 
         initListener()
         setListData()

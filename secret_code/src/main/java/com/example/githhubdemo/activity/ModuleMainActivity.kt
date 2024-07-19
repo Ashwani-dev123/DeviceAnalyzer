@@ -5,10 +5,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityModuleMainBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
 import com.example.githhubdemo.deviceinfo.activity.DeviceInfoActivity
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var binding : ActivityModuleMainBinding
@@ -19,6 +23,18 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
 
         initListener()
     }

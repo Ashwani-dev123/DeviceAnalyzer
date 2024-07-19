@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivitySecretCodeListBinding
 import com.example.githhubdemo.adapter.CodeListAdapter
 import com.example.githhubdemo.model.CodeModel
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class SecretCodeListActivity : AppCompatActivity(),View.OnClickListener {
@@ -18,6 +22,18 @@ class SecretCodeListActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
 
         initListener()
         setListData()
