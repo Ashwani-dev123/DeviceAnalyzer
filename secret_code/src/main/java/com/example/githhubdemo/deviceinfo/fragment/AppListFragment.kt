@@ -22,7 +22,7 @@ import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentAppListBinding
 import com.example.githhubdemo.deviceinfo.adapter.AppAdapter
 import com.example.githhubdemo.deviceinfo.data.model.AppInfo
-import com.example.githhubdemo.utils.Share
+import com.example.githhubdemo.utils.ShareModule
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,8 +61,8 @@ class AppListFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.e("CHECKFRAGMENT", "onViewCreated: " + Share.tabPosition )
-        if (Share.tabPosition == 6  && installedApps.size<=0) {
+        Log.e("CHECKFRAGMENT", "onViewCreated: " + ShareModule.tabPosition )
+        if (ShareModule.tabPosition == 6  && installedApps.size<=0) {
             showProgressDialog()
             loadInstalledApps()
         }

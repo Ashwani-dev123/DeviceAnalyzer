@@ -6,10 +6,13 @@ import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.githhubdemo.BuildConfig
+import androidx.core.view.isVisible
 import com.example.githhubdemo.R
 import com.example.githhubdemo.adapter.CustomItemListAdapter
 import com.example.githhubdemo.databinding.ActivityMobileTricksBinding
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
@@ -23,7 +26,18 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
 
-        binding.bannerDashboard.loadBanner(this, BuildConfig.ad_banner)
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
+
 
         initListener()
 

@@ -13,7 +13,7 @@ import com.example.githhubdemo.databinding.FragmentContainerBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.example.githhubdemo.deviceinfo.main.SectionsPagerAdapter
-import com.example.githhubdemo.utils.Share
+import com.example.githhubdemo.utils.ShareModule
 
 
 class ContainerFragment : Fragment() {
@@ -63,7 +63,7 @@ class ContainerFragment : Fragment() {
                     PorterDuff.Mode.SRC_IN
                 )
 
-                Share.tabPosition =  tab!!.position
+                ShareModule.tabPosition =  tab!!.position
 
                 Log.e("CHECKFRAGMENT", "isSelected: " +  tab.position)
 

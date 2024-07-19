@@ -28,10 +28,10 @@ android {
             }
         }
 
-        manifestPlaceholders["ad_app_id"] =  "ca-app-pub-3940256099942544~3347511713"
+        /*manifestPlaceholders["ad_app_id"] =  "ca-app-pub-3940256099942544~3347511713"
         buildConfigField("String", "ad_interstitial_splash", "\"ca-app-pub-oifjsdjg895yeu5jgoijn90rsdghe5\"")
         buildConfigField("String", "ad_banner", "\"ca-app-pub-oifjsdjg895yeu5jgoijn90rsdghe5\"")
-        buildConfigField("Boolean", "env_dev", "true")
+        buildConfigField("Boolean", "env_dev", "true")*/
 
     }
 
@@ -99,7 +99,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "secret_code"
-                version = "1.0.14"
+                version = "1.1.0"
             }
         }
     }

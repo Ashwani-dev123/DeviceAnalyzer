@@ -10,10 +10,12 @@ import com.ads.narayan.ads.NarayanAd
 import com.ads.narayan.ads.NarayanAdCallback
 import com.ads.narayan.ads.wrapper.NarayanAdError
 import com.ads.narayan.ads.wrapper.NarayanInterstitialAd
-import com.example.githhubdemo.BuildConfig
 import com.example.githhubdemo.R
 import com.example.githhubdemo.adapter.CustomItemListAdapter
 import com.example.githhubdemo.databinding.ActivityAndroidTipsBinding
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
@@ -33,6 +35,10 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
         binding.ivEdit.visibility = View.INVISIBLE
 
         loadInterstitial()
+
+
+
+
         initListener()
 
         itemIcons = arrayOf(
@@ -116,7 +122,12 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun loadInterstitial() {
-        mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this, BuildConfig.ad_interstitial_splash)
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID,"") != "") {
+                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this , SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
+            }
+        }
+
     }
     override fun onBackPressed() {
         if (mInterstitialAd!!.isReady) {
