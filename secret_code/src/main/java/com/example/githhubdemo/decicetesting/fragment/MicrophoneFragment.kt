@@ -194,10 +194,11 @@ class MicrophoneFragment : BaseFragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        audioRecord.stop()
-        audioRecord.release()
+        if (::audioRecord.isInitialized) {
+            audioRecord.stop()
+            audioRecord.release()
+        }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
