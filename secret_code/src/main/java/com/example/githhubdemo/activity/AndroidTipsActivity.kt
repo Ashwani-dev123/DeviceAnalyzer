@@ -38,7 +38,7 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
 
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
-                binding.bannerDashboard.loadBanner(this, ShareModule.BANNER_ID)
+                binding.bannerDashboard.loadBanner(this, SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,""))
             }
             else {
                 binding.bannerDashboard.isVisible = false
