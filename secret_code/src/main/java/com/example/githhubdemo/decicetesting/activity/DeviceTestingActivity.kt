@@ -13,6 +13,9 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityDeviceTestingBinding
 import com.example.githhubdemo.decicetesting.fragment.VolumeUpFragment
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
+import com.example.githhubdemo.utils.Util
 
 
 class DeviceTestingActivity : AppCompatActivity() {
@@ -85,6 +88,19 @@ class DeviceTestingActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             onBackPressed()
         }
+
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
+                binding.bannerDashboard.loadBanner(this, SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,""))
+            }
+            else {
+                binding.bannerDashboard.isVisible = false
+            }
+        }
+        else {
+            binding.bannerDashboard.isVisible = false
+        }
+
 
 
     }

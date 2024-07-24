@@ -54,6 +54,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.ads.narayan.ads.bannerAds.NarayanBannerAdView
+        android:id="@+id/bannerDashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp" />
+
     <ProgressBar
         android:id="@+id/customProgressBar"
         android:layout_marginTop="@dimen/_15sdp"
@@ -61,7 +70,7 @@
         android:layout_marginStart="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/bannerDashboard"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_7sdp"

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -89,7 +90,7 @@ class SystemFrag : Fragment() {
 
             while (isActive) {
                 val startColor = cardView.cardBackgroundColor.defaultColor
-                val endColor = colors.random()
+                val endColor = ContextCompat.getColor(requireContext(),R.color.colorToolbar)
 
                 val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), startColor, endColor)
                 colorAnimation.duration = 500 // duration in milliseconds
