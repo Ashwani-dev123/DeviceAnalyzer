@@ -90,7 +90,7 @@ class SystemFrag : Fragment() {
 
             while (isActive) {
                 val startColor = cardView.cardBackgroundColor.defaultColor
-                val endColor = ContextCompat.getColor(requireContext(),R.color.colorToolbar)
+                val endColor = ContextCompat.getColor(requireContext(),R.color.white)
 
                 val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), startColor, endColor)
                 colorAnimation.duration = 500 // duration in milliseconds
