@@ -16,8 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentVolumeDownBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class VolumeDownFragment : BaseFragment() {
@@ -25,8 +24,7 @@ class VolumeDownFragment : BaseFragment() {
     private var _binding: FragmentVolumeDownBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,20 +41,17 @@ class VolumeDownFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(12, "yes")
-            viewModel.responses[12] = true
-          navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(12, "yes")
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            viewModel.responses[12] = false
-            sharedViewModel.addButtonClick(12, "no")
+            ButtonClickTracker.addButtonClick(12, "no")
             navigateToResultFragment()
         }
 
@@ -72,6 +67,7 @@ class VolumeDownFragment : BaseFragment() {
             .build()
         findNavController().navigate(R.id.deviceTestingResultFragment, null, navOptions)
     }
+
     override fun onResume() {
         super.onResume()
 
@@ -103,7 +99,12 @@ class VolumeDownFragment : BaseFragment() {
         vibrator?.let {
             if (it.hasVibrator()) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    it.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE))
+                    it.vibrate(
+                        VibrationEffect.createOneShot(
+                            500,
+                            VibrationEffect.DEFAULT_AMPLITUDE
+                        )
+                    )
                 } else {
                     it.vibrate(500)
                 }

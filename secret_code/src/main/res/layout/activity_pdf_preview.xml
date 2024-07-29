@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pdfBgColor"
+    tools:context=".decicetesting.activity.PdfPreviewActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_50sdp"
+      android:background="@color/white"
+      android:contentInsetStart="0dp"
+      android:elevation="@dimen/_10sdp"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/ic_back"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preview_pdf"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSharePdf"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnSharePdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_share_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <ScrollView
+      android:id="@+id/clMain"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:fillViewport="true"
+      android:scrollbars="none"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@color/white"
+        android:visibility="visible">
+
+      <LinearLayout
+          android:id="@+id/llAppIcon"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:gravity="center"
+          android:orientation="horizontal"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_14sdp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/tvAppVersion"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/version"
+              android:textColor="@color/darkGrey"
+              android:textSize="@dimen/_13sdp"
+              android:textStyle="bold" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <View
+          android:id="@+id/appIconView"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_1sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:background="@color/textGrey"
+          app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+      <TextView
+          android:id="@+id/tvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:text="@string/device_result"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/_16sdp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/appIconView" />
+
+      <ImageView
+          android:id="@+id/ivShowResult"
+          android:layout_width="@dimen/_100sdp"
+          android:layout_height="@dimen/_150sdp"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:src="@drawable/ic_device_test_result"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+      <TextView
+          android:id="@+id/tvResultPercentage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_2sdp"
+          android:layout_marginBottom="@dimen/_14sdp"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/_24sdp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/ivShowResult"
+          app:layout_constraintEnd_toEndOf="@+id/ivShowResult"
+          app:layout_constraintStart_toStartOf="@+id/ivShowResult"
+          app:layout_constraintTop_toTopOf="@+id/ivShowResult" />
+
+      <TextView
+          android:id="@+id/tvResultText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:textColor="@color/colorToolbar"
+          android:textSize="@dimen/_16sdp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ivShowResult" />
+
+      <TextView
+          android:id="@+id/tvDeviceCondition"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          android:gravity="center"
+          android:textColor="@color/textColor"
+          android:textSize="@dimen/_14sdp"
+          app:layout_constraintTop_toBottomOf="@+id/tvResultText" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:layout_marginBottom="@dimen/_10sdp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvDeviceCondition">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivDisplay"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_display"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/display"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivDisplayChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivDisplay"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivDisplayChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivFlashlight"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_flashlight"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/flashlight"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivFlashlightChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivFlashlight"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivFlashlightChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivLoudSpeaker"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_loud_speaker"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/loud_speaker"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivLoudSpeakerChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivLoudSpeaker"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivLoudSpeakerChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivEarSpeaker"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_ear_speaker"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/ear_speaker"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivEarSpeakerChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivEarSpeaker"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivEarSpeakerChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/edit_contact_blue">
+
+          <ImageView
+              android:id="@+id/ivMicrophone"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_micro_phone"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/microphone"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivMicrophoneChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivMicrophone"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivMicrophoneChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivEarProximity"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_ear_proximity"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/ear_proximity"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivEarProximityChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivEarProximity"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivEarProximityChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivLightSensor"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_light_sensor"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/light_sensor"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivLightSensorChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivLightSensor"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivLightSensorChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivAccelerometer"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_accelerometer"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/accelerometer"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivAccelerometerChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivAccelerometer"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivAccelerometerChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivCharging"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_charging_details"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/charging"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivChargingChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivCharging"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivChargingChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivVibration"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_vibration"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/vibration"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivVibrationChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivVibration"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivVibrationChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivBluetooth"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_device_bluetooth"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/bluetooth"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivBluetoothChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivBluetooth"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivBluetoothChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivVolumeUp"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_volume_up"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/volume_up"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivVolumeUpChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivVolumeUp"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivVolumeUpChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/textGrey"
+            app:layout_constraintTop_toBottomOf="@+id/llAppIcon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+          <ImageView
+              android:id="@+id/ivVolumeDown"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              android:src="@drawable/ic_volume_down"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:layout_marginEnd="@dimen/_10sdp"
+              android:text="@string/volume_down"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_15sdp"
+
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/ivVolumeDownChecked"
+              app:layout_constraintStart_toEndOf="@+id/ivVolumeDown"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+          <ImageView
+              android:id="@+id/ivVolumeDownChecked"
+              android:layout_width="@dimen/_22sdp"
+              android:layout_height="@dimen/_22sdp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+      </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

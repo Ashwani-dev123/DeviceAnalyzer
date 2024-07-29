@@ -19,8 +19,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentEarProximityBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 class EarProximityFragment : BaseFragment() {
 
@@ -29,8 +28,7 @@ class EarProximityFragment : BaseFragment() {
     private lateinit var sensorManager: SensorManager
     private var proximitySensor: Sensor? = null
     private lateinit var vibrator: Vibrator
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
     private val proximitySensorListener: SensorEventListener = object : SensorEventListener {
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -49,6 +47,7 @@ class EarProximityFragment : BaseFragment() {
             }
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -61,32 +60,32 @@ class EarProximityFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
-        sensorManager = requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
+        sensorManager =
+            requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
 
-        vibrator = requireActivity().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
+        vibrator =
+            requireActivity().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
 
         if (proximitySensor == null) {
-            Toast.makeText(requireActivity(), "Proximity sensor not available", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(), "Proximity sensor not available", Toast.LENGTH_SHORT)
+                .show()
         }
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(5, "yes")
-            viewModel.responses[5] = true
+            ButtonClickTracker.addButtonClick(5, "yes")
             stopVibration()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(5, "no")
-            viewModel.responses[5] = false
+            ButtonClickTracker.addButtonClick(5, "no")
             stopVibration()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
     }
 
@@ -101,7 +100,8 @@ class EarProximityFragment : BaseFragment() {
     }
 
     private fun startVibration() {
-        vibrator = requireActivity().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
+        vibrator =
+            requireActivity().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
 
         if (vibrator != null && vibrator.hasVibrator()) {
             // Check if the device has a vibrator
@@ -137,7 +137,11 @@ class EarProximityFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         proximitySensor?.also { sensor ->
-            sensorManager.registerListener(proximitySensorListener, sensor, SensorManager.SENSOR_DELAY_NORMAL)
+            sensorManager.registerListener(
+                proximitySensorListener,
+                sensor,
+                SensorManager.SENSOR_DELAY_NORMAL
+            )
         }
     }
 

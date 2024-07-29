@@ -666,6 +666,8 @@ adb shell rm /data/system/gesture.key
     <string name="your_device_bluetooth_is_on">بلوتوث جهازك قيد التشغيل</string>
     <string name="test_pass">نجح الاختبار</string>
     <string name="test_failed">فشل الاختبار</string>
+    <string name="device_analyzer_amp_info"><![CDATA[محلل الجهاز والمعلومات]]></string>
+    <string name="discharging">التفريغ</string>
 
 
 

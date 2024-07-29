@@ -15,8 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentLightSensorBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class LightSensorFragment : BaseFragment(), SensorEventListener {
@@ -24,8 +23,7 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
     private val binding get() = _binding!!
     private lateinit var sensorManager: SensorManager
     private var lightSensor: Sensor? = null
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,10 +41,10 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
-        sensorManager = requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
+        sensorManager =
+            requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
 
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
@@ -56,16 +54,14 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(6, "yes")
-            viewModel.responses[6] = true
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(6, "yes")
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(6, "no")
-            viewModel.responses[6] = false
-          navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(6, "no")
+            navigateToResultFragment()
         }
     }
 
@@ -103,6 +99,7 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
         super.onDestroyView()
         _binding = null
     }
+
     override fun onPause() {
         super.onPause()
         sensorManager.unregisterListener(this)

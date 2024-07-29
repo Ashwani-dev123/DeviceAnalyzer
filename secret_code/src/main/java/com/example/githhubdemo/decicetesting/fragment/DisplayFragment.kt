@@ -13,8 +13,7 @@ import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentDisplayBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
 import com.example.githhubdemo.decicetesting.activity.DisplayPreviewActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class DisplayFragment : BaseFragment() {
@@ -22,8 +21,7 @@ class DisplayFragment : BaseFragment() {
     private var _binding: FragmentDisplayBinding? = null
     private val binding get() = _binding!!
     private var LAUNCH_DISPLAY_PREVIEW_ACTIVITY = 1
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,8 +40,7 @@ class DisplayFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         binding.btnNext.setOnClickListener {
             val i = Intent(requireActivity(), DisplayPreviewActivity::class.java)
@@ -53,8 +50,7 @@ class DisplayFragment : BaseFragment() {
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(0, "no")
-            viewModel.responses[0] = false
+             ButtonClickTracker.addButtonClick(0, "no")
             val navOptions = NavOptions.Builder()
                 .setEnterAnim(R.anim.slide_in_right)
                 .setExitAnim(R.anim.slide_out_left)
@@ -66,8 +62,7 @@ class DisplayFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(0, "yes")
-            viewModel.responses[0] = true
+            ButtonClickTracker.addButtonClick(0, "yes")
             val navOptions = NavOptions.Builder()
                 .setEnterAnim(R.anim.slide_in_right)
                 .setExitAnim(R.anim.slide_out_left)

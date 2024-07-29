@@ -652,5 +652,8 @@ Dos servicios basados en el GPS, a saber, el Historial de ubicaciones y la Infor
     <string name="test_pass">Prueba aprobada</string>
     <string name="test_failed">Prueba fallida</string>
 
+    <string name="device_analyzer_amp_info"><![CDATA[Analizador de Dispositivos & Info]]></string>
+    <string name="discharging">Descargando</string>
+
 
 </resources>

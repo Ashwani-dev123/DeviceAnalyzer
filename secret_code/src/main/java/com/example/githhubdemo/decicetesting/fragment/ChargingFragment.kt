@@ -15,8 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentChargingBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 import kotlin.math.abs
 
 
@@ -27,8 +26,7 @@ class ChargingFragment : BaseFragment() {
 
     private var batteryReceiver: BroadcastReceiver? = null
 
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -45,23 +43,20 @@ class ChargingFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         receiver()
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(8, "yes")
-            viewModel.responses[8] = true
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(8, "yes")
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(8, "no")
-            viewModel.responses[8] = false
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(8, "no")
+            navigateToResultFragment()
         }
     }
 
@@ -85,9 +80,9 @@ class ChargingFragment : BaseFragment() {
                             status == BatteryManager.BATTERY_STATUS_FULL
 
                     if (isCharging) {
-                        binding.tvCharging.text = "Charging"
+                        binding.tvCharging.text = requireContext().getString(R.string.charging)
                     } else {
-                        binding.tvCharging.text = "Discharging"
+                        binding.tvCharging.text = requireContext().getString(R.string.discharging)
                     }
 
                     val level: Int = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
@@ -107,8 +102,10 @@ class ChargingFragment : BaseFragment() {
 
                     binding.tvVoltage.text = "$voltageMilliVolts mV"
 
-                    val batteryManager = context!!.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-                    val currentMicroAmps = batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)
+                    val batteryManager =
+                        context!!.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
+                    val currentMicroAmps =
+                        batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)
                     val currentMilliAmps = abs(currentMicroAmps / 1000f)
 
                     binding.tvCurrent.text = "${currentMilliAmps.toInt()} mA"

@@ -667,5 +667,8 @@ C\'est tout ! Le mot est maintenant ajouté au dictionnaire de votre téléphone
     <string name="test_pass">Test réussi</string>
     <string name="test_failed">Test échoué</string>
 
+    <string name="device_analyzer_amp_info"><![CDATA[Analyseur de Dispositif & Info]]></string>
+    <string name="discharging">Décharge</string>
+
 
 </resources>

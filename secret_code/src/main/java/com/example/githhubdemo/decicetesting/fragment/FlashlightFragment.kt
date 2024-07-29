@@ -13,8 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentFlashlightBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 class FlashlightFragment : BaseFragment() {
 
@@ -23,8 +22,7 @@ class FlashlightFragment : BaseFragment() {
     private var isFlashlightOn = false
     private lateinit var cameraManager: CameraManager
     private lateinit var cameraId: String
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,10 +41,10 @@ class FlashlightFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
-        cameraManager = requireActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE) as CameraManager
+        cameraManager =
+            requireActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE) as CameraManager
         cameraId = getCameraId()
 
         turnOnFlashlight()
@@ -55,20 +53,19 @@ class FlashlightFragment : BaseFragment() {
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(1, "no")
-            viewModel.responses[1] = false
+            ButtonClickTracker.addButtonClick(1, "no")
             turnOffFlashlight()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            viewModel.responses[1] = true
-            sharedViewModel.addButtonClick(1, "yes")
+            ButtonClickTracker.addButtonClick(1, "yes")
             turnOffFlashlight()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
     }
+
     private fun navigateToResultFragment() {
         val navOptions = NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)
@@ -76,7 +73,7 @@ class FlashlightFragment : BaseFragment() {
             .setPopEnterAnim(R.anim.slide_in_left)
             .setPopExitAnim(R.anim.slide_out_right)
             .build()
-        findNavController().navigate(R.id.loudSpeakerFragment,null, navOptions)
+        findNavController().navigate(R.id.loudSpeakerFragment, null, navOptions)
     }
 
     private fun getCameraId(): String {

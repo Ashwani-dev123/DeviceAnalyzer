@@ -15,8 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentEarSpeakerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 class EarSpeakerFragment : BaseFragment() {
     private var _binding: FragmentEarSpeakerBinding? = null
@@ -24,8 +23,7 @@ class EarSpeakerFragment : BaseFragment() {
     private var audioFocusRequest: AudioFocusRequest? = null
     private var mediaPlayer: MediaPlayer? = null
     private var audioManager: AudioManager? = null
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,25 +40,23 @@ class EarSpeakerFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
-        audioManager = requireActivity().getSystemService(AppCompatActivity.AUDIO_SERVICE) as AudioManager?
+        audioManager =
+            requireActivity().getSystemService(AppCompatActivity.AUDIO_SERVICE) as AudioManager?
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            viewModel.responses[3] = true
-            sharedViewModel.addButtonClick(3, "yes")
+            ButtonClickTracker.addButtonClick(3, "yes")
             resetAudioToDefault()
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            viewModel.responses[3] = false
-            sharedViewModel.addButtonClick(3, "no")
+            ButtonClickTracker.addButtonClick(3, "no")
             resetAudioToDefault()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
     }
@@ -75,12 +71,16 @@ class EarSpeakerFragment : BaseFragment() {
             .build()
         findNavController().navigate(R.id.microphoneFragment, null, navOptions)
     }
+
     override fun onResume() {
         super.onResume()
         setAudioToEarpiece()
 
         mediaPlayer =
-            MediaPlayer.create(requireActivity(), R.raw.simple_ringtone) // replace with your audio file
+            MediaPlayer.create(
+                requireActivity(),
+                R.raw.simple_ringtone
+            ) // replace with your audio file
 
         mediaPlayer!!.start()
     }

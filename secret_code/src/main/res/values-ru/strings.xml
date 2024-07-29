@@ -654,5 +654,8 @@ adb shell rm /data/system/gesture.key\n
     <string name="test_pass">Тест пройден</string>
     <string name="test_failed">Тест не пройден</string>
 
+    <string name="device_analyzer_amp_info"><![CDATA[Анализатор устройства и информация]]></string>
+    <string name="discharging">Разрядка</string>
+
 
 </resources>

@@ -17,8 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentVolumeUpBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class VolumeUpFragment : BaseFragment() {
@@ -26,8 +25,7 @@ class VolumeUpFragment : BaseFragment() {
     private var _binding: FragmentVolumeUpBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,21 +44,18 @@ class VolumeUpFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(11, "yes")
-            viewModel.responses[11] = true
+            ButtonClickTracker.addButtonClick(11, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(11, "no")
-            viewModel.responses[11] = false
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(11, "no")
+            navigateToResultFragment()
         }
 
 
@@ -84,6 +79,7 @@ class VolumeUpFragment : BaseFragment() {
                     performVibration()
                     true
                 }
+
                 else -> false
             }
         } else {
@@ -92,7 +88,8 @@ class VolumeUpFragment : BaseFragment() {
     }
 
     private fun adjustVolume(direction: Int) {
-        val audioManager = requireContext().getSystemService(AppCompatActivity.AUDIO_SERVICE) as AudioManager
+        val audioManager =
+            requireContext().getSystemService(AppCompatActivity.AUDIO_SERVICE) as AudioManager
         audioManager.adjustStreamVolume(
             AudioManager.STREAM_MUSIC,
             direction,
@@ -105,7 +102,12 @@ class VolumeUpFragment : BaseFragment() {
         vibrator?.let {
             if (it.hasVibrator()) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    it.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE))
+                    it.vibrate(
+                        VibrationEffect.createOneShot(
+                            500,
+                            VibrationEffect.DEFAULT_AMPLITUDE
+                        )
+                    )
                 } else {
                     it.vibrate(500)
                 }

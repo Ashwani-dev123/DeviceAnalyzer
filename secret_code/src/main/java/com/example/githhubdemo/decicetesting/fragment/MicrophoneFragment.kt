@@ -20,8 +20,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentMicrophoneBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 import org.jtransforms.fft.DoubleFFT_1D
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -42,8 +41,7 @@ class MicrophoneFragment : BaseFragment() {
     private val noiseThreshold = 50
     private val movingAverageWindow = 5
     private val frequencyBuffer = mutableListOf<Int>()
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
     private var recordingThread: Thread? = null
     private var isRecording = false
@@ -63,22 +61,19 @@ class MicrophoneFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         checkPermission()
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(4, "yes")
-            viewModel.responses[4] = true
+            ButtonClickTracker.addButtonClick(4, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(4, "no")
-            viewModel.responses[4] = false
+            ButtonClickTracker.addButtonClick(4, "no")
             navigateToResultFragment()
         }
     }
@@ -136,7 +131,7 @@ class MicrophoneFragment : BaseFragment() {
                 arrayOf(RECORD_AUDIO),
                 PERMISSION_REQUEST_CODE
             )
-        }else {
+        } else {
             audioRecord = AudioRecord(
                 MediaRecorder.AudioSource.MIC,
                 sampleRate,

@@ -30,6 +30,7 @@
             android:id="@+id/tvToolbar"
             android:layout_marginEnd="@dimen/_5sdp"
             android:layout_marginStart="@dimen/_5sdp"
+            android:singleLine="true"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

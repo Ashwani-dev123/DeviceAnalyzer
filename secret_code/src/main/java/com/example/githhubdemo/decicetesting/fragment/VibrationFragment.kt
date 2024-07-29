@@ -14,8 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentVibrationBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 class VibrationFragment : BaseFragment() {
 
@@ -23,12 +22,12 @@ class VibrationFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private lateinit var vibrator: Vibrator
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,8 +39,7 @@ class VibrationFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
 
         vibrator = requireContext().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
@@ -50,18 +48,16 @@ class VibrationFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(9, "yes")
-            viewModel.responses[9] = true
+            ButtonClickTracker.addButtonClick(9, "yes")
             stopVibration()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(9, "no")
-            viewModel.responses[9] = false
+            ButtonClickTracker.addButtonClick(9, "no")
             stopVibration()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
     }
 
@@ -92,6 +88,7 @@ class VibrationFragment : BaseFragment() {
         }
 
     }
+
     override fun onDestroy() {
         super.onDestroy()
         if (vibrator != null) {

@@ -11,8 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentLoudSpeakerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class LoudSpeakerFragment : BaseFragment() {
@@ -21,8 +20,7 @@ class LoudSpeakerFragment : BaseFragment() {
     private val binding get() = _binding!!
     private lateinit var mediaPlayer: MediaPlayer
 
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,8 +37,7 @@ class LoudSpeakerFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.simple_ringtone)
 
@@ -49,16 +46,14 @@ class LoudSpeakerFragment : BaseFragment() {
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(2, "no")
-            viewModel.responses[2] = false
+            ButtonClickTracker.addButtonClick(2, "no")
             stopSound()
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(2, "yes")
-            viewModel.responses[2] = true
+            ButtonClickTracker.addButtonClick(2, "yes")
             stopSound()
             navigateToResultFragment()
         }

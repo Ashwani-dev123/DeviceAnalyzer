@@ -21,8 +21,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentBluetoothBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 
 
 class BluetoothFragment : BaseFragment() {
@@ -33,8 +32,7 @@ class BluetoothFragment : BaseFragment() {
     private val REQUEST_ENABLE_BT = 1
     private val REQUEST_BLUETOOTH_CONNECT_PERMISSION = 2
 
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -52,12 +50,17 @@ class BluetoothFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            if (ContextCompat.checkSelfPermission(requireContext(), BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(requireActivity(), arrayOf(BLUETOOTH_CONNECT), REQUEST_BLUETOOTH_CONNECT_PERMISSION)
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    BLUETOOTH_CONNECT
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(BLUETOOTH_CONNECT),
+                    REQUEST_BLUETOOTH_CONNECT_PERMISSION
+                )
             } else {
                 checkBluetooth()
             }
@@ -70,16 +73,14 @@ class BluetoothFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(10, "yes")
-            viewModel.responses[10] = true
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(10, "yes")
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(10, "no")
-            viewModel.responses[10] = false
-           navigateToResultFragment()
+            ButtonClickTracker.addButtonClick(10, "no")
+            navigateToResultFragment()
         }
     }
 
@@ -94,12 +95,12 @@ class BluetoothFragment : BaseFragment() {
             if (!bluetoothAdapter.isEnabled) {
                 val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
-            }
-            else {
+            } else {
                 binding.tvBluetoothIsON.isVisible = true
             }
         }
     }
+
     private fun navigateToResultFragment() {
 
         val navOptions = NavOptions.Builder()
@@ -123,7 +124,11 @@ class BluetoothFragment : BaseFragment() {
             .show()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_BLUETOOTH_CONNECT_PERMISSION) {
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
@@ -134,6 +139,7 @@ class BluetoothFragment : BaseFragment() {
             }
         }
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_ENABLE_BT) {

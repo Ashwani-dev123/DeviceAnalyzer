@@ -652,5 +652,8 @@ Dwa usługi oparte na GPS, a mianowicie Historia lokalizacji i Raportowanie loka
     <string name="test_pass">Test zaliczony</string>
     <string name="test_failed">Test nieudany</string>
 
+    <string name="device_analyzer_amp_info"><![CDATA[Analizator Urządzeń & Info]]></string>
+    <string name="discharging">Rozładowywanie</string>
+
 
 </resources>

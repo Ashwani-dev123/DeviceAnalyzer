@@ -12,9 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentAccelerometerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
+import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 import com.example.githhubdemo.decicetesting.utils.ShakeDetector
-import com.example.githhubdemo.decicetesting.utils.FeatureTestViewModel
-import com.example.githhubdemo.decicetesting.utils.SharedViewModel
 
 
 class AccelerometerFragment : BaseFragment(), ShakeDetector.OnShakeListener {
@@ -24,8 +23,7 @@ class AccelerometerFragment : BaseFragment(), ShakeDetector.OnShakeListener {
 
     private lateinit var shakeDetector: ShakeDetector
     private lateinit var vibrator: Vibrator
-    private lateinit var sharedViewModel: SharedViewModel
-    private lateinit var viewModel: FeatureTestViewModel
+   
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,23 +41,20 @@ class AccelerometerFragment : BaseFragment(), ShakeDetector.OnShakeListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[FeatureTestViewModel::class.java]
+       
 
         vibrator = requireActivity().getSystemService(AppCompatActivity.VIBRATOR_SERVICE) as Vibrator
         shakeDetector = ShakeDetector(requireContext(), this)
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(7, "yes")
-            viewModel.responses[7] = true
+            ButtonClickTracker.addButtonClick(7, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            sharedViewModel.addButtonClick(7, "no")
-            viewModel.responses[7] = false
+            ButtonClickTracker.addButtonClick(7, "no")
            navigateToResultFragment()
         }
 

@@ -661,5 +661,9 @@ adb shell rm /data/system/gesture.key\n
     <string name="test_pass">测试通过</string>
     <string name="test_failed">测试失败</string>
 
+    <string name="device_analyzer_amp_info"><![CDATA[设备分析器 & 信息]]></string>
+    <string name="discharging">放电中</string>
+
+
 
 </resources>
