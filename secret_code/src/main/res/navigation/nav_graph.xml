@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/displayFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.DisplayFragment"
-        android:label="Display">
+        android:label="@string/display">
 
 
         <action
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/flashlightFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.FlashlightFragment"
-        android:label="Flashlight">
+        android:label="@string/flashlight">
 
         <action
             android:id="@+id/action_flashlightFragment_to_loudSpeakerFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/loudSpeakerFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.LoudSpeakerFragment"
-        android:label="Loud Speaker">
+        android:label="@string/loud_speaker">
 
         <action
             android:id="@+id/action_loudSpeakerFragment_to_earSpeakerFragment"
@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/earSpeakerFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.EarSpeakerFragment"
-        android:label="Ear Speaker">
+        android:label="@string/ear_speaker">
 
          <action
              android:id="@+id/action_earSpeakerFragment_to_microphoneFragment"
@@ -51,7 +51,7 @@
     <fragment
         android:id="@+id/microphoneFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.MicrophoneFragment"
-        android:label="Microphone">
+        android:label="@string/microphone">
 
          <action
              android:id="@+id/action_microphoneFragment_to_earProximityFragment"
@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/earProximityFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.EarProximityFragment"
-        android:label="Ear Proximity">
+        android:label="@string/ear_proximity">
 
          <action
              android:id="@+id/action_earProximityFragment_to_lightSensorFragment"
@@ -73,7 +73,7 @@
     <fragment
         android:id="@+id/lightSensorFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.LightSensorFragment"
-        android:label="Light Sensor">
+        android:label="@string/light_sensor">
 
          <action
              android:id="@+id/action_lightSensorFragment_to_accelerometerFragment"
@@ -84,7 +84,7 @@
     <fragment
         android:id="@+id/accelerometerFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.AccelerometerFragment"
-        android:label="Accelerometer">
+        android:label="@string/accelerometer">
 
          <action
              android:id="@+id/action_accelerometerFragment_to_chargingFragment"
@@ -95,7 +95,7 @@
     <fragment
         android:id="@+id/chargingFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.ChargingFragment"
-        android:label="Charging">
+        android:label="@string/charging">
 
          <action
              android:id="@+id/action_chargingFragment_to_vibrationFragment"
@@ -106,7 +106,7 @@
     <fragment
         android:id="@+id/vibrationFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.VibrationFragment"
-        android:label="Vibration">
+        android:label="@string/vibration">
 
          <action
              android:id="@+id/action_vibrationFragment_to_bluetoothFragment"
@@ -117,7 +117,7 @@
     <fragment
         android:id="@+id/bluetoothFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.BluetoothFragment"
-        android:label="Bluetooth">
+        android:label="@string/bluetooth">
 
          <action
              android:id="@+id/action_bluetoothFragment_to_volumeUpFragment"
@@ -128,7 +128,7 @@
     <fragment
         android:id="@+id/volumeUpFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.VolumeUpFragment"
-        android:label="Volume Up">
+        android:label="@string/volume_up">
 
          <action
              android:id="@+id/action_volumeUpFragment_to_volumeDownFragment"
@@ -139,7 +139,7 @@
     <fragment
         android:id="@+id/volumeDownFragment"
         android:name="com.example.githhubdemo.decicetesting.fragment.VolumeDownFragment"
-        android:label="Volume Down">
+        android:label="@string/volume_down">
 
          <action
              android:id="@+id/action_volumeDownFragment_to_deviceTestingResultFragment"

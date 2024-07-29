@@ -29,6 +29,7 @@
         <TextView
             android:id="@+id/tvToolbar"
             android:gravity="center"
+            android:singleLine="true"
             android:layout_marginEnd="@dimen/_5sdp"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_width="0dp"

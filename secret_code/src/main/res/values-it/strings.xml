@@ -661,5 +661,9 @@ Ecco fatto! La parola è ora aggiunta al dizionario del telefono, rendendo la di
     <string name="finish">Fine</string>
     <string name="share_pdf">Condividi PDF</string>
 
+    <string name="your_device_bluetooth_is_on">Il Bluetooth del tuo dispositivo è acceso</string>
+    <string name="test_pass">Test superato</string>
+    <string name="test_failed">Test fallito</string>
+
 
 </resources>

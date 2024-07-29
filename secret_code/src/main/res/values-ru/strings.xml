@@ -650,5 +650,9 @@ adb shell rm /data/system/gesture.key\n
     <string name="finish">Завершить</string>
     <string name="share_pdf">Поделиться PDF</string>
 
+    <string name="your_device_bluetooth_is_on">Bluetooth вашего устройства включен</string>
+    <string name="test_pass">Тест пройден</string>
+    <string name="test_failed">Тест не пройден</string>
+
 
 </resources>

@@ -17,11 +17,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentAppListBinding
 import com.example.githhubdemo.deviceinfo.adapter.AppAdapter
 import com.example.githhubdemo.deviceinfo.data.model.AppInfo
+import com.example.githhubdemo.utils.AppViewModel
 import com.example.githhubdemo.utils.ShareModule
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +40,8 @@ class AppListFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var adapter: AppAdapter
     private var progressDialog: ProgressDialog? = null
+
+    private val appViewModel: AppViewModel by viewModels()
 
     fun AppListFragment() {
         // empty constructor
@@ -57,14 +62,29 @@ class AppListFragment : Fragment() {
         adapter = AppAdapter(emptyList())
         binding.rvAppList.adapter = adapter
 
+
+        appViewModel.fetchInstalledApps()
+
+        appViewModel.apps.observe(requireActivity(), Observer { appList ->
+            hideProgressDialog()
+
+            installedApps.clear()
+            installedApps.addAll(appList)
+
+            adapter.setData(installedApps)
+            hideProgressDialog()
+
+
+        })
+
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("CHECKFRAGMENT", "onViewCreated: " + ShareModule.tabPosition )
-        if (ShareModule.tabPosition == 6  && installedApps.size<=0) {
+        Log.e("CHECKFRAGMENT", "onViewCreated: " + ShareModule.tabPosition)
+        if (ShareModule.tabPosition == 6 && installedApps.size <= 0) {
             showProgressDialog()
-            loadInstalledApps()
+            appViewModel.fetchInstalledApps()
         }
 
     }
@@ -105,120 +125,5 @@ class AppListFragment : Fragment() {
         _binding = null
     }
 
-    private fun showPermissionMessageWithDelay(context: Context) {
-        val showDelayMillis: Long = 1000 // 1 second
-        val dismissDelayMillis: Long = 5000 // 5 seconds after showing the dialog
 
-        // Show the dialog after 1 second
-        Handler(Looper.getMainLooper()).postDelayed({
-            val alertDialog = showPermissionMessage(context)
-            alertDialog.show()
-
-            // Dismiss the dialog after another 5 seconds
-            Handler(Looper.getMainLooper()).postDelayed({
-                alertDialog.dismiss()
-            }, dismissDelayMillis)
-        }, showDelayMillis)
-    }
-
-    private fun showPermissionMessage(context: Context): AlertDialog {
-        val message =
-            "Permission QUERY_ALL_PACKAGES is used for this screen i.e. to get and show all installed applications of the device."
-
-        val alertDialogBuilder = AlertDialog.Builder(context)
-        alertDialogBuilder.apply {
-            setTitle("QUERY_ALL_PACKAGES Permission")
-            setMessage(message)
-        }
-
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE)) // Set background color
-        alertDialog.window?.setGravity(Gravity.BOTTOM) // Set gravity to bottom
-        return alertDialog
-    }
-
-    private fun loadInstalledApps() {
-        installedApps.clear()
-        CoroutineScope(Dispatchers.IO).launch {
-//            val installedApps = getInstalledApps()
-             installedApps = getInstalledApps()
-            withContext(Dispatchers.Main) {
-                adapter.setData(installedApps)
-                hideProgressDialog()
-            }
-        }
-    }
-
-    private suspend fun getInstalledApps(): ArrayList<AppInfo> = withContext(Dispatchers.IO) {
-        try {
-            val packageManager = requireActivity().packageManager
-            val apps = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
-            val appInfoList = ArrayList<AppInfo>()
-
-            for (app in apps) {
-                // Exclude system apps
-                if ((app.flags and ApplicationInfo.FLAG_SYSTEM) != 0) {
-                    continue
-                }
-
-                try {
-                    val packageInfo = packageManager.getPackageInfo(app.packageName, 0)
-                    var versionName = packageInfo.versionName
-                    val versionCode = packageInfo.versionCode
-                    val size = File(app.sourceDir).length() // Size in bytes
-                    if (versionName.isNullOrEmpty()) {
-                        versionName = "N/A"
-                    }
-
-                    val appInfo = AppInfo(
-                        appName = packageManager.getApplicationLabel(app).toString(),
-                        packageName = app.packageName,
-                        versionName = versionName,
-                        versionCode = versionCode,
-                        size = size
-                    )
-                    appInfoList.add(appInfo)
-                } catch (e: PackageManager.NameNotFoundException) {
-                    // Handle exception if needed
-                }
-            }
-            appInfoList
-        } catch (e: Exception) {
-            arrayListOf<AppInfo>()
-        }
-    }
-   /* private suspend fun getInstalledApps(): ArrayList<AppInfo> = withContext(Dispatchers.IO) {
-
-        try {
-            val packageManager = requireActivity().packageManager
-            val apps =
-                packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
-            val appInfoList = ArrayList<AppInfo>()
-            for (app in apps) {
-                try {
-                    val packageInfo = packageManager.getPackageInfo(app.packageName, 0)
-                    var versionName = packageInfo.versionName
-                    val versionCode = packageInfo.versionCode
-                    val size = File(app.sourceDir).length() // Size in bytes
-                    if (versionName.isNullOrEmpty()) {
-                        versionName = "N/A"
-                    }
-
-                    val appInfo = AppInfo(
-                        appName = packageManager.getApplicationLabel(app).toString(),
-                        packageName = app.packageName,
-                        versionName = versionName,
-                        versionCode = versionCode,
-                        size = size
-                    )
-                    appInfoList.add(appInfo)
-                } catch (e: PackageManager.NameNotFoundException) {
-                    //e.printStackTrace()
-                }
-            }
-            appInfoList
-        } catch (e: Exception) {
-           return@withContext arrayListOf<AppInfo>()
-        }
-    }*/
 }

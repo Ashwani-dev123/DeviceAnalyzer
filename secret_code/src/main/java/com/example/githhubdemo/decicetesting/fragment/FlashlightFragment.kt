@@ -104,7 +104,13 @@ class FlashlightFragment : BaseFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        turnOffFlashlight() // Turn off the flashlight when the view is destroyed
         _binding = null
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        turnOffFlashlight() // Ensure flashlight is off when fragment is destroyed
     }
 
 }

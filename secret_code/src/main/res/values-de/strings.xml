@@ -664,5 +664,9 @@ Das war\'s! Das Wort wurde jetzt Ihrem Telefonwörterbuch hinzugefügt, was das 
     <string name="finish">Fertig</string>
     <string name="share_pdf">PDF teilen</string>
 
+    <string name="your_device_bluetooth_is_on">Bluetooth Ihres Geräts ist eingeschaltet</string>
+    <string name="test_pass">Test bestanden</string>
+    <string name="test_failed">Test fehlgeschlagen</string>
+
 
 </resources>

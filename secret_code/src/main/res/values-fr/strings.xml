@@ -663,5 +663,9 @@ C\'est tout ! Le mot est maintenant ajouté au dictionnaire de votre téléphone
     <string name="finish">Terminer</string>
     <string name="share_pdf">Partager PDF</string>
 
+    <string name="your_device_bluetooth_is_on">Le Bluetooth de votre appareil est activé</string>
+    <string name="test_pass">Test réussi</string>
+    <string name="test_failed">Test échoué</string>
+
 
 </resources>

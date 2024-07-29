@@ -657,5 +657,9 @@ adb shell rm /data/system/gesture.key\n
     <string name="finish">完成</string>
     <string name="share_pdf">分享PDF</string>
 
+    <string name="your_device_bluetooth_is_on">您的设备蓝牙已开启</string>
+    <string name="test_pass">测试通过</string>
+    <string name="test_failed">测试失败</string>
+
 
 </resources>

@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
@@ -94,6 +95,9 @@ class BluetoothFragment : BaseFragment() {
                 val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
             }
+            else {
+                binding.tvBluetoothIsON.isVisible = true
+            }
         }
     }
     private fun navigateToResultFragment() {
@@ -135,10 +139,10 @@ class BluetoothFragment : BaseFragment() {
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode == AppCompatActivity.RESULT_OK) {
 
-                binding.tvDetails.text = "Test Pass"
+                binding.tvDetails.text = getString(R.string.test_pass)
 
             } else {
-                binding.tvDetails.text = "Test Failed"
+                binding.tvDetails.text = getString(R.string.test_failed)
             }
         }
     }

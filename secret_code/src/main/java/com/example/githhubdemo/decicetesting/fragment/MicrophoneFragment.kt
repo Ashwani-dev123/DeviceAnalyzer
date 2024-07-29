@@ -26,29 +26,30 @@ import org.jtransforms.fft.DoubleFFT_1D
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-
 class MicrophoneFragment : BaseFragment() {
 
     private var _binding: FragmentMicrophoneBinding? = null
     private val binding get() = _binding!!
 
     private val sampleRate = 44100
-    private val bufferSize = AudioRecord.getMinBufferSize(sampleRate, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT)
+    private val bufferSize = AudioRecord.getMinBufferSize(
+        sampleRate,
+        AudioFormat.CHANNEL_IN_MONO,
+        AudioFormat.ENCODING_PCM_16BIT
+    )
     private lateinit var audioRecord: AudioRecord
     private val handler = Handler(Looper.getMainLooper())
-    private val noiseThreshold = 50 // Adjust this value as needed
+    private val noiseThreshold = 50
     private val movingAverageWindow = 5
     private val frequencyBuffer = mutableListOf<Int>()
     private lateinit var sharedViewModel: SharedViewModel
     private lateinit var viewModel: FeatureTestViewModel
 
+    private var recordingThread: Thread? = null
+    private var isRecording = false
+
     companion object {
         const val PERMISSION_REQUEST_CODE = 200
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -58,7 +59,6 @@ class MicrophoneFragment : BaseFragment() {
         _binding = FragmentMicrophoneBinding.inflate(layoutInflater)
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,7 +72,7 @@ class MicrophoneFragment : BaseFragment() {
             DeviceTestingActivity.isPopBackStack = false
             sharedViewModel.addButtonClick(4, "yes")
             viewModel.responses[4] = true
-           navigateToResultFragment()
+            navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
@@ -84,7 +84,6 @@ class MicrophoneFragment : BaseFragment() {
     }
 
     private fun navigateToResultFragment() {
-
         val navOptions = NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)
             .setExitAnim(R.anim.slide_out_left)
@@ -95,8 +94,16 @@ class MicrophoneFragment : BaseFragment() {
     }
 
     private fun checkPermission() {
-        if (ContextCompat.checkSelfPermission(requireContext(), RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(requireActivity(), arrayOf(RECORD_AUDIO), PERMISSION_REQUEST_CODE)
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                RECORD_AUDIO
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(RECORD_AUDIO),
+                PERMISSION_REQUEST_CODE
+            )
         } else {
             startRecording()
         }
@@ -110,10 +117,8 @@ class MicrophoneFragment : BaseFragment() {
         when (requestCode) {
             PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // Permission granted, proceed with accessing the microphone
                     startRecording()
                 } else {
-                    // Permission denied, handle accordingly
                     Toast.makeText(requireContext(), "Permission Denied", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -126,34 +131,40 @@ class MicrophoneFragment : BaseFragment() {
                 RECORD_AUDIO
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return
-        }
-        audioRecord = AudioRecord(MediaRecorder.AudioSource.MIC, sampleRate, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize)
-        audioRecord.startRecording()
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(RECORD_AUDIO),
+                PERMISSION_REQUEST_CODE
+            )
+        }else {
+            audioRecord = AudioRecord(
+                MediaRecorder.AudioSource.MIC,
+                sampleRate,
+                AudioFormat.CHANNEL_IN_MONO,
+                AudioFormat.ENCODING_PCM_16BIT,
+                bufferSize
+            )
+            audioRecord.startRecording()
 
-        Thread {
-            val buffer = ShortArray(bufferSize)
-            while (true) {
-                val readCount = audioRecord.read(buffer, 0, buffer.size)
-                if (readCount > 0) {
-                    val frequency = calculateFrequency(buffer, readCount)
-                    if (frequency > noiseThreshold) {
-                        updateFrequencyBuffer(frequency)
-                        val averageFrequency = frequencyBuffer.average().toInt()
-                        updateProgressBar(averageFrequency)
-                    } else {
-                        updateProgressBar(0)
+            isRecording = true
+            recordingThread = Thread {
+                val buffer = ShortArray(bufferSize)
+                while (isRecording) {
+                    val readCount = audioRecord.read(buffer, 0, buffer.size)
+                    if (readCount > 0) {
+                        val frequency = calculateFrequency(buffer, readCount)
+                        if (frequency > noiseThreshold) {
+                            updateFrequencyBuffer(frequency)
+                            val averageFrequency = frequencyBuffer.average().toInt()
+                            updateProgressBar(averageFrequency)
+                        } else {
+                            updateProgressBar(0)
+                        }
                     }
                 }
             }
-        }.start()
+            recordingThread?.start()
+        }
     }
 
     private fun calculateFrequency(buffer: ShortArray, readCount: Int): Int {
@@ -192,16 +203,29 @@ class MicrophoneFragment : BaseFragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        if (::audioRecord.isInitialized) {
-            audioRecord.stop()
-            audioRecord.release()
-        }
+    override fun onPause() {
+        super.onPause()
+        stopRecording()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        stopRecording()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopRecording()
+    }
+
+    private fun stopRecording() {
+        if (::audioRecord.isInitialized && audioRecord.state == AudioRecord.STATE_INITIALIZED && isRecording) {
+            isRecording = false
+            audioRecord!!.stop()
+            audioRecord!!.release()
+            recordingThread?.interrupt()
+            recordingThread = null
+        }
     }
 }
+

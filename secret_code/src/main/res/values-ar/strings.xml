@@ -663,5 +663,10 @@ adb shell rm /data/system/gesture.key
     <string name="finish">إنهاء</string>
     <string name="share_pdf">مشاركة PDF</string>
 
+    <string name="your_device_bluetooth_is_on">بلوتوث جهازك قيد التشغيل</string>
+    <string name="test_pass">نجح الاختبار</string>
+    <string name="test_failed">فشل الاختبار</string>
+
+
 
 </resources>

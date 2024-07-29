@@ -15,6 +15,16 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/activity_device_testing.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/activity_deviceinfo.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/activity_mobile_brands.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
@@ -45,6 +55,11 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/fragment_container.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/item_information.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
@@ -60,28 +75,52 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/secret_code/src/main/res/layout/system_fragment.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1885ef2a-0368-4561-b8e0-19bed34ca0a6" name="Changes" comment="18/07/2024 implement ads">
+    <list default="true" id="1885ef2a-0368-4561-b8e0-19bed34ca0a6" name="Changes" comment="24/07/2024 implement ads">
+      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/utils/AppRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/utils/AppViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/secret_code/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/AndroidTipsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/AndroidTipsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/AndroidTipsDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/AndroidTipsDetailsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/MobileTrickDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/MobileTrickDetailsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/MobileTricksActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/MobileTricksActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/ModuleMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/ModuleMainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/SecretCodeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/SecretCodeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/SecretCodeListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/activity/SecretCodeListActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_android_tips.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_android_tips.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/BluetoothFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/BluetoothFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/FlashlightFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/FlashlightFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/MicrophoneFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/decicetesting/fragment/MicrophoneFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/deviceinfo/fragment/AppListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/java/com/example/githhubdemo/deviceinfo/fragment/AppListFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_android_tips_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_android_tips_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_mobile_trick_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_mobile_trick_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_device_testing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_device_testing.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_module_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_module_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_secret_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_secret_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_secret_code_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/activity_secret_code_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/app_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/app_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/code_list_adapter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/code_list_adapter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/fragment_app_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/fragment_app_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/layout/fragment_bluetooth.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/layout/fragment_bluetooth.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-ar/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-de/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-de/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-it/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-it/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-pl/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-pl/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-ru/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-ru/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values-zh/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values-zh/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret_code/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/secret_code/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +130,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9620253241000OI]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=ZA222J6S68)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -100,8 +139,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ashwani-dev123&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ashwani-dev123/SecretCode.git&quot;,
+    &quot;accountId&quot;: &quot;41e4fbd3-88df-4120-922d-8cdfae8c3ece&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.7.0/c66c25a939bfe4b18249922dc4e7a19caca8bf68/appcompat-1.7.0-sources.jar!/androidx/appcompat/app/AppCompatActivity.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2jGdCAnPQ0T1ZYDDihrXsPOtcIV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -111,11 +170,20 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;android-custom-viewD:/minhaz/demo/GIthHubDemo/app/src/main/java/com/example/githhubdemo/deviceinfo/widgets/TerminalView.kt_SELECTED&quot;: &quot;TerminalView&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/minhaz/demo/GIthHubDemo&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\PC\\.gradle&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -127,6 +195,7 @@
       <recent name="D:\minhaz\demo\GIthHubDemo" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.githhubdemo.utils" />
       <recent name="com.example.githhubdemo" />
     </key>
   </component>
@@ -146,7 +215,6 @@
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -397,7 +465,39 @@
       <option name="project" value="LOCAL" />
       <updated>1721383238900</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="18/07/2024 implement ads">
+      <option name="closed" value="true" />
+      <created>1721388848766</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1721388848766</updated>
+    </task>
+    <task id="LOCAL-00024" summary="24/07/2024 implement ads">
+      <option name="closed" value="true" />
+      <created>1721817720316</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721817720316</updated>
+    </task>
+    <task id="LOCAL-00025" summary="24/07/2024 implement ads">
+      <option name="closed" value="true" />
+      <created>1721818513557</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721818513557</updated>
+    </task>
+    <task id="LOCAL-00026" summary="24/07/2024 implement ads">
+      <option name="closed" value="true" />
+      <created>1721821947580</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721821947580</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,6 +518,7 @@
     <MESSAGE value="16/07/2024 duplicate strings issue" />
     <MESSAGE value="17/07/2024 duplicate strings issue" />
     <MESSAGE value="18/07/2024 implement ads" />
-    <option name="LAST_COMMIT_MESSAGE" value="18/07/2024 implement ads" />
+    <MESSAGE value="24/07/2024 implement ads" />
+    <option name="LAST_COMMIT_MESSAGE" value="24/07/2024 implement ads" />
   </component>
 </project>

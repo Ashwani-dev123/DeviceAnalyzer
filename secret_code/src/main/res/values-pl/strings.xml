@@ -648,5 +648,9 @@ Dwa usługi oparte na GPS, a mianowicie Historia lokalizacji i Raportowanie loka
     <string name="finish">Zakończ</string>
     <string name="share_pdf">Udostępnij PDF</string>
 
+    <string name="your_device_bluetooth_is_on">Bluetooth Twojego urządzenia jest włączony</string>
+    <string name="test_pass">Test zaliczony</string>
+    <string name="test_failed">Test nieudany</string>
+
 
 </resources>

@@ -23,6 +23,7 @@
 
 
     <ImageView
+        android:id="@+id/ivBluetooth"
         app:layout_constraintBottom_toTopOf="@+id/llButtons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +31,22 @@
         android:src="@drawable/ic_device_bluetooth"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_150sdp"/>
+
+    <TextView
+        android:id="@+id/tvBluetoothIsON"
+        android:visibility="gone"
+        android:text="@string/your_device_bluetooth_is_on"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llButtons"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:id="@+id/llButtons"
