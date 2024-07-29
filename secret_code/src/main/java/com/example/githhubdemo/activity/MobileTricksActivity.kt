@@ -74,7 +74,7 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
         binding.btnBack.setOnClickListener(this)
         binding.lvMobileTricksItem.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
 
-            if (mInterstitialAd!!.isReady) {
+            if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                 NarayanAd.getInstance().forceShowInterstitial(
                     this,
                     mInterstitialAd,
@@ -134,7 +134,7 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
 
     }
     override fun onBackPressed() {
-        if (mInterstitialAd!!.isReady) {
+        if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
             NarayanAd.getInstance().forceShowInterstitial(
                 this,
                 mInterstitialAd,

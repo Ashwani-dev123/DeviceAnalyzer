@@ -670,5 +670,11 @@ adb shell rm /data/system/gesture.key
     <string name="discharging">التفريغ</string>
 
 
+    <string name="preview_pdf">معاينة PDF</string>
+    <string name="download_pdf">تحميل PDF</string>
+    <string name="is_it_charging">هل هو يشحن؟</string>
+    <string name="screen_will_change_colors">ستتغير ألوان الشاشة. ابحث عن أي بقع محترقة أو أي بكسلات بارزة</string>
+    <string name="tap_to_continue">انقر للمتابعة</string>
+
 
 </resources>

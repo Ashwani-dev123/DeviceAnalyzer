@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
@@ -17,31 +17,42 @@
 
         <ImageView
             android:id="@+id/btnBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_back" />
 
         <TextView
             android:id="@+id/tvToolbar"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:singleLine="true"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
             android:text="@string/device_info"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_16sdp" />
 
         <ImageView
             android:id="@+id/ivEdit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:paddingHorizontal="@dimen/_2sdp"
-            android:src="@drawable/ic_edit_profile"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
             android:visibility="invisible" />
 
-    </androidx.appcompat.widget.Toolbar>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:id="@+id/view"

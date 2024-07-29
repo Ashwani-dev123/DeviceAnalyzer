@@ -664,6 +664,12 @@ adb shell rm /data/system/gesture.key\n
     <string name="device_analyzer_amp_info"><![CDATA[设备分析器 & 信息]]></string>
     <string name="discharging">放电中</string>
 
+    <string name="preview_pdf">预览 PDF</string>
+    <string name="download_pdf">下载 PDF</string>
+    <string name="is_it_charging">它在充电吗？</string>
+    <string name="screen_will_change_colors">屏幕将改变颜色。寻找烧痕或任何突出的像素</string>
+    <string name="tap_to_continue">点击继续</string>
+
 
 
 </resources>

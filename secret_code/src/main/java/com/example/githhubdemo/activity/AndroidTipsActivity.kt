@@ -85,7 +85,7 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnBack.setOnClickListener(this)
         binding.lvAndroidTipsItem.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
 
-            if (mInterstitialAd!!.isReady) {
+            if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                 NarayanAd.getInstance().forceShowInterstitial(
                     this,
                     mInterstitialAd,
@@ -145,7 +145,7 @@ class AndroidTipsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onBackPressed() {
-        if (mInterstitialAd!!.isReady) {
+        if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
             NarayanAd.getInstance().forceShowInterstitial(
                 this,
                 mInterstitialAd,

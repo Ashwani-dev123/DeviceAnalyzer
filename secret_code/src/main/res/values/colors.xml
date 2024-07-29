@@ -10,5 +10,6 @@
     <color name="textGrey">#CED4D7</color>
     <color name="darkGrey">#9911141D</color>
     <color name="textColor">#11141D</color>
+    <color name="pdfTextColor">#0F172A</color>
     <color name="pdfBgColor">#E0E0E0</color>
 </resources>

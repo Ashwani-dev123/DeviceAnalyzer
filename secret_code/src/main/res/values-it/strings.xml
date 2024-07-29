@@ -668,5 +668,11 @@ Ecco fatto! La parola è ora aggiunta al dizionario del telefono, rendendo la di
     <string name="device_analyzer_amp_info"><![CDATA[Analizzatore Dispositivo & Info]]></string>
     <string name="discharging">Scaricamento</string>
 
+    <string name="preview_pdf">Anteprima PDF</string>
+    <string name="download_pdf">Scarica PDF</string>
+    <string name="is_it_charging">È in carica?</string>
+    <string name="screen_will_change_colors">Lo schermo cambierà colore. Cerca segni di bruciatura o pixel che si distinguono</string>
+    <string name="tap_to_continue">Tocca per continuare</string>
+
 
 </resources>

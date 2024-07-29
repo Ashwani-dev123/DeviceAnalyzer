@@ -670,5 +670,11 @@ C\'est tout ! Le mot est maintenant ajouté au dictionnaire de votre téléphone
     <string name="device_analyzer_amp_info"><![CDATA[Analyseur de Dispositif & Info]]></string>
     <string name="discharging">Décharge</string>
 
+    <string name="preview_pdf">Aperçu du PDF</string>
+    <string name="download_pdf">Télécharger PDF</string>
+    <string name="is_it_charging">Est-ce en charge?</string>
+    <string name="screen_will_change_colors">L\'écran changera de couleurs. Recherchez des brûlures ou des pixels qui se démarquent</string>
+    <string name="tap_to_continue">Appuyez pour continuer</string>
+
 
 </resources>

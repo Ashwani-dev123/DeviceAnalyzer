@@ -655,5 +655,11 @@ Dos servicios basados en el GPS, a saber, el Historial de ubicaciones y la Infor
     <string name="device_analyzer_amp_info"><![CDATA[Analizador de Dispositivos & Info]]></string>
     <string name="discharging">Descargando</string>
 
+    <string name="preview_pdf">Vista previa del PDF</string>
+    <string name="download_pdf">Descargar PDF</string>
+    <string name="is_it_charging">¿Está cargando?</string>
+    <string name="screen_will_change_colors">La pantalla cambiará de colores. Busque quemaduras o píxeles que sobresalgan</string>
+    <string name="tap_to_continue">Toque para continuar</string>
+
 
 </resources>

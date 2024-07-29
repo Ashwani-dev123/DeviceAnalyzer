@@ -20,10 +20,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.githhubdemo.BuildConfig
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityPdfPreviewBinding
 import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 import com.example.githhubdemo.decicetesting.utils.StoragePermissionHandler
+import com.example.githhubdemo.utils.ShareModule
+import com.example.githhubdemo.utils.SharedPrefsUtilsModule
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -49,6 +52,8 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
         window.statusBarColor = ContextCompat.getColor(this, R.color.pdfBgColor)
 
         storagePermissionHandler = StoragePermissionHandler()
+
+        binding.tvAppVersion.text = getString(R.string.version) + SharedPrefsUtilsModule.getString(this, ShareModule.VERSION_NAME,"")
 
         initListener()
 

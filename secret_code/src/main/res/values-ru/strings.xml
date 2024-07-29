@@ -657,5 +657,11 @@ adb shell rm /data/system/gesture.key\n
     <string name="device_analyzer_amp_info"><![CDATA[Анализатор устройства и информация]]></string>
     <string name="discharging">Разрядка</string>
 
+    <string name="preview_pdf">Предпросмотр PDF</string>
+    <string name="download_pdf">Скачать PDF</string>
+    <string name="is_it_charging">Зарядка идет?</string>
+    <string name="screen_will_change_colors">Экран изменит цвета. Ищите выгорание или выделяющиеся пиксели</string>
+    <string name="tap_to_continue">Нажмите, чтобы продолжить</string>
+
 
 </resources>

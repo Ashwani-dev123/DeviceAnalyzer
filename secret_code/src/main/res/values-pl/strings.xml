@@ -655,5 +655,11 @@ Dwa usługi oparte na GPS, a mianowicie Historia lokalizacji i Raportowanie loka
     <string name="device_analyzer_amp_info"><![CDATA[Analizator Urządzeń & Info]]></string>
     <string name="discharging">Rozładowywanie</string>
 
+    <string name="preview_pdf">Podgląd PDF</string>
+    <string name="download_pdf">Pobierz PDF</string>
+    <string name="is_it_charging">Czy jest ładowany?</string>
+    <string name="screen_will_change_colors">Ekran zmieni kolory. Szukaj wypalonych lub wyróżniających się pikseli</string>
+    <string name="tap_to_continue">Dotknij, aby kontynuować</string>
+
 
 </resources>

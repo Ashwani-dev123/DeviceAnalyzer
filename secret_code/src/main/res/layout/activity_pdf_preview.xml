@@ -23,7 +23,7 @@
         android:layout_height="@dimen/_25sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:background="@drawable/ic_back"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/pdfTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,24 +33,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/preview_pdf"
-        android:textColor="@color/textColor"
+        android:textColor="@color/pdfTextColor"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSharePdf"
-        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <LinearLayout
         android:id="@+id/btnSharePdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:padding="@dimen/_10sdp"
-        android:src="@drawable/ic_share_white"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_download_pdf"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/download_pdf"
+          android:textColor="@color/pdfTextColor"
+          android:textSize="@dimen/_11sdp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/btnSharePdf"
+          app:layout_constraintStart_toEndOf="@+id/btnBack"
+          app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -98,7 +121,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="@string/app_name"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_14sdp"
               android:textStyle="bold" />
 
@@ -129,7 +152,7 @@
           android:layout_height="wrap_content"
           android:layout_marginTop="@dimen/_10sdp"
           android:text="@string/device_result"
-          android:textColor="@color/textColor"
+          android:textColor="@color/pdfTextColor"
           android:textSize="@dimen/_16sdp"
           android:textStyle="bold"
           app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +175,7 @@
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/_2sdp"
           android:layout_marginBottom="@dimen/_14sdp"
-          android:textColor="@color/textColor"
+          android:textColor="@color/pdfTextColor"
           android:textSize="@dimen/_24sdp"
           android:textStyle="bold"
           app:layout_constraintBottom_toBottomOf="@+id/ivShowResult"
@@ -180,7 +203,7 @@
           android:layout_marginTop="@dimen/_15sdp"
           android:layout_marginEnd="@dimen/_20sdp"
           android:gravity="center"
-          android:textColor="@color/textColor"
+          android:textColor="@color/pdfTextColor"
           android:textSize="@dimen/_14sdp"
           app:layout_constraintTop_toBottomOf="@+id/tvResultText" />
 
@@ -216,7 +239,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/display"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
               app:layout_constraintBottom_toBottomOf="parent"
               app:layout_constraintEnd_toStartOf="@+id/ivDisplayChecked"
@@ -260,7 +283,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/flashlight"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -305,7 +328,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/loud_speaker"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -350,7 +373,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/ear_speaker"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -397,7 +420,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/microphone"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -442,7 +465,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/ear_proximity"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -487,7 +510,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/light_sensor"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -532,7 +555,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/accelerometer"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -577,7 +600,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/charging"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -622,7 +645,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/vibration"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -667,7 +690,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/bluetooth"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -712,7 +735,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/volume_up"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"
@@ -757,7 +780,7 @@
               android:layout_marginStart="@dimen/_10sdp"
               android:layout_marginEnd="@dimen/_10sdp"
               android:text="@string/volume_down"
-              android:textColor="@color/textColor"
+              android:textColor="@color/pdfTextColor"
               android:textSize="@dimen/_15sdp"
 
               app:layout_constraintBottom_toBottomOf="parent"

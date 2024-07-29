@@ -671,6 +671,12 @@ Das war\'s! Das Wort wurde jetzt Ihrem Telefonwörterbuch hinzugefügt, was das 
     <string name="device_analyzer_amp_info"><![CDATA[Geräteanalyse & Info]]></string>
     <string name="discharging">Entladen</string>
 
+    <string name="preview_pdf">PDF-Vorschau</string>
+    <string name="download_pdf">PDF herunterladen</string>
+    <string name="is_it_charging">Wird es geladen?</string>
+    <string name="screen_will_change_colors">Der Bildschirm wird die Farben ändern. Achten Sie auf Einbrennen oder hervorstehende Pixel</string>
+    <string name="tap_to_continue">Zum Fortfahren tippen</string>
+
 
 
 </resources>

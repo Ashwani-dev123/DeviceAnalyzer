@@ -27,7 +27,7 @@
             android:gravity="center"
             android:textSize="@dimen/_14sdp"
             android:textColor="@color/white"
-            android:text="Screen will change colors.Look for burn-in or any pixels that stand out"
+            android:text="@string/screen_will_change_colors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -38,7 +38,7 @@
             android:textStyle="bold"
             android:textSize="@dimen/_14sdp"
             android:textColor="@color/white"
-            android:text="Tap to continue"
+            android:text="@string/tap_to_continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

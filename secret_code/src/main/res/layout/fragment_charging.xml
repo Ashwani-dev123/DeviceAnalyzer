@@ -276,7 +276,7 @@
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:gravity="center"
-        android:text="Is it charging?"
+        android:text="@string/is_it_charging"
         android:layout_marginBottom="@dimen/_50sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

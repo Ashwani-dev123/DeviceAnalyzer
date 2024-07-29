@@ -96,7 +96,7 @@ class DeviceInfoActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onBackPressed() {
-        if (mInterstitialAd!!.isReady) {
+        if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
             NarayanAd.getInstance().forceShowInterstitial(
                 this,
                 mInterstitialAd,

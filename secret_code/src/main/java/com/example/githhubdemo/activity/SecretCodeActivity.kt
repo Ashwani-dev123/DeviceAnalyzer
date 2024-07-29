@@ -70,7 +70,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                 onBackPressed()
             }
             R.id.cvSamsung -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -107,7 +107,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvOppo -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -144,7 +144,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvMi -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -181,7 +181,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvVivo -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -219,7 +219,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.cvHtc -> {
 
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -256,7 +256,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvRealme -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -293,7 +293,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvAsus -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -330,7 +330,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
             }
             R.id.cvIphone -> {
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -368,7 +368,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.cvSony -> {
 
-                if (mInterstitialAd!!.isReady) {
+                if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                     NarayanAd.getInstance().forceShowInterstitial(
                         this,
                         mInterstitialAd,
@@ -407,7 +407,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
             }
                R.id.cvHuawei -> {
 
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -445,7 +445,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                }
                R.id.cvLg -> {
 
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -484,7 +484,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                }
                R.id.cvOnePlus -> {
 
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -522,7 +522,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                }
                R.id.cvAcer -> {
 
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -559,7 +559,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
                }
                R.id.cvLenovo -> {
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -597,7 +597,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                }
                R.id.cvZte -> {
 
-                   if (mInterstitialAd!!.isReady) {
+                   if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                        NarayanAd.getInstance().forceShowInterstitial(
                            this,
                            mInterstitialAd,
@@ -645,7 +645,7 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
 
     }
     override fun onBackPressed() {
-        if (mInterstitialAd!!.isReady) {
+        if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
             NarayanAd.getInstance().forceShowInterstitial(
                 this,
                 mInterstitialAd,
