@@ -53,7 +53,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         storagePermissionHandler = StoragePermissionHandler()
 
-        binding.tvAppVersion.text = getString(R.string.version) + SharedPrefsUtilsModule.getString(this, ShareModule.VERSION_NAME,"")
+        binding.tvAppVersion.text = getString(R.string.version) + " " + SharedPrefsUtilsModule.getString(this, ShareModule.VERSION_NAME)
 
         initListener()
 
