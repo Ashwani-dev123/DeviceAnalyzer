@@ -221,8 +221,8 @@ class MicrophoneFragment : BaseFragment() {
     private fun stopRecording() {
         if (::audioRecord.isInitialized && audioRecord.state == AudioRecord.STATE_INITIALIZED && isRecording) {
             isRecording = false
-            audioRecord!!.stop()
-            audioRecord!!.release()
+            audioRecord.stop()
+            audioRecord.release()
             recordingThread?.interrupt()
             recordingThread = null
         }
