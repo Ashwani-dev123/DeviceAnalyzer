@@ -88,6 +88,7 @@ android {
         dataBinding = true
         viewBinding = true
         buildConfig = true
+
         aidl = true
     }
 }
@@ -99,7 +100,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.Ashwani-dev123"
                 artifactId = "secret_code"
-                version = "1.1.9"
+                version = "1.2.0"
             }
         }
     }

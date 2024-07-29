@@ -488,5 +488,8 @@
     <string name="test_failed">Test Failed</string>
     <string name="device_analyzer_amp_info"><![CDATA[Device Analyzer & Info]]></string>
     <string name="discharging">Discharging</string>
+    <string name="preview_pdf">Preview Pdf</string>
+    <string name="download_pdf">Download Pdf</string>
+
 
 </resources>
