@@ -1,6 +1,7 @@
 package com.example.githhubdemo.decicetesting.activity
 
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -13,14 +14,13 @@ import android.os.Environment
 import android.provider.Settings
 import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
-import com.example.githhubdemo.BuildConfig
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityPdfPreviewBinding
 import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
@@ -59,6 +59,18 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         setResult()
 
+        showPermissionExplanationDialog()
+
+    }
+
+    private fun showPermissionExplanationDialog() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Permission Explanation")
+        builder.setMessage("Our app needs access to user device's storage to save PDF files. This permission allows us to save PDFs that you generate or download within the app, ensuring that your documents are easily accessible whenever you need them. We value your privacy and are committed to protecting your data.")
+        builder.setPositiveButton("OK",
+            { dialog, which -> dialog.dismiss() })
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 
     private fun initListener() {
@@ -223,82 +235,10 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btnSharePdf -> {
-                val filePath = getExternalFilesDir(null).toString() + "/generated.pdf"
-                Log.e("FILEPATH", "onClick: " + filePath)
-                //generatePDFFromConstraintLayout(binding.clMain,filePath)
                 checkAndRequestPermissions()
             }
         }
     }
-
-    private fun getAllChildViews(view: View): List<View> {
-        if (view !is ViewGroup) {
-            return listOf(view)
-        }
-        val result: MutableList<View> = ArrayList()
-        val viewGroup = view
-        for (i in 0 until viewGroup.childCount) {
-            val child = viewGroup.getChildAt(i)
-            result.addAll(getAllChildViews(child))
-        }
-        return result
-    }
-
-    private fun generatePDFFromConstraintLayout(
-        constraintLayout: ConstraintLayout,
-        filePath: String
-    ) {
-        val childViews = getAllChildViews(constraintLayout)
-
-        val document = PdfDocument()
-        val paint = Paint()
-        val pageHeight = binding.clMain.height
-        val pageWidth = binding.clMain.width
-
-        var pageInfo = PdfDocument.PageInfo.Builder(pageWidth, pageHeight, 1).create()
-        var page = document.startPage(pageInfo)
-
-        var canvas = page.canvas
-        var yOffset = 0
-
-        for (childView in childViews) {
-            childView.measure(
-                View.MeasureSpec.makeMeasureSpec(pageWidth, View.MeasureSpec.EXACTLY),
-                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
-            )
-            childView.layout(0, 0, childView.measuredWidth, childView.measuredHeight)
-
-            canvas.save()
-            canvas.translate(0f, yOffset.toFloat())
-            childView.draw(canvas)
-            canvas.restore()
-
-            yOffset += childView.height
-
-            if (yOffset >= pageHeight) {
-                document.finishPage(page)
-                pageInfo =
-                    PdfDocument.PageInfo.Builder(pageWidth, pageHeight, document.pages.size + 1)
-                        .create()
-                page = document.startPage(pageInfo)
-                canvas = page.canvas
-                yOffset = 0
-            }
-        }
-
-        document.finishPage(page)
-
-        try {
-            document.writeTo(FileOutputStream(filePath))
-            Toast.makeText(this, "PDF Generated successfully", Toast.LENGTH_SHORT).show()
-        } catch (e: IOException) {
-            e.printStackTrace()
-            Toast.makeText(this, "Error generating PDF", Toast.LENGTH_SHORT).show()
-        }
-
-        document.close()
-    }
-
 
     private fun captureScrollViewContent(scrollView: ScrollView): Bitmap {
         // Measure and layout the ScrollView
@@ -344,7 +284,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
-    private fun savePdfToFile(bitmap: Bitmap, fileName: String) {
+    private fun savePdfToFile(bitmap: Bitmap) {
         val pdfFile = File(
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS),
             "DeviceResult_" + System.currentTimeMillis() + ".pdf"
@@ -358,14 +298,13 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private fun generatePdf() {
-
         val bitmap = captureScrollViewContent(binding.clMain)
-        savePdfToFile(bitmap, "example.pdf")
+        savePdfToFile(bitmap)
     }
 
     private fun savePDF(pdfFile: File) {
         try {
-            Toast.makeText(this, "PDF saved locally at ${pdfFile.absolutePath}", Toast.LENGTH_LONG)
+            Toast.makeText(this, "PDF saved Successfully", Toast.LENGTH_LONG)
                 .show()
         } catch (e: IOException) {
             e.printStackTrace()
@@ -382,6 +321,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
         if (requestCode == STORAGE_PERMISSION_CODE) {
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                 generatePdf()
+                showPermissionExplanationDialog()
             } else {
                 Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
             }
