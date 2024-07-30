@@ -1,12 +1,12 @@
 package com.example.githhubdemo.decicetesting.activity
 
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.drawable.Drawable
 import android.graphics.pdf.PdfDocument
 import android.os.Build
 import android.os.Bundle
@@ -19,7 +19,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityPdfPreviewBinding
@@ -59,7 +58,18 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         setResult()
 
-        showPermissionExplanationDialog()
+        var appIcon: Drawable? = null
+        try {
+            val pm = packageManager
+            val appInfo = pm.getApplicationInfo(packageName, 0)
+            appIcon = pm.getApplicationIcon(appInfo)
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
+
+        binding.ivAppIcon.setImageDrawable(appIcon)
+
+        //showPermissionExplanationDialog()
 
     }
 
