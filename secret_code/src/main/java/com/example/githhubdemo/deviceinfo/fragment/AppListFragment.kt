@@ -77,40 +77,8 @@ class AppListFragment : Fragment() {
 
         })
 
-        showPermissionMessageWithDelay(requireContext())
 
-    }
 
-    private fun showPermissionMessageWithDelay(context: Context) {
-        val showDelayMillis: Long = 1000 // 1 second
-        val dismissDelayMillis: Long = 5000 // 5 seconds after showing the dialog
-
-        // Show the dialog after 1 second
-        Handler(Looper.getMainLooper()).postDelayed({
-            val alertDialog = showPermissionMessage(context)
-            alertDialog.show()
-
-            // Dismiss the dialog after another 5 seconds
-            Handler(Looper.getMainLooper()).postDelayed({
-                alertDialog.dismiss()
-            }, dismissDelayMillis)
-        }, showDelayMillis)
-    }
-
-    private fun showPermissionMessage(context: Context): AlertDialog {
-        val message =
-            "Permission QUERY_ALL_PACKAGES is used for this screen i.e. to get and show all installed applications of the device."
-
-        val alertDialogBuilder = AlertDialog.Builder(context)
-        alertDialogBuilder.apply {
-            setTitle("QUERY_ALL_PACKAGES Permission")
-            setMessage(message)
-        }
-
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE)) // Set background color
-        alertDialog.window?.setGravity(Gravity.BOTTOM) // Set gravity to bottom
-        return alertDialog
     }
 
     override fun onResume() {
