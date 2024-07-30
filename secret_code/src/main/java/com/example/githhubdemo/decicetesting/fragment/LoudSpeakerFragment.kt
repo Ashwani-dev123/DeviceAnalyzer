@@ -85,7 +85,9 @@ class LoudSpeakerFragment : BaseFragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        mediaPlayer.release()
+        if (::mediaPlayer.isInitialized) {
+            mediaPlayer.release()
+        }
     }
 
     override fun onDestroyView() {
