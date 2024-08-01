@@ -42,6 +42,7 @@ class DeviceTestingResultFragment : BaseFragment() {
         setResult()
 
         binding.btnFinished.setOnClickListener {
+            ButtonClickTracker.clearClicks()
             DeviceTestingActivity.isPopBackStack = false
             requireActivity().finish()
         }
@@ -53,7 +54,7 @@ class DeviceTestingResultFragment : BaseFragment() {
 
     private fun setResult() {
         val clicks = ButtonClickTracker.buttonClicks
-        val percentage = (ButtonClickTracker.getTotal().toDouble() / clicks.size) * 100
+        val percentage = (ButtonClickTracker.getTotal() / clicks.size) * 100
         binding.tvResultPercentage.text = "${percentage.toInt()}%"
 
 
@@ -168,9 +169,9 @@ class DeviceTestingResultFragment : BaseFragment() {
 
         }
 
-        binding.tvResultText.text = getConditionText(percentage)
+        binding.tvResultText.text = getConditionText(percentage.toDouble())
 
-        binding.tvDeviceCondition.text = getConditionMassage(percentage)
+        binding.tvDeviceCondition.text = getConditionMassage(percentage.toDouble())
 
 
     }

@@ -58,6 +58,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         setResult()
 
+
         var appIcon: Drawable? = null
         try {
             val pm = packageManager
@@ -213,6 +214,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.tvDeviceCondition.text = getConditionMassage(percentage)
 
+        ButtonClickTracker.clearClicks()
 
     }
 
@@ -256,7 +258,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
             View.MeasureSpec.makeMeasureSpec(scrollView.width, View.MeasureSpec.EXACTLY),
             View.MeasureSpec.makeMeasureSpec(scrollView.height, View.MeasureSpec.UNSPECIFIED)
         )
-        scrollView.layout(0, 0, scrollView.measuredWidth, scrollView.measuredHeight)
+        //scrollView.layout(0, 0, scrollView.measuredWidth, scrollView.measuredHeight)
 
         val bitmap = Bitmap.createBitmap(
             scrollView.width,
