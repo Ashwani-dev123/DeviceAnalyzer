@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentLoudSpeakerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 
 class LoudSpeakerFragment : BaseFragment() {
@@ -19,6 +20,8 @@ class LoudSpeakerFragment : BaseFragment() {
     private var _binding: FragmentLoudSpeakerBinding? = null
     private val binding get() = _binding!!
     private lateinit var mediaPlayer: MediaPlayer
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
 
    
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,14 +49,14 @@ class LoudSpeakerFragment : BaseFragment() {
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(2, "no")
+            viewModel.addButtonClick(2, "no")
             stopSound()
             navigateToResultFragment()
         }
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(2, "yes")
+            viewModel.addButtonClick(2, "yes")
             stopSound()
             navigateToResultFragment()
         }

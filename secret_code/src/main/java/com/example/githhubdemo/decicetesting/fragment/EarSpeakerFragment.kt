@@ -9,13 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentEarSpeakerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 class EarSpeakerFragment : BaseFragment() {
     private var _binding: FragmentEarSpeakerBinding? = null
@@ -23,6 +24,8 @@ class EarSpeakerFragment : BaseFragment() {
     private var audioFocusRequest: AudioFocusRequest? = null
     private var mediaPlayer: MediaPlayer? = null
     private var audioManager: AudioManager? = null
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,14 +50,14 @@ class EarSpeakerFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(3, "yes")
+            viewModel.addButtonClick(3, "yes")
             resetAudioToDefault()
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(3, "no")
+            viewModel.addButtonClick(3, "no")
             resetAudioToDefault()
             navigateToResultFragment()
         }

@@ -9,13 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentLightSensorBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 
 class LightSensorFragment : BaseFragment(), SensorEventListener {
@@ -23,6 +24,8 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
     private val binding get() = _binding!!
     private lateinit var sensorManager: SensorManager
     private var lightSensor: Sensor? = null
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,13 +57,13 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(6, "yes")
+            viewModel.addButtonClick(6, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(6, "no")
+            viewModel.addButtonClick(6, "no")
             navigateToResultFragment()
         }
     }

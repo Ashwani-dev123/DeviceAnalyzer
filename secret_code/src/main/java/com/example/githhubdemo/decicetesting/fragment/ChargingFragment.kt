@@ -9,13 +9,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentChargingBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 import kotlin.math.abs
 
 
@@ -25,6 +26,8 @@ class ChargingFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private var batteryReceiver: BroadcastReceiver? = null
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
 
    
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,13 +52,13 @@ class ChargingFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(8, "yes")
+            viewModel.addButtonClick(8, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(8, "no")
+            viewModel.addButtonClick(8, "no")
             navigateToResultFragment()
         }
     }

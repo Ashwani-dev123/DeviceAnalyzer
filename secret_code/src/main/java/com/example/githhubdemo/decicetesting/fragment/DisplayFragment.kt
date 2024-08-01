@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
@@ -13,7 +14,7 @@ import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentDisplayBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
 import com.example.githhubdemo.decicetesting.activity.DisplayPreviewActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 
 class DisplayFragment : BaseFragment() {
@@ -21,6 +22,8 @@ class DisplayFragment : BaseFragment() {
     private var _binding: FragmentDisplayBinding? = null
     private val binding get() = _binding!!
     private var LAUNCH_DISPLAY_PREVIEW_ACTIVITY = 1
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +53,7 @@ class DisplayFragment : BaseFragment() {
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-             ButtonClickTracker.addButtonClick(0, "no")
+             viewModel.addButtonClick(0, "no")
             val navOptions = NavOptions.Builder()
                 .setEnterAnim(R.anim.slide_in_right)
                 .setExitAnim(R.anim.slide_out_left)
@@ -62,7 +65,7 @@ class DisplayFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(0, "yes")
+            viewModel.addButtonClick(0, "yes")
             val navOptions = NavOptions.Builder()
                 .setEnterAnim(R.anim.slide_in_right)
                 .setExitAnim(R.anim.slide_out_left)

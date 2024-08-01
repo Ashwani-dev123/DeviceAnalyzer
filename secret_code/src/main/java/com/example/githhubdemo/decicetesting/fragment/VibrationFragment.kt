@@ -8,13 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentVibrationBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 class VibrationFragment : BaseFragment() {
 
@@ -22,6 +23,8 @@ class VibrationFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private lateinit var vibrator: Vibrator
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,14 +51,14 @@ class VibrationFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(9, "yes")
+            viewModel.addButtonClick(9, "yes")
             stopVibration()
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(9, "no")
+            viewModel.addButtonClick(9, "no")
             stopVibration()
             navigateToResultFragment()
         }

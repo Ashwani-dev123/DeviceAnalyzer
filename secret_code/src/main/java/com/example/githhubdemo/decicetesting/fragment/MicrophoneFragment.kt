@@ -14,13 +14,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentMicrophoneBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 import org.jtransforms.fft.DoubleFFT_1D
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -29,6 +30,8 @@ class MicrophoneFragment : BaseFragment() {
 
     private var _binding: FragmentMicrophoneBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
 
     private val sampleRate = 44100
     private val bufferSize = AudioRecord.getMinBufferSize(
@@ -67,13 +70,13 @@ class MicrophoneFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(4, "yes")
+            viewModel.addButtonClick(4, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(4, "no")
+            viewModel.addButtonClick(4, "no")
             navigateToResultFragment()
         }
     }

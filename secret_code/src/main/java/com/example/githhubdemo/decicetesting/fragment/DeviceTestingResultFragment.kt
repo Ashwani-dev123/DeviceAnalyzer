@@ -3,14 +3,16 @@ package com.example.githhubdemo.decicetesting.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentDeviceTestingResultBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
 import com.example.githhubdemo.decicetesting.activity.PdfPreviewActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 import com.example.githhubdemo.decicetesting.utils.StoragePermissionHandler
 
 
@@ -20,6 +22,8 @@ class DeviceTestingResultFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private lateinit var storagePermissionHandler: StoragePermissionHandler
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -42,7 +46,6 @@ class DeviceTestingResultFragment : BaseFragment() {
         setResult()
 
         binding.btnFinished.setOnClickListener {
-            ButtonClickTracker.clearClicks()
             DeviceTestingActivity.isPopBackStack = false
             requireActivity().finish()
         }
@@ -53,126 +56,133 @@ class DeviceTestingResultFragment : BaseFragment() {
     }
 
     private fun setResult() {
-        val clicks = ButtonClickTracker.buttonClicks
-        val percentage = (ButtonClickTracker.getTotal() / clicks.size) * 100
+
+        val totalYesClicks = viewModel.getTotalYesClicks()
+        val totalClicks = viewModel.getTotalClicks()
+
+        val percentage = if (totalClicks > 0) {
+            (totalYesClicks.toDouble() / totalClicks * 100).toInt()
+        } else {
+            0
+        }
+
         binding.tvResultPercentage.text = "${percentage.toInt()}%"
 
+        Log.e("CHECKCLICK", "ButtonClickTracker: percentage1==>" + percentage)
 
 
-        clicks.forEach { (position, buttonType) ->
-            when (position) {
+        for (i in viewModel.buttonClicks.indices) {
+            Log.e("CHECKCLICK", "ButtonClickTracker: iitem==>${viewModel.buttonClicks[i]}")
+            when (i) {
                 0 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[0] == "yes") {
                         binding.ivDisplayChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivDisplayChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 1 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[1] == "yes") {
                         binding.ivFlashlightChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivFlashlightChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 2 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[2] == "yes") {
                         binding.ivLoudSpeakerChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivLoudSpeakerChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 3 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[3] == "yes") {
                         binding.ivEarSpeakerChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivEarSpeakerChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 4 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[4] == "yes") {
                         binding.ivMicrophoneChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivMicrophoneChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 5 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[5] == "yes") {
                         binding.ivEarProximityChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivEarProximityChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 6 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[6] == "yes") {
                         binding.ivLightSensorChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivLightSensorChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 7 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[7] == "yes") {
                         binding.ivAccelerometerChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivAccelerometerChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 8 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[8] == "yes") {
                         binding.ivChargingChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivChargingChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 9 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[9] == "yes") {
                         binding.ivVibrationChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivVibrationChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 10 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[10] == "yes") {
                         binding.ivBluetoothChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivBluetoothChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 11 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[11] == "yes") {
                         binding.ivVolumeUpChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivVolumeUpChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
+
                 12 -> {
-                    if (buttonType == "yes") {
+                    if (viewModel.buttonClicks[12] == "yes") {
                         binding.ivVolumeDownChecked.setImageResource(R.drawable.ic_yes)
-                    }
-                    else {
+                    } else {
                         binding.ivVolumeDownChecked.setImageResource(R.drawable.ic_no)
                     }
                 }
             }
-
         }
 
         binding.tvResultText.text = getConditionText(percentage.toDouble())
 
         binding.tvDeviceCondition.text = getConditionMassage(percentage.toDouble())
-
 
     }
 

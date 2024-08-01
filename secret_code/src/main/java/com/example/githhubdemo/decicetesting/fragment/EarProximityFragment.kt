@@ -13,13 +13,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentEarProximityBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 class EarProximityFragment : BaseFragment() {
 
@@ -28,6 +29,7 @@ class EarProximityFragment : BaseFragment() {
     private lateinit var sensorManager: SensorManager
     private var proximitySensor: Sensor? = null
     private lateinit var vibrator: Vibrator
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
 
     private val proximitySensorListener: SensorEventListener = object : SensorEventListener {
@@ -76,14 +78,14 @@ class EarProximityFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(5, "yes")
+            viewModel.addButtonClick(5, "yes")
             stopVibration()
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(5, "no")
+            viewModel.addButtonClick(5, "no")
             stopVibration()
             navigateToResultFragment()
         }

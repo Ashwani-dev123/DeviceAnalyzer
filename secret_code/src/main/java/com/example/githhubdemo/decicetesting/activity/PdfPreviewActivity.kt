@@ -22,7 +22,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityPdfPreviewBinding
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
 import com.example.githhubdemo.decicetesting.utils.StoragePermissionHandler
 import com.example.githhubdemo.utils.ShareModule
 import com.example.githhubdemo.utils.SharedPrefsUtilsModule
@@ -56,7 +55,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         initListener()
 
-        setResult()
+        //setResult()
 
 
         var appIcon: Drawable? = null
@@ -89,7 +88,7 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnSharePdf.setOnClickListener(this)
     }
 
-    private fun setResult() {
+   /* private fun setResult() {
 
         val clicks = ButtonClickTracker.buttonClicks
         val percentage = (ButtonClickTracker.getTotal().toDouble() / clicks.size) * 100
@@ -214,9 +213,9 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.tvDeviceCondition.text = getConditionMassage(percentage)
 
-        ButtonClickTracker.clearClicks()
+        //ButtonClickTracker.clearClicks()
 
-    }
+    }*/
 
     private fun getConditionText(percentage: Double): String {
         return when {

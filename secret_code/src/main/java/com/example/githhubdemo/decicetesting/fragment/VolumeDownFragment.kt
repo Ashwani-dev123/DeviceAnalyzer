@@ -10,13 +10,14 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentVolumeDownBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 
 class VolumeDownFragment : BaseFragment() {
@@ -24,6 +25,7 @@ class VolumeDownFragment : BaseFragment() {
     private var _binding: FragmentVolumeDownBinding? = null
     private val binding get() = _binding!!
 
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +47,13 @@ class VolumeDownFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(12, "yes")
+            viewModel.addButtonClick(12, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(12, "no")
+            viewModel.addButtonClick(12, "no")
             navigateToResultFragment()
         }
 

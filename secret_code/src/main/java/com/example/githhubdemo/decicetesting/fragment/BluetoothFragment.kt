@@ -15,13 +15,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentBluetoothBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 
 
 class BluetoothFragment : BaseFragment() {
@@ -31,6 +32,8 @@ class BluetoothFragment : BaseFragment() {
 
     private val REQUEST_ENABLE_BT = 1
     private val REQUEST_BLUETOOTH_CONNECT_PERMISSION = 2
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
 
    
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,13 +76,13 @@ class BluetoothFragment : BaseFragment() {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(10, "yes")
+            viewModel.addButtonClick(10, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(10, "no")
+            viewModel.addButtonClick(10, "no")
             navigateToResultFragment()
         }
     }

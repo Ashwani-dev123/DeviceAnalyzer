@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentAccelerometerBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
-import com.example.githhubdemo.decicetesting.utils.ButtonClickTracker
+import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
 import com.example.githhubdemo.decicetesting.utils.ShakeDetector
 
 
@@ -23,6 +24,8 @@ class AccelerometerFragment : BaseFragment(), ShakeDetector.OnShakeListener {
 
     private lateinit var shakeDetector: ShakeDetector
     private lateinit var vibrator: Vibrator
+
+    private val viewModel: ButtonClickViewModel by activityViewModels()
    
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,13 +51,13 @@ class AccelerometerFragment : BaseFragment(), ShakeDetector.OnShakeListener {
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(7, "yes")
+            viewModel.addButtonClick(7, "yes")
             navigateToResultFragment()
         }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
-            ButtonClickTracker.addButtonClick(7, "no")
+            viewModel.addButtonClick(7, "no")
            navigateToResultFragment()
         }
 
