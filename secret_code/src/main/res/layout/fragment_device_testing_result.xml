@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+      <!--  <ImageView
             android:id="@+id/btnPreview"
             android:visibility="invisible"
             android:layout_marginStart="@dimen/_10sdp"
@@ -20,9 +20,9 @@
             android:layout_gravity="center"
             android:src="@drawable/ic_pdf"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
 
-        <ImageView
+       <!-- <ImageView
             android:id="@+id/btnPreviewPdf"
             android:layout_marginEnd="@dimen/_10sdp"
             app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:src="@drawable/ic_pdf"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
 
 
 
@@ -43,10 +43,9 @@
             android:text="@string/device_result"
             android:textColor="@color/textColor"
             android:textSize="@dimen/_16sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnPreviewPdf"
-            app:layout_constraintEnd_toStartOf="@+id/btnPreviewPdf"
-            app:layout_constraintStart_toEndOf="@+id/btnPreview"
-            app:layout_constraintTop_toTopOf="@+id/btnPreviewPdf"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
             android:id="@+id/ivShowResult"
