@@ -47,9 +47,9 @@ class DeviceTestingResultFragment : BaseFragment() {
             requireActivity().finish()
         }
 
-        binding.btnPreviewPdf.setOnClickListener {
+        /*binding.btnPreviewPdf.setOnClickListener {
             startActivity(Intent(requireContext(), PdfPreviewActivity::class.java))
-        }
+        }*/
     }
 
     private fun setResult() {
