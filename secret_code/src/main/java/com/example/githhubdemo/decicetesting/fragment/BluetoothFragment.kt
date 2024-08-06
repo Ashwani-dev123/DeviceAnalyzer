@@ -35,18 +35,15 @@ class BluetoothFragment : BaseFragment() {
 
     private val viewModel: ButtonClickViewModel by activityViewModels()
 
-   
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentBluetoothBinding.inflate(layoutInflater)
+        _binding = FragmentBluetoothBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -70,9 +67,6 @@ class BluetoothFragment : BaseFragment() {
         } else {
             checkBluetooth()
         }
-
-
-
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
@@ -105,7 +99,6 @@ class BluetoothFragment : BaseFragment() {
     }
 
     private fun navigateToResultFragment() {
-
         val navOptions = NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)
             .setExitAnim(R.anim.slide_out_left)
@@ -123,7 +116,7 @@ class BluetoothFragment : BaseFragment() {
                 // Handle accordingly (e.g., exit app)
                 requireActivity().finish()
             }
-            .setCancelable(false) // Prevent dialog from being dismissed by tapping outside
+            .setCancelable(false)
             .show()
     }
 
@@ -138,7 +131,7 @@ class BluetoothFragment : BaseFragment() {
                 checkBluetooth()
             } else {
                 // Permission denied, handle accordingly
-                binding.tvDetails.text = "Bluetooth permission is required to perform this action."
+                _binding?.tvDetails?.text = "Bluetooth permission is required to perform this action."
             }
         }
     }
@@ -146,19 +139,18 @@ class BluetoothFragment : BaseFragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_ENABLE_BT) {
-            if (resultCode == AppCompatActivity.RESULT_OK) {
-
-                binding.tvDetails.text = getString(R.string.test_pass)
-
-            } else {
-                binding.tvDetails.text = getString(R.string.test_failed)
+            _binding?.let {
+                if (resultCode == AppCompatActivity.RESULT_OK) {
+                    it.tvDetails.text = getString(R.string.test_pass)
+                } else {
+                    it.tvDetails.text = getString(R.string.test_failed)
+                }
             }
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-
         _binding = null
     }
 }

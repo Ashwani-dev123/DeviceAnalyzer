@@ -1,5 +1,6 @@
 package com.example.githhubdemo.deviceinfo.adapter
 
+import android.content.pm.PackageManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,13 +39,18 @@ class AppAdapter(private var appList: List<AppInfo>) :
 
         fun bind(appInfo: AppInfo) {
             val packageManager = itemView.context.packageManager
-            val appIconDrawable = packageManager.getApplicationIcon(appInfo.packageName)
-            appIcon.setImageDrawable(appIconDrawable)
+            try {
+                val appIconDrawable = packageManager.getApplicationIcon(appInfo.packageName)
+                appIcon.setImageDrawable(appIconDrawable)
+            } catch (e: PackageManager.NameNotFoundException) {
+                // Handle the exception by setting a default icon or leaving the ImageView empty
+                appIcon.setImageResource(R.drawable.ic_launcher_background) // Replace with your default icon resource
+            }
 
             appName.text = appInfo.appName
             packageName.text = appInfo.packageName
             versionSize.text = "Version: ${appInfo.versionName}"
-             appSize.text = "${getFormattedSize(appInfo.size)}"
+            appSize.text = "${getFormattedSize(appInfo.size)}"
         }
 
         private fun getFormattedSize(size: Long): String {

@@ -6,6 +6,7 @@ plugins {
     id("androidx.navigation.safeargs")
     id("maven-publish")
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 
 
 }
@@ -150,6 +151,8 @@ dependencies {
     implementation ("org.apache.commons:commons-math3:3.6.1")
     implementation ("com.github.wendykierp:JTransforms:3.1")
     implementation ("com.github.Ashwani-dev123:NarayanAds:1.1.2")
-
-
+    
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
 }

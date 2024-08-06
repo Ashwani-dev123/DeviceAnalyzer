@@ -26,29 +26,23 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
     private var lightSensor: Sensor? = null
 
     private val viewModel: ButtonClickViewModel by activityViewModels()
-   
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentLightSensorBinding.inflate(layoutInflater)
+        _binding = FragmentLightSensorBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       
-
-        sensorManager =
-            requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
-
+        sensorManager = requireActivity().getSystemService(AppCompatActivity.SENSOR_SERVICE) as SensorManager
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
         lightSensor?.let {
@@ -69,7 +63,6 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
     }
 
     private fun navigateToResultFragment() {
-
         val navOptions = NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)
             .setExitAnim(R.anim.slide_out_left)
@@ -83,12 +76,14 @@ class LightSensorFragment : BaseFragment(), SensorEventListener {
         if (event.sensor.type == Sensor.TYPE_LIGHT && event.values.isNotEmpty()) {
             val lux = event.values[0]
             val luxInt = lux.toInt()
-            binding.tvSensorValue.text = "$luxInt Lx"  // Null-check for TextView
+            _binding?.let { // Use _binding to safely access the view
+                it.tvSensorValue.text = "$luxInt Lx"
+            }
         }
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-
+        // No implementation needed
     }
 
     override fun onResume() {

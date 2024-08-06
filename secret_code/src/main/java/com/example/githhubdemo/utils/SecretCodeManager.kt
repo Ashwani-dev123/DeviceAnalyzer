@@ -10,6 +10,7 @@ import com.example.githhubdemo.deviceinfo.data.provider.CpuDataProvider
 import com.example.githhubdemo.deviceinfo.di.allModules
 import com.example.githhubdemo.deviceinfo.utils.Settings
 import com.example.githhubdemo.deviceinfo.workers.SystemMonitorWorker
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.gson.Gson
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.component.KoinComponent
@@ -54,8 +55,14 @@ object SecretCodeManager : KoinComponent {
         try {
             System.loadLibrary(LIB_NAME)  // Make sure LIB_NAME is correct
 
-        } catch (e: Exception) {
+        }
+        catch (u : UnsatisfiedLinkError) {
+            FirebaseCrashlytics.getInstance().log(u.message!!)
             Toast.makeText(context, "Please try again later", Toast.LENGTH_SHORT).show()
         }
+        catch (e: Exception) {
+            Toast.makeText(context, "Please try again later", Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
