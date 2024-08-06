@@ -210,13 +210,9 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
                             finish()
                         }
 
-                        override fun onNextAction() {
-                            super.onNextAction()
-
-                        }
 
                     },
-                    true
+                    false
                 )
             } else {
                 loadInterstitial()
