@@ -193,7 +193,6 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
         if (fromNotification) {
             if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
                 NarayanAd.getInstance().forceShowInterstitial(
