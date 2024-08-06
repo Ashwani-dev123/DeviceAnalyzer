@@ -31,6 +31,8 @@ class AndroidTipsDetailsActivity : AppCompatActivity(), View.OnClickListener {
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
 
+        fromNotification = intent.getBooleanExtra("fromNotification", false)
+
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
                 binding.bannerDashboard.loadBanner(this, SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,""))
