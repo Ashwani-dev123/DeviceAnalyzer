@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -22,12 +23,11 @@ class FlashlightFragment : BaseFragment() {
     private val binding get() = _binding!!
     private var isFlashlightOn = false
     private lateinit var cameraManager: CameraManager
-    private lateinit var cameraId: String
+    private var cameraId: String? = null
     private val viewModel: ButtonClickViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -41,15 +41,15 @@ class FlashlightFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       
-
-        cameraManager =
-            requireActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE) as CameraManager
+        cameraManager = requireActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE) as CameraManager
         cameraId = getCameraId()
 
-        turnOnFlashlight()
-
-
+        cameraId?.let {
+            turnOnFlashlight()
+        } ?: run {
+            // Handle the case where no camera is available
+            Toast.makeText(requireContext(), "No camera available", Toast.LENGTH_SHORT).show()
+        }
 
         binding.btnNo.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
@@ -76,15 +76,21 @@ class FlashlightFragment : BaseFragment() {
         findNavController().navigate(R.id.loudSpeakerFragment, null, navOptions)
     }
 
-    private fun getCameraId(): String {
+    private fun getCameraId(): String? {
         val cameraIds = cameraManager.cameraIdList
-        return cameraIds[0] // Usually the first camera is the back camera
+        return if (cameraIds.isNotEmpty()) {
+            cameraIds[0] // Usually the first camera is the back camera
+        } else {
+            null
+        }
     }
 
     private fun turnOnFlashlight() {
         try {
-            cameraManager.setTorchMode(cameraId, true)
-            isFlashlightOn = true
+            cameraId?.let {
+                cameraManager.setTorchMode(it, true)
+                isFlashlightOn = true
+            }
         } catch (e: CameraAccessException) {
             e.printStackTrace()
         }
@@ -92,8 +98,10 @@ class FlashlightFragment : BaseFragment() {
 
     private fun turnOffFlashlight() {
         try {
-            cameraManager.setTorchMode(cameraId, false)
-            isFlashlightOn = false
+            cameraId?.let {
+                cameraManager.setTorchMode(it, false)
+                isFlashlightOn = false
+            }
         } catch (e: CameraAccessException) {
             e.printStackTrace()
         }
@@ -109,5 +117,4 @@ class FlashlightFragment : BaseFragment() {
         super.onDestroy()
         turnOffFlashlight() // Ensure flashlight is off when fragment is destroyed
     }
-
 }

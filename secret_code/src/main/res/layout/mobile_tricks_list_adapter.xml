@@ -28,14 +28,14 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/_14sdp"/>
 
-        <ImageView
+        <View
             android:id="@+id/view"
+            android:background="@color/textGrey"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/ic_view"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="@dimen/_1sdp"/>
 
         <TextView
             android:id="@+id/tvDisc"

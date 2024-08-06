@@ -107,6 +107,11 @@ class MicrophoneFragment : BaseFragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        checkPermission()
+    }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,

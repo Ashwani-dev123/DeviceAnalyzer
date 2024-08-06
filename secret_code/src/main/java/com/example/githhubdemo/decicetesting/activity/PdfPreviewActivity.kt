@@ -77,8 +77,8 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("Permission Explanation")
         builder.setMessage("Our app needs access to user device's storage to save PDF files. This permission allows us to save PDFs that you generate or download within the app, ensuring that your documents are easily accessible whenever you need them. We value your privacy and are committed to protecting your data.")
-        builder.setPositiveButton("OK",
-            { dialog, which -> dialog.dismiss() })
+        builder.setPositiveButton("OK"
+        ) { dialog, which -> dialog.dismiss() }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }

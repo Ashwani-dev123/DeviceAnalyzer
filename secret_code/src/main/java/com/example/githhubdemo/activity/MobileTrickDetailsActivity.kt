@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.ads.narayan.ads.NarayanAd
+import com.ads.narayan.ads.NarayanAdCallback
+import com.ads.narayan.ads.wrapper.NarayanAdError
+import com.ads.narayan.ads.wrapper.NarayanInterstitialAd
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityMobileTrickDetailsBinding
 import com.example.githhubdemo.adapter.MobileTrickAdapter
@@ -17,6 +21,8 @@ import com.example.githhubdemo.utils.Util
 class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding : ActivityMobileTrickDetailsBinding
+    private var fromNotification = false
+    private var mInterstitialAd: NarayanInterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,12 +43,23 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
             binding.bannerDashboard.isVisible = false
         }
 
+        loadInterstitial()
+
         initListener()
         setListData()
     }
 
     private fun initListener() {
         binding.btnBack.setOnClickListener(this)
+    }
+
+    private fun loadInterstitial() {
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID,"") != "") {
+                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this , SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
+            }
+        }
+
     }
 
     override fun onClick(view : View?) {
@@ -173,5 +190,43 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.mobileTrickDetailsList.adapter = MobileTrickAdapter(backupAndroidPhoneArrayList, this)
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (fromNotification) {
+            if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
+                NarayanAd.getInstance().forceShowInterstitial(
+                    this,
+                    mInterstitialAd,
+                    object : NarayanAdCallback() {
+
+//                        override fun onAdClosed() {
+//                            super.onAdClosed()
+//                            gotoNext(service)
+//                        }
+
+                        override fun onAdFailedToShow(adError: NarayanAdError?) {
+                            super.onAdFailedToShow(adError)
+                            finish()
+                        }
+
+                        override fun onNextAction() {
+                            super.onNextAction()
+                            finish()
+                        }
+
+                    },
+                    true
+                )
+            } else {
+                loadInterstitial()
+                finish()
+            }
+        }
+        else {
+            finish()
+        }
+
     }
 }
