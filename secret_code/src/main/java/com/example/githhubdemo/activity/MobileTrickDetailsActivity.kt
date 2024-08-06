@@ -2,6 +2,7 @@ package com.example.githhubdemo.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -193,8 +194,23 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onBackPressed() {
+        //super.onBackPressed()
+        Log.e("CHECKBANNERID", "fromNotification!! : ==> $fromNotification")
         if (fromNotification) {
+
+            Log.e(
+                "CHECKBANNERID",
+                "INTERSTITIAL_ID : ==> " + SharedPrefsUtilsModule.getString(
+                    this,
+                    ShareModule.INTERSTITIAL_ID,
+                    ""
+                )
+            )
             if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
+                Log.e(
+                    "CHECKBANNERID",
+                    "mInterstitialAd!!.isReady : ==> " + mInterstitialAd!!.isReady
+                )
                 NarayanAd.getInstance().forceShowInterstitial(
                     this,
                     mInterstitialAd,
@@ -205,21 +221,50 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
                             finish()
                         }
 
+                        override fun onAdFailedToLoad(adError: NarayanAdError?) {
+                            super.onAdFailedToLoad(adError)
+                            Log.e("CHECKBANNERID", "onAdFailedToLoad : ++> " + adError!!.message)
+                        }
+
+                        override fun onInterstitialLoad(interstitialAd: NarayanInterstitialAd?) {
+                            super.onInterstitialLoad(interstitialAd)
+
+                            Log.e(
+                                "CHECKBANNERID",
+                                "onInterstitialLoad ---> :  " + interstitialAd!!.isLoading
+                            )
+                        }
+
+                        override fun onAdLoaded() {
+                            super.onAdLoaded()
+                            Log.e("CHECKBANNERID", "onAdLoaded : ==> ")
+                        }
+
+                        override fun onInterstitialShow() {
+                            super.onInterstitialShow()
+
+                            Log.e("CHECKBANNERID", "onInterstitialShow ---> :  ")
+                        }
+
                         override fun onAdFailedToShow(adError: NarayanAdError?) {
                             super.onAdFailedToShow(adError)
+                            Log.e("CHECKBANNERID", "onAdFailedToShow : ==> " + adError!!.message)
                             finish()
                         }
 
+                        /* override fun onNextAction() {
+                             super.onNextAction()
+                             Log.e("CHECKBANNERID", "onNextAction : ==> ")
+                             //finish()
+                         }*/
 
                     },
                     false
                 )
             } else {
-                loadInterstitial()
                 finish()
             }
-        }
-        else {
+        } else {
             finish()
         }
 
