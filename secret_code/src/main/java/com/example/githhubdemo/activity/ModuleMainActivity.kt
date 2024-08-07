@@ -2,6 +2,7 @@ package com.example.githhubdemo.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -27,6 +28,8 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
 
         appName = SharedPrefsUtilsModule.getString(this, ShareModule.APP_NAME,"")
+
+        Log.e("CHECKAPPNAME", "appName =====> : " + appName)
 
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
