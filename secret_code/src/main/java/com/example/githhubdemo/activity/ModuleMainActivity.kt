@@ -27,7 +27,7 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
 
         val bundle = Bundle()
         bundle.putString("ModuleMainActivity","------>")
-        FirebaseAnalytics.getInstance(this@ModuleMainActivity).logEvent("CheckModule", bundle)
+        FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
 
 
         if (Util.isNetworkConnected(this)) {
