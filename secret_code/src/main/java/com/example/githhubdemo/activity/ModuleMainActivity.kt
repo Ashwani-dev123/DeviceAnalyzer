@@ -13,6 +13,7 @@ import com.example.githhubdemo.deviceinfo.activity.DeviceInfoActivity
 import com.example.githhubdemo.utils.ShareModule
 import com.example.githhubdemo.utils.SharedPrefsUtilsModule
 import com.example.githhubdemo.utils.Util
+import com.google.firebase.analytics.FirebaseAnalytics
 
 class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var binding : ActivityModuleMainBinding
@@ -23,6 +24,11 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
+
+        val bundle = Bundle()
+        bundle.putString("ModuleMainActivity","------>")
+        FirebaseAnalytics.getInstance(this@ModuleMainActivity).logEvent("CheckModule", bundle)
+
 
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
