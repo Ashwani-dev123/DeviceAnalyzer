@@ -8,4 +8,5 @@ object ShareModule {
   var INTERSTITIAL_ID: String = "interstitialId"
   var BANNER_ID: String = "bannerId"
   var VERSION_NAME: String = "versionName"
+  var APP_NAME: String = "appName"
 }

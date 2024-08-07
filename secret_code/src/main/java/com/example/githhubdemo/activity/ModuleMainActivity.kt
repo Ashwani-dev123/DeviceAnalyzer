@@ -17,6 +17,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 
 class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var binding : ActivityModuleMainBinding
+    private var appName : String ? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,7 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
 
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
 
-
+        appName = SharedPrefsUtilsModule.getString(this, ShareModule.APP_NAME,"")
 
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
@@ -59,35 +60,35 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.btnSecretCode -> {
                 val bundle = Bundle()
-                bundle.putString("SecretCodeModule","1")
-                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
+                bundle.putString("DeviceAnalyzer","SecretCodeModule")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, SecretCodeActivity::class.java))
             }
 
             R.id.btnMobileTricks -> {
                 val bundle = Bundle()
-                bundle.putString("MobileTricksModule","1")
-                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
+                bundle.putString("DeviceAnalyzer","MobileTricksModule")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, MobileTricksActivity::class.java))
             }
             R.id.btnAndroidTips -> {
                 val bundle = Bundle()
-                bundle.putString("AndroidTipsModule","1")
-                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
+                bundle.putString("DeviceAnalyzer","AndroidTipsModule")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, AndroidTipsActivity::class.java))
             }
 
             R.id.btnDeviceInfo -> {
                 val bundle = Bundle()
-                bundle.putString("DeviceInfoModule","1")
-                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
+                bundle.putString("DeviceAnalyzer","DeviceInfoModule")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, DeviceInfoActivity::class.java))
             }
 
             R.id.btnDeviceTesting -> {
                 val bundle = Bundle()
-                bundle.putString("DeviceTestingModule","1")
-                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
+                bundle.putString("DeviceAnalyzer","DeviceTestingModule")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, DeviceTestingActivity::class.java))
             }
         }
