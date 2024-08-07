@@ -25,9 +25,6 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
 
         window.statusBarColor = ContextCompat.getColor(this,R.color.colorStatusBar)
 
-        val bundle = Bundle()
-        bundle.putString("ModuleMainActivity","------>")
-        FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
 
 
         if (Util.isNetworkConnected(this)) {
@@ -61,21 +58,36 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
                 finish()
             }
             R.id.btnSecretCode -> {
+                val bundle = Bundle()
+                bundle.putString("SecretCodeModule","1")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
                 startActivity(Intent(this, SecretCodeActivity::class.java))
             }
 
             R.id.btnMobileTricks -> {
+                val bundle = Bundle()
+                bundle.putString("MobileTricksModule","1")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
                 startActivity(Intent(this, MobileTricksActivity::class.java))
             }
             R.id.btnAndroidTips -> {
+                val bundle = Bundle()
+                bundle.putString("AndroidTipsModule","1")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
                 startActivity(Intent(this, AndroidTipsActivity::class.java))
             }
 
             R.id.btnDeviceInfo -> {
+                val bundle = Bundle()
+                bundle.putString("DeviceInfoModule","1")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
                 startActivity(Intent(this, DeviceInfoActivity::class.java))
             }
 
             R.id.btnDeviceTesting -> {
+                val bundle = Bundle()
+                bundle.putString("DeviceTestingModule","1")
+                FirebaseAnalytics.getInstance(applicationContext).logEvent("SAMSUNG_UNLOCK_APP", bundle)
                 startActivity(Intent(this, DeviceTestingActivity::class.java))
             }
         }

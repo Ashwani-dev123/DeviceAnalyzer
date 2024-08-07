@@ -66,7 +66,7 @@ class MicrophoneFragment : BaseFragment() {
 
        
 
-        checkPermission()
+
 
         binding.btnYes.setOnClickListener {
             DeviceTestingActivity.isPopBackStack = false
