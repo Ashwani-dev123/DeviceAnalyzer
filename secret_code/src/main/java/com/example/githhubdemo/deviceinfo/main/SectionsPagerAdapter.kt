@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.githhubdemo.R
-import com.example.githhubdemo.deviceinfo.fragment.AppListFragment
 import com.example.githhubdemo.deviceinfo.fragment.BatteryFragment
 import com.example.githhubdemo.deviceinfo.fragment.CPU
 import com.example.githhubdemo.deviceinfo.fragment.Dashboard
@@ -23,8 +22,7 @@ class SectionsPagerAdapter(
         SYSTEM(R.string.tab_text_3, ::SystemFrag),
         STORAGE(R.string.tab_text_4, ::StorageFragment),
         CPU(R.string.tab_text_5, { CPU() }),
-        BATTERY(R.string.tab_text_6, ::BatteryFragment),
-        APPS(R.string.tab_text_7, ::AppListFragment);
+        BATTERY(R.string.tab_text_6, ::BatteryFragment);
 
         companion object {
             fun fromPosition(position: Int) = values().getOrElse(position) {

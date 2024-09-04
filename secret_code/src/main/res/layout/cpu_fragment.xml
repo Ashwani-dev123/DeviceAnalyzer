@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        style="@style/SpinKitView.FadingCircle"
+        app:SpinKit_Color="@color/colorToolbar"
+        />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"

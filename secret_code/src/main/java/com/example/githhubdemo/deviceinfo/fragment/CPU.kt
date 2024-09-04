@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githhubdemo.databinding.CpuFragmentBinding
@@ -41,6 +42,7 @@ class CPU : Fragment() {
     private fun setupUIElements() {
         binding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
         launchAndCollectWithViewLifecycle(dataViewModel.cpuInfo) { result ->
+            binding.progressbar.isVisible = true
             Do exhaustive when (result) {
                 is UiResult.Error -> showToast(result.throwable.message.orEmpty())
                 is UiResult.Success -> binding.listWithItems.withModels {
@@ -50,6 +52,7 @@ class CPU : Fragment() {
                             data(information)
                         }
                     }
+                    binding.progressbar.isVisible = false
                 }
             }
         }
