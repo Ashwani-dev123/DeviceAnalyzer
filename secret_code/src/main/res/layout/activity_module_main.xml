@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dlMain"
@@ -20,82 +19,82 @@
 
         <ImageView
             android:id="@+id/btnBack"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
             android:padding="@dimen/_10sdp"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvToolbar"
-            android:layout_marginEnd="@dimen/_5sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:singleLine="true"
-            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:singleLine="true"
             android:text="@string/device_analyzer_amp_info"
             android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ivEdit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="end"
             android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_back"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bannerDashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:id="@+id/llSecretCode"
-            android:background="@drawable/bg_round_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/bg_round_white"
+            android:minHeight="@dimen/_120sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            android:minHeight="@dimen/_120sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
-                    android:textSize="@dimen/_14sdp"
-                    android:textColor="@color/textColor"
-                    android:text="@string/improve_the_performance_of_your_gadget"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/improve_the_performance_of_your_gadget"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_14sdp" />
 
 
                 <LinearLayout
@@ -105,9 +104,11 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/bg_round"
                     android:backgroundTint="@color/colorToolbar"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_gravity="center">
 
                     <TextView
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/device_test"
@@ -120,43 +121,41 @@
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_marginStart="@dimen/_30sdp"
-                    android:background="@drawable/ic_device_test"
                     android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_100sdp"/>
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:background="@drawable/ic_device_test" />
 
             </LinearLayout>
-
-
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/btnDeviceInfo"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:background="@drawable/bg_round_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:background="@drawable/bg_round_white"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
@@ -165,14 +164,14 @@
                     android:background="@drawable/ic_device_info" />
 
                 <TextView
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
                     android:text="@string/device_info"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -181,13 +180,13 @@
 
             <LinearLayout
                 android:id="@+id/btnSecretCode"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:background="@drawable/bg_round_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:background="@drawable/bg_round_white"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
@@ -196,14 +195,14 @@
                     android:background="@drawable/ic_secret_code" />
 
                 <TextView
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
                     android:text="@string/secret_code"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -213,22 +212,22 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/btnMobileTricks"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:background="@drawable/bg_round_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:background="@drawable/bg_round_white"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
@@ -237,14 +236,14 @@
                     android:background="@drawable/ic_mobile_tricks" />
 
                 <TextView
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
                     android:text="@string/mobile_tricks"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -253,13 +252,13 @@
 
             <LinearLayout
                 android:id="@+id/btnAndroidTips"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:background="@drawable/bg_round_white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:background="@drawable/bg_round_white"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
@@ -268,14 +267,14 @@
                     android:background="@drawable/ic_android_tips" />
 
                 <TextView
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
                     android:text="@string/android_tips"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -288,11 +287,11 @@
 
     <com.ads.narayan.ads.bannerAds.NarayanBannerAdView
         android:id="@+id/bannerDashboard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_2sdp" />
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

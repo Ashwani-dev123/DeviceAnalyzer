@@ -3,6 +3,8 @@
 
     <solid android:color="@color/colorToolbar"/>
     <corners android:radius="@dimen/_20sdp"/>
+    <padding android:left="@dimen/_10sdp"
+        android:right="@dimen/_10sdp"/>
 
 
 </shape>
