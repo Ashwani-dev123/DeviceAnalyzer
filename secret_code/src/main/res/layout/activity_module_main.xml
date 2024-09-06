@@ -101,16 +101,16 @@
                     android:id="@+id/btnDeviceTesting"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_36sdp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/bg_round"
                     android:backgroundTint="@color/colorToolbar"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:gravity="center">
 
                     <TextView
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/device_test"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_13sdp" />
@@ -171,7 +171,11 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:ellipsize="end"
                     android:gravity="center"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:singleLine="false"
                     android:text="@string/device_info"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -202,7 +206,11 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:ellipsize="end"
                     android:gravity="center"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:singleLine="false"
                     android:text="@string/secret_code"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -243,7 +251,11 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:ellipsize="end"
                     android:gravity="center"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:singleLine="false"
                     android:text="@string/mobile_tricks"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
@@ -274,7 +286,11 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
+                    android:ellipsize="end"
                     android:gravity="center"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:singleLine="false"
                     android:text="@string/android_tips"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/_14sdp" />
