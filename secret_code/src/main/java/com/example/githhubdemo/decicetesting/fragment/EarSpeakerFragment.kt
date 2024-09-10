@@ -4,6 +4,7 @@ import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -97,7 +98,7 @@ class EarSpeakerFragment : BaseFragment() {
         resetAudioToDefault()
     }
 
-    private fun setAudioToEarpiece() {
+    /*private fun setAudioToEarpiece() {
         audioManager?.let { manager ->
             val audioAttributes = AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_VOICE_COMMUNICATION)
@@ -114,9 +115,38 @@ class EarSpeakerFragment : BaseFragment() {
             manager.mode = AudioManager.MODE_IN_COMMUNICATION
             manager.isSpeakerphoneOn = false
         }
+    }*/
+
+    private fun setAudioToEarpiece() {
+        audioManager?.let { manager ->
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                // For Android O and above
+                val audioAttributes = AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_VOICE_COMMUNICATION)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+                    .build()
+
+                audioFocusRequest = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                    .setAudioAttributes(audioAttributes)
+                    .setAcceptsDelayedFocusGain(true)
+                    .setOnAudioFocusChangeListener {
+                        // Handle audio focus change if needed
+                    }
+                    .build()
+                manager.requestAudioFocus(audioFocusRequest!!)
+            } else {
+                // For Android versions below O (API 26)
+                manager.requestAudioFocus(null, AudioManager.STREAM_VOICE_CALL, AudioManager.AUDIOFOCUS_GAIN)
+            }
+
+            // Set audio mode and disable speakerphone
+            manager.mode = AudioManager.MODE_IN_COMMUNICATION
+            manager.isSpeakerphoneOn = false
+        }
     }
 
-    private fun resetAudioToDefault() {
+
+    /*private fun resetAudioToDefault() {
         audioManager?.let { manager ->
             audioFocusRequest?.let { request ->
                 manager.abandonAudioFocusRequest(request)
@@ -124,7 +154,26 @@ class EarSpeakerFragment : BaseFragment() {
             manager.mode = AudioManager.MODE_NORMAL
             manager.isSpeakerphoneOn = true
         }
+    }*/
+
+    private fun resetAudioToDefault() {
+        audioManager?.let { manager ->
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                // For Android O and above
+                audioFocusRequest?.let { request ->
+                    manager.abandonAudioFocusRequest(request)
+                }
+            } else {
+                // For Android versions below O (API 26)
+                manager.abandonAudioFocus(null)
+            }
+
+            // Reset audio mode and enable speakerphone
+            manager.mode = AudioManager.MODE_NORMAL
+            manager.isSpeakerphoneOn = true
+        }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
