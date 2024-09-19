@@ -2,10 +2,7 @@ package com.example.githhubdemo
 
 
 import android.app.Application
-import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 
@@ -18,15 +15,17 @@ import com.example.githhubdemo.deviceinfo.workers.SystemMonitorWorker
 
 
 import com.getkeepsafe.relinker.ReLinker
+import com.google.firebase.FirebaseApp
 import com.google.gson.Gson
 
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.component.KoinComponent
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-
-class SecretCodeApplication : Application(),KoinComponent {
+//@HiltAndroidApp
+class SecretCodeApplication : Application(),KoinComponent/*, Configuration.Provider*/ {
 
     private val ADJUST_TOKEN = "cc4jvudppczk"
     private val EVENT_PURCHASE_ADJUST = "gzel1k"
@@ -36,6 +35,9 @@ class SecretCodeApplication : Application(),KoinComponent {
 
     private var context: SecretCodeApplication? = null
 
+
+//    override val workManagerConfiguration: Configuration
+//        get() = Configuration.Builder().setWorkerFactory(workerFactory).build()
 
     companion object{
         private lateinit var mInstance : SecretCodeApplication
@@ -57,10 +59,8 @@ class SecretCodeApplication : Application(),KoinComponent {
         startKoin()
         initNativeCpuInfo()
         addSystemMonitor()
+        FirebaseApp.initializeApp(this)
     }
-
-
-
 
     private fun addSystemMonitor() {
         val shouldMonitor = settings.systemMonitoringState

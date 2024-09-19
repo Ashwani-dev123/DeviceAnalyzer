@@ -2,7 +2,7 @@
     <string name="app_name">SecretCodeDemo</string>
 
     <string name="secret_code">Secret Code</string>
-    <string name="mobile_tricks">Mobile tricks</string>
+    <string name="mobile_tricks">Mobile Tricks</string>
     <string name="android_tips">Android Tips</string>
 
     <string name="mobile_tricks_title">Mobile\ntricks</string>
@@ -347,7 +347,7 @@
     <string name="sound_get_lower_when">Sound get lower when plug in headphones</string>
     <string name="disable_facebook_video">Disable Facebook Video Auto - Play On android</string>
     <string name="turn_off_android">Turn off Android location tracking</string>
-    <string name="tap_on_location_google"><![CDATA[Tap on Location > Google Location History]]></string>
+    <string name="tap_on_location_google">Tap on Location > Google Location History</string>
     <string name="reduce_your_mobile">Reduce your mobile data usage on android</string>
     <string name="compress_chrome_pages">Compress Chrome pages</string>
     <string name="use_opera_video">Use Opera video compression</string>
