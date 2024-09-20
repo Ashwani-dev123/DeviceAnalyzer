@@ -10,6 +10,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.ads.narayan.ads.NarayanAd
+import com.ads.narayan.ads.NarayanAdCallback
+import com.ads.narayan.ads.wrapper.NarayanAdError
+import com.ads.narayan.ads.wrapper.NarayanInterstitialAd
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityDeviceTestingBinding
 import com.example.githhubdemo.decicetesting.fragment.VolumeUpFragment
@@ -24,6 +28,7 @@ class DeviceTestingActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
+    private var mInterstitialAd: NarayanInterstitialAd? = null
 
     companion object {
         var progressbar: ProgressBar? = null
@@ -84,6 +89,7 @@ class DeviceTestingActivity : AppCompatActivity() {
             }
         }
 
+        loadInterstitial()
 
         binding.btnBack.setOnClickListener {
             onBackPressed()
@@ -112,12 +118,36 @@ class DeviceTestingActivity : AppCompatActivity() {
 
             Log.e("CHECKNAVCONTROLLER", "progressbar!!.progress: *** " + progressbar!!.progress)
         } else {
-            super.onBackPressed()
+            if(mInterstitialAd!=null && mInterstitialAd!!.isReady){
+                NarayanAd.getInstance().forceShowInterstitial(this,mInterstitialAd,object : NarayanAdCallback(){
+                    override fun onNextAction() {
+                        super.onNextAction()
+                        finish()
+                    }
+
+                    override fun onAdFailedToShow(adError: NarayanAdError?) {
+                        super.onAdFailedToShow(adError)
+                        finish()
+                    }
+                },true)
+            }else {
+                loadInterstitial()
+                super.onBackPressed()
+            }
         }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    private fun loadInterstitial() {
+        if (Util.isNetworkConnected(this)) {
+            if (SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID,"") != "") {
+                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this , SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
+            }
+        }
+
     }
 
 }
