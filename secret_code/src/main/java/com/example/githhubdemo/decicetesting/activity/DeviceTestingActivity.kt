@@ -133,6 +133,7 @@ class DeviceTestingActivity : AppCompatActivity() {
             }else {
                 loadInterstitial()
                 super.onBackPressed()
+                finish()
             }
         }
     }

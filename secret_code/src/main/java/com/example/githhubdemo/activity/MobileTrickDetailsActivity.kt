@@ -264,6 +264,7 @@ class MobileTrickDetailsActivity : AppCompatActivity(), View.OnClickListener {
                     false
                 )
             } else {
+                loadInterstitial()
                 finish()
             }
         } else {
