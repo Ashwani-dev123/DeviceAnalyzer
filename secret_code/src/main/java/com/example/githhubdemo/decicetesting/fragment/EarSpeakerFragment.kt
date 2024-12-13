@@ -6,6 +6,7 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -117,7 +118,7 @@ class EarSpeakerFragment : BaseFragment() {
         }
     }*/
 
-    private fun setAudioToEarpiece() {
+    /*private fun setAudioToEarpiece() {
         audioManager?.let { manager ->
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 // For Android O and above
@@ -142,6 +143,55 @@ class EarSpeakerFragment : BaseFragment() {
             // Set audio mode and disable speakerphone
             manager.mode = AudioManager.MODE_IN_COMMUNICATION
             manager.isSpeakerphoneOn = false
+        }
+    }*/
+
+    private fun setAudioToEarpiece() {
+        audioManager?.let { manager ->
+            // Log audio manager state for debugging
+            Log.d("AudioManager", "Initial Mode: ${manager.mode}, IsSpeakerphoneOn: ${manager.isSpeakerphoneOn}")
+
+            // Handle audio focus
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                val audioAttributes = AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_VOICE_COMMUNICATION)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+                    .build()
+
+                audioFocusRequest = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                    .setAudioAttributes(audioAttributes)
+                    .setAcceptsDelayedFocusGain(true)
+                    .setOnAudioFocusChangeListener {
+                        Log.d("AudioManager", "Audio focus changed: $it")
+                    }
+                    .build()
+                manager.requestAudioFocus(audioFocusRequest!!)
+            } else {
+                val result = manager.requestAudioFocus(
+                    null,
+                    AudioManager.STREAM_VOICE_CALL,
+                    AudioManager.AUDIOFOCUS_GAIN
+                )
+                Log.d("AudioManager", "Audio focus result: $result")
+            }
+
+            // Set audio mode and routing
+            manager.mode = AudioManager.MODE_IN_COMMUNICATION
+            manager.isSpeakerphoneOn = false
+
+            // Force audio routing if necessary
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                try {
+                    @Suppress("DEPRECATION")
+                    manager.isWiredHeadsetOn = false // Some devices might need this
+                } catch (e: Exception) {
+                    Log.e("AudioManager", "Error setting wired headset: ${e.message}")
+                }
+            }
+
+            Log.d("AudioManager", "Mode after setup: ${manager.mode}, IsSpeakerphoneOn: ${manager.isSpeakerphoneOn}")
+        } ?: run {
+            Log.e("AudioManager", "AudioManager is null")
         }
     }
 

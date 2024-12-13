@@ -56,9 +56,7 @@ class DeviceInfoActivity : AppCompatActivity(), View.OnClickListener {
 
         init()
 
-
     }
-
 
 
     override fun onSupportNavigateUp(): Boolean {

@@ -3,6 +3,7 @@ package com.example.githhubdemo.decicetesting.fragment
 import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraManager
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.FragmentFlashlightBinding
 import com.example.githhubdemo.decicetesting.activity.DeviceTestingActivity
 import com.example.githhubdemo.decicetesting.utils.ButtonClickViewModel
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class FlashlightFragment : BaseFragment() {
 
@@ -92,7 +94,12 @@ class FlashlightFragment : BaseFragment() {
                 isFlashlightOn = true
             }
         } catch (e: CameraAccessException) {
-            e.printStackTrace()
+            Toast.makeText(requireContext(),"Something error",Toast.LENGTH_SHORT).show()
+            try {
+                FirebaseCrashlytics.getInstance().log(e.localizedMessage!!)
+            } catch (_: Exception) {
+
+            }
         }
     }
 
