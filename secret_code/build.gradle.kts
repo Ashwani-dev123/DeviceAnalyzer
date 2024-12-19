@@ -121,8 +121,8 @@ dependencies {
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
 
 
-    annotationProcessor ("org.androidannotations:androidannotations:4.8.0")
-    implementation ("org.androidannotations:androidannotations-api:4.8.0")
+    kapt("org.androidannotations:androidannotations:4.8.0")
+    implementation("org.androidannotations:androidannotations-api:4.8.0")
     implementation ("com.google.code.gson:gson:2.11.0")
     implementation ("com.squareup.retrofit2:retrofit:2.11.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
