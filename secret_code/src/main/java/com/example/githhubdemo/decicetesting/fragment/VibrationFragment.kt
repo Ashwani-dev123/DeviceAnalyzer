@@ -93,10 +93,13 @@ class VibrationFragment : BaseFragment() {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
-        if (vibrator != null) {
-            vibrator.cancel() // Stop the vibration when activity is destroyed
+        try {
+            if (vibrator != null) {
+                vibrator.cancel() // Stop the vibration when activity is destroyed
+            }
+        } catch (_: Exception) {
         }
+        super.onDestroy()
     }
 
     private fun stopVibration() {
