@@ -150,7 +150,7 @@ dependencies {
     implementation ("com.google.android.play:review-ktx:2.0.1")
     implementation ("org.apache.commons:commons-math3:3.6.1")
     implementation ("com.github.wendykierp:JTransforms:3.1")
-    implementation ("com.github.Ashwani-dev123:NarayanAds:1.1.4")
+    implementation ("com.github.Ashwani-dev123:NarayanAds:1.2.4")
     
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-analytics")
