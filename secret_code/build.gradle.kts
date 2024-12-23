@@ -134,7 +134,7 @@ dependencies {
     implementation ("com.airbnb.android:epoxy-databinding:5.1.4")
     implementation ("com.akexorcist:round-corner-progress-bar:2.1.2")
     implementation ("com.github.lzyzsd:circleprogress:1.2.1")
-    implementation ("io.insert-koin:koin-android:3.3.2")
+    implementation ("io.insert-koin:koin-android:4.0.0")
     implementation ("com.getkeepsafe.relinker:relinker:1.4.5")
     implementation ("androidx.preference:preference-ktx:1.2.1")
     implementation ("androidx.work:work-runtime-ktx:2.9.1")
