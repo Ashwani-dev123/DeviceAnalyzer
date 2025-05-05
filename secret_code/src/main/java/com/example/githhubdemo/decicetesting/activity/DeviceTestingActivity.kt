@@ -1,6 +1,5 @@
 package com.example.githhubdemo.decicetesting.activity
 
-
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
@@ -21,13 +20,10 @@ import com.example.githhubdemo.utils.ShareModule
 import com.example.githhubdemo.utils.SharedPrefsUtilsModule
 import com.example.githhubdemo.utils.Util
 
-
 class DeviceTestingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeviceTestingBinding
-
     private lateinit var navController: NavController
-
     private var mInterstitialAd: NarayanInterstitialAd? = null
 
     companion object {
@@ -57,11 +53,16 @@ class DeviceTestingActivity : AppCompatActivity() {
 
         progressbar = binding.customProgressBar
 
+        // Get navigation controller from the NavHostFragment
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-
+        // Set the graph explicitly to ensure it uses the device testing graph
+        // This is crucial to prevent the MainActivity's graph from being used
+        val inflater = navHostFragment.navController.navInflater
+        val graph = inflater.inflate(R.navigation.nav_graph)
         navController = navHostFragment.navController
+        navController.graph = graph
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.tvToolbar.text = destination.label
@@ -72,13 +73,10 @@ class DeviceTestingActivity : AppCompatActivity() {
                     isPopBackStack = false
                     progressbar!!.progress = currentProgress + 1
 
-                    //Log.e("CHECKNAVCONTROLLER", "navController: " + navController.currentDestination)
                     Log.e("CHECKNAVCONTROLLER", "progressbar!!.progress: " + progressbar!!.progress)
                     Log.e("CHECKNAVCONTROLLER", "isPopBackStack : " + isPopBackStack)
                 }
             }
-
-
 
             if (destination.label == "Device Result") {
                 binding.toolbar.isVisible = false
@@ -106,16 +104,12 @@ class DeviceTestingActivity : AppCompatActivity() {
         else {
             binding.bannerDashboard.isVisible = false
         }
-
-
-
     }
 
     override fun onBackPressed() {
         isPopBackStack = true
         if (navController.popBackStack()) {
             progressbar!!.progress = progressbar!!.progress - 1
-
             Log.e("CHECKNAVCONTROLLER", "progressbar!!.progress: *** " + progressbar!!.progress)
         } else {
             if(mInterstitialAd!=null && mInterstitialAd!!.isReady){
@@ -145,10 +139,8 @@ class DeviceTestingActivity : AppCompatActivity() {
     private fun loadInterstitial() {
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID,"") != "") {
-                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this , SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
+                mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this, SharedPrefsUtilsModule.getString(this,ShareModule.INTERSTITIAL_ID))
             }
         }
-
     }
-
 }
