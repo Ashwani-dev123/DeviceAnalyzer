@@ -60,7 +60,7 @@ class DeviceTestingActivity : AppCompatActivity() {
         // Set the graph explicitly to ensure it uses the device testing graph
         // This is crucial to prevent the MainActivity's graph from being used
         val inflater = navHostFragment.navController.navInflater
-        val graph = inflater.inflate(R.navigation.nav_graph)
+        val graph = inflater.inflate(R.navigation.device_testing_nav_graph)
         navController = navHostFragment.navController
         navController.graph = graph
 
