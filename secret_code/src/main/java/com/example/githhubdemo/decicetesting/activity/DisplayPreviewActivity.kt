@@ -2,7 +2,14 @@ package com.example.githhubdemo.decicetesting.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.Insets
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
+import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityDisplayPreviewBinding
 
 
@@ -14,6 +21,14 @@ class DisplayPreviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDisplayPreviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.container) { v: View, insets: WindowInsetsCompat ->
+            val systemBars: Insets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         setColor(0)
 

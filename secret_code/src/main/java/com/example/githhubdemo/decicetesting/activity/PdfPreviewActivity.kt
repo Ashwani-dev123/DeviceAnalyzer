@@ -20,6 +20,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.Insets
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityPdfPreviewBinding
 import com.example.githhubdemo.decicetesting.utils.StoragePermissionHandler
@@ -47,7 +51,13 @@ class PdfPreviewActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityPdfPreviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = ContextCompat.getColor(this, R.color.pdfBgColor)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v: View, insets: WindowInsetsCompat ->
+            val systemBars: Insets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         storagePermissionHandler = StoragePermissionHandler()
 

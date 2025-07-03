@@ -28,9 +28,17 @@ android {
                 arguments += "-DANDROID_STL=c++_static"
             }
         }
+    }
 
-
-
+    externalNativeBuild {
+        cmake {
+//            path("src/main/cpp/CMakeLists.txt")
+//            path("../secret_code/src/main/cpp/CMakeLists.txt")
+            cmake {
+                path = file("src/main/cpp/CMakeLists.txt")
+                version = "4.0.2"
+            }
+        }
     }
 
     buildTypes {
