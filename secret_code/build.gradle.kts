@@ -5,8 +5,9 @@ plugins {
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs")
     id("maven-publish")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
+    // Remove these plugins for library modules - they're for app modules only
+    // id("com.google.gms.google-services")
+    // id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -140,11 +141,12 @@ dependencies {
     implementation("com.google.android.play:review-ktx:2.0.1")
     implementation("org.apache.commons:commons-math3:3.6.1")
     implementation("com.github.wendykierp:JTransforms:3.1")
-    implementation("com.github.Ashwani-dev123:NarayanAds:1.2.4")
+    implementation("com.github.Ashwani-dev123:NarayanAds:1.3.3")
 
-    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-crashlytics")
+    // Firebase dependencies should be added by the app module that uses this library
+    // implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
+    // implementation("com.google.firebase:firebase-analytics")
+    // implementation("com.google.firebase:firebase-crashlytics")
 
     //app locale
     implementation("dev.b3nedikt.applocale:app-locale:2.0.2")
