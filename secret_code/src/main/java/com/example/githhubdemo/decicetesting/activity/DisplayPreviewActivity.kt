@@ -1,8 +1,10 @@
 package com.example.githhubdemo.decicetesting.activity
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowInsets
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.Insets
 import androidx.core.view.ViewCompat
@@ -22,11 +24,16 @@ class DisplayPreviewActivity : AppCompatActivity() {
         binding = ActivityDisplayPreviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.container) { v: View, insets: WindowInsetsCompat ->
-            val systemBars: Insets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+        window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
+                view.setPadding(0, statusBarHeight, 0, 0)
+                view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
+            } else {
+                @Suppress("DEPRECATION")
+                window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+            }
+
             insets
         }
 
