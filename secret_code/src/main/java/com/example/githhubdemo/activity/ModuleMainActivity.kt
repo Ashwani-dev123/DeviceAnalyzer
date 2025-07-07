@@ -8,10 +8,6 @@ import android.view.View
 import android.view.WindowInsets
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.Insets
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import com.example.githhubdemo.R
 import com.example.githhubdemo.databinding.ActivityModuleMainBinding
@@ -31,17 +27,23 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
         binding = ActivityModuleMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.decorView.setOnApplyWindowInsetsListener { view, insets ->
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
-                view.setPadding(0, statusBarHeight, 0, 0)
-                view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
-            } else {
-                @Suppress("DEPRECATION")
-                window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
-            }
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                    val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
+                    view.setPadding(0, statusBarHeight, 0, 0)
+                    view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
+                } else {
+                    @Suppress("DEPRECATION")
+                    window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+                }
 
-            insets
+                insets
+            }
+        }
+        else
+        {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
         }
 
         appName = SharedPrefsUtilsModule.getString(this, ShareModule.APP_NAME,"")
