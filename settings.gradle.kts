@@ -40,6 +40,6 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "GIthHubDemo"
+rootProject.name = "DeviceAnalyzer"
 include(":secret_code")
  

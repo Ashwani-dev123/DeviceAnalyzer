@@ -5,7 +5,7 @@ plugins {
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs")
     id("maven-publish")
-    id("com.google.gms.google-services")
+//    id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
 
 
@@ -37,7 +37,7 @@ android {
 //            path("../secret_code/src/main/cpp/CMakeLists.txt")
             cmake {
                 path = file("../secret_code/src/main/cpp/CMakeLists.txt")
-                version = "4.0.2"
+                version = "3.22.1"
             }
         }
     }
