@@ -45,7 +45,7 @@
     <string name="select_imei_service">Seleccionar servicio IMEI</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">Este servicio solo verificará el estado actual de tu IMEI. NO desbloqueará tu dispositivo.</string>
     <string name="txt_service_have_rates">El servicio tiene tasas de éxito del 40 al 50%</string>
-    <string name="agree_service_terms_condition">Al marcar esta casilla, aceptas nuestra <a href="https://mobilemiracle.io/privacy">Política de privacidad</a> y nuestros <a href="https://mobilemiracle.io/terms-condition">Términos y condiciones del servicio</a></string>
+    <string name="agree_service_terms_condition">Al marcar esta casilla, aceptas nuestra <a href="https://easysimunlocker.com/privacy-policy">Política de privacidad</a> y nuestros <a href="https://easysimunlocker.com/term-and-conditions">Términos y condiciones del servicio</a></string>
     <string name="txt_dial_to_get_digit">Marca *#06# para obtener los 15 dígitos del IMEI</string>
     <string name="alert">Alerta</string>
     <string name="errors_connection_1">¡Sin conexión a Internet!</string>
@@ -73,7 +73,7 @@
     <string name="order_status">Estado del pedido</string>
     <string name="txt_success">Éxito</string>
     <string name="status">Estado</string>
-    <string name="by_mobile_miracle">Por <u>MobileMiracle</u></string>
+    <string name="by_mobile_miracle">Por <u>Easysimunlocker.com</u></string>
     <string name="email_imei_input_hint">Ingresa dirección de correo electrónico o IMEI</string>
     <string name="txt_track_now">Rastrear ahora</string>
     <string name="no_order_found">No se encontró ningún pedido</string>

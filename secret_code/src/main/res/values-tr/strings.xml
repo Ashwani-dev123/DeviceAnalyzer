@@ -50,7 +50,7 @@
     <string name="select_imei_service">IMEI Hizmetini Seçin</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">Bu hizmet yalnızca IMEI\'nizin mevcut durumunu kontrol edecektir. Cihazınızın kilidini AÇMAYACAKTIR.</string>
     <string name="txt_service_have_rates">Hizmetin %40 – %50 Başarı Oranı Var</string>
-    <string name="agree_service_terms_condition">Bu kutuyu işaretleyerek <a href="https://mobilemiracle.io/privacy">Gizlilik Politikamızı</a> ve <a href="https://mobilemiracle.io/terms-condition">Hizmet Şartları ve Koşulları</a>nı kabul etmiş olursunuz</string>
+    <string name="agree_service_terms_condition">Bu kutuyu işaretleyerek <a href="https://easysimunlocker.com/privacy-policy">Gizlilik Politikamızı</a> ve <a href="https://easysimunlocker.com/term-and-conditions">Hizmet Şartları ve Koşulları</a>nı kabul etmiş olursunuz</string>
     <string name="txt_dial_to_get_digit">15 Haneli IMEI almak için *#06# tuşlayın</string>
     <string name="alert">Uyarı</string>
     <string name="errors_connection_1">İnternet bağlantısı yok!</string>
@@ -78,7 +78,7 @@
     <string name="order_status">Sipariş Durumu</string>
     <string name="txt_success">Başarılı</string>
     <string name="status">Durum</string>
-    <string name="by_mobile_miracle">Tarafından <u>MobileMiracle</u></string>
+    <string name="by_mobile_miracle">Tarafından <u>Easysimunlocker.com</u></string>
     <string name="email_imei_input_hint">E-posta Adresi veya IMEI Girin</string>
     <string name="txt_track_now">Şimdi Takip Et</string>
     <string name="no_order_found">Sipariş Bulunamadı</string>

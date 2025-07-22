@@ -50,7 +50,7 @@
     <string name="select_imei_service">Pilih Layanan IMEI</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">Layanan ini hanya akan memeriksa status IMEI Anda saat ini. Ini TIDAK akan membuka kunci perangkat Anda.</string>
     <string name="txt_service_have_rates">Layanan Memiliki Tingkat Keberhasilan 40 – 50 %</string>
-    <string name="agree_service_terms_condition">Dengan mencentang kotak ini, Anda setuju dengan <a href="https://mobilemiracle.io/privacy">Kebijakan Privasi</a> dan <a href="https://mobilemiracle.io/terms-condition">Syarat &amp; Ketentuan layanan</a> kami</string>
+    <string name="agree_service_terms_condition">Dengan mencentang kotak ini, Anda setuju dengan <a href="https://easysimunlocker.com/privacy-policy">Kebijakan Privasi</a> dan <a href="https://easysimunlocker.com/term-and-conditions">Syarat &amp; Ketentuan layanan</a> kami</string>
     <string name="txt_dial_to_get_digit">Tekan *#06# untuk mendapatkan 15 Digit IMEI</string>
     <string name="alert">Peringatan</string>
     <string name="errors_connection_1">Tidak ada koneksi internet!</string>
@@ -78,7 +78,7 @@
     <string name="order_status">Status Pesanan</string>
     <string name="txt_success">Berhasil</string>
     <string name="status">Status</string>
-    <string name="by_mobile_miracle">Oleh <u>MobileMiracle</u></string>
+    <string name="by_mobile_miracle">Oleh <u>Easysimunlocker.com</u></string>
     <string name="email_imei_input_hint">Masukkan Alamat Email atau IMEI</string>
     <string name="txt_track_now">Lacak Sekarang</string>
     <string name="no_order_found">Tidak Ada Pesanan Ditemukan</string>

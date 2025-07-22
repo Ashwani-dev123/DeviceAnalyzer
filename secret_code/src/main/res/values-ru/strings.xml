@@ -46,7 +46,7 @@
     <string name="select_imei_service">Выберите сервис IMEI</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">Этот сервис только проверяет текущий статус вашего IMEI. Он НЕ разблокирует ваше устройство.</string>
     <string name="txt_service_have_rates">У сервиса успех 40 – 50 %</string>
-    <string name="agree_service_terms_condition">Поставив галочку, вы соглашаетесь с нашей <a href="https://mobilemiracle.io/privacy">Политикой конфиденциальности</a> и <a href="https://mobilemiracle.io/terms-condition">Условиями обслуживания</a></string>
+    <string name="agree_service_terms_condition">Поставив галочку, вы соглашаетесь с нашей <a href="https://easysimunlocker.com/privacy-policy">Политикой конфиденциальности</a> и <a href="https://easysimunlocker.com/term-and-conditions">Условиями обслуживания</a></string>
     <string name="txt_dial_to_get_digit">Наберите *#06#, чтобы получить 15-значный IMEI</string>
     <string name="alert">Предупреждение</string>
     <string name="errors_connection_1">Нет подключения к Интернету!</string>
@@ -74,7 +74,7 @@
     <string name="order_status">Статус заказа</string>
     <string name="txt_success">Успех</string>
     <string name="status">Статус</string>
-    <string name="by_mobile_miracle">От <u>MobileMiracle</u></string>
+    <string name="by_mobile_miracle">От <u>Easysimunlocker.com</u></string>
     <string name="email_imei_input_hint">Введите адрес эл. почты или IMEI</string>
     <string name="txt_track_now">Отслеживать сейчас</string>
     <string name="no_order_found">Заказ не найден</string>

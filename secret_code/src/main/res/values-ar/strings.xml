@@ -45,7 +45,7 @@
     <string name="select_imei_service">اختر خدمة IMEI</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">ستقوم هذه الخدمة فقط بالتحقق من الحالة الحالية لـ IMEI الخاص بك. لن تفتح جهازك.</string>
     <string name="txt_service_have_rates">الخدمة لديها معدل نجاح 40-50%</string>
-    <string name="agree_service_terms_condition">بالنقر على هذا المربع، فإنك توافق على <a href="https://mobilemiracle.io/privacy">سياسة الخصوصية</a> و<a href="https://mobilemiracle.io/terms-condition">شروط الخدمة</a></string>
+    <string name="agree_service_terms_condition">بالنقر على هذا المربع، فإنك توافق على <a href="https://easysimunlocker.com/privacy-policy">سياسة الخصوصية</a> و<a href="https://easysimunlocker.com/term-and-conditions">شروط الخدمة</a></string>
     <string name="txt_dial_to_get_digit">اتصل بـ *#06# للحصول على رقم IMEI المكون من 15 رقمًا</string>
     <string name="alert">تنبيه</string>
     <string name="errors_connection_1">لا يوجد اتصال بالإنترنت!</string>
@@ -73,7 +73,7 @@
     <string name="order_status">حالة الطلب</string>
     <string name="txt_success">نجاح</string>
     <string name="status">الحالة</string>
-    <string name="by_mobile_miracle">بواسطة <u>MobileMiracle</u></string>
+    <string name="by_mobile_miracle">بواسطة <u>Easysimunlocker.com</u></string>
     <string name="email_imei_input_hint">أدخل عنوان البريد الإلكتروني أو IMEI</string>
     <string name="txt_track_now">تتبع الآن</string>
     <string name="no_order_found">لم يتم العثور على طلب</string>

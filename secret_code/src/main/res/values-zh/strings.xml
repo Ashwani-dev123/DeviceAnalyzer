@@ -46,7 +46,7 @@
     <string name="select_imei_service">选择IMEI服务</string>
     <string name="this_service_will_only_check_current_status_of_your_imei_it_will_not_unlock_your_device">此服务仅检查您的IMEI的当前状态。它不会解锁您的设备。</string>
     <string name="txt_service_have_rates">服务成功率为40%至50%</string>
-    <string name="agree_service_terms_condition">通过选中此框，您同意我们的<a href="https://mobilemiracle.io/privacy">隐私政策</a>和<a href="https://mobilemiracle.io/terms-condition">服务条款</a></string>
+    <string name="agree_service_terms_condition">通过选中此框，您同意我们的<a href="https://easysimunlocker.com/privacy-policy">隐私政策</a>和<a href="https://easysimunlocker.com/term-and-conditions">服务条款</a></string>
     <string name="txt_dial_to_get_digit">拨打*＃06＃获取15位IMEI</string>
     <string name="alert">警报</string>
     <string name="errors_connection_1">没有网络连接！</string>
@@ -74,7 +74,7 @@
     <string name="order_status">订单状态</string>
     <string name="txt_success">成功</string>
     <string name="status">状态</string>
-    <string name="by_mobile_miracle">由<u>MobileMiracle</u>提供</string>
+    <string name="by_mobile_miracle">由<u>Easysimunlocker.com</u>提供</string>
     <string name="email_imei_input_hint">输入电子邮件地址或IMEI</string>
     <string name="txt_track_now">立即跟踪</string>
     <string name="no_order_found">未找到订单</string>
