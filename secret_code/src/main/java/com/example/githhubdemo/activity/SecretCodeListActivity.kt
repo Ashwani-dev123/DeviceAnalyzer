@@ -23,24 +23,24 @@ class SecretCodeListActivity : AppCompatActivity(),View.OnClickListener {
         binding = ActivitySecretCodeListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            window.decorView.setOnApplyWindowInsetsListener { view, insets ->
-                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                    val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
-                    view.setPadding(0, statusBarHeight, 0, 0)
-                    view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
-                } else {
-                    @Suppress("DEPRECATION")
-                    window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
-                }
-
-                insets
-            }
-        }
-        else
-        {
-            window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
-        }
+//        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+//            window.decorView.setOnApplyWindowInsetsListener { view, insets ->
+//                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+//                    val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
+//                    view.setPadding(0, statusBarHeight, 0, 0)
+//                    view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
+//                } else {
+//                    @Suppress("DEPRECATION")
+//                    window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+//                }
+//
+//                insets
+//            }
+//        }
+//        else
+//        {
+//            window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
+//        }
 
         if (Util.isNetworkConnected(this)) {
             if (SharedPrefsUtilsModule.getString(this, ShareModule.BANNER_ID,"") != "") {
