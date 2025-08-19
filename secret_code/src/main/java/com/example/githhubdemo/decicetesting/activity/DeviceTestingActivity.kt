@@ -8,6 +8,7 @@ import android.view.WindowInsets
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -55,8 +56,13 @@ class DeviceTestingActivity : AppCompatActivity() {
             window.decorView.setOnApplyWindowInsetsListener { view, insets ->
                 if (Build.VERSION.SDK_INT > Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
                     val statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top
-                    view.setPadding(0, statusBarHeight, 0, 0)
+                    val navBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom
+                    view.setPadding(0, statusBarHeight, 0, navBarHeight)
                     view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorStatusBar))
+
+                    window.navigationBarColor = ContextCompat.getColor(this, R.color.white) // pick a dark color
+                    val controller = WindowInsetsControllerCompat(window, window.decorView)
+                    controller.isAppearanceLightNavigationBars = false //
                 } else {
                     @Suppress("DEPRECATION")
                     window.statusBarColor = ContextCompat.getColor(this, R.color.colorStatusBar)
