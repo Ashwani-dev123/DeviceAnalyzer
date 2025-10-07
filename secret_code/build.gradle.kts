@@ -93,6 +93,15 @@ android {
     }
     packaging {
         exclude ("META-INF/DEPENDENCIES")
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = false
+        }
     }
 
     lint {
