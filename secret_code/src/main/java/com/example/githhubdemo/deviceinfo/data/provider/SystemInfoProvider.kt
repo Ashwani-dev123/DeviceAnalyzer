@@ -82,7 +82,7 @@ class SystemInfoProvider(
     private fun getGooglePlayServices(): Information {
         return try {
             val pInfo: PackageInfo = packageManager.getPackageInfo("com.google.android.gms", 0)
-            Information("Google Play Services", pInfo.versionName)
+            Information("Google Play Services", pInfo.versionName!!)
         } catch (e: PackageManager.NameNotFoundException) {
             Information("Google Play Services", "Not Installed")
         }

@@ -19,12 +19,12 @@ class AppRepository(private val context: Context) {
             try {
                 val launchIntent = packageManager.getLaunchIntentForPackage(packageInfo.packageName)
                 if (packageInfo != null && launchIntent != null) {
-                    val appName = packageInfo.applicationInfo.loadLabel(packageManager).toString()
+                    val appName = packageInfo.applicationInfo!!.loadLabel(packageManager).toString()
                     val packageName = packageInfo.packageName
                     val versionName = packageInfo.versionName
                     val versionCode = packageInfo.versionCode
-                    val size = File(packageInfo.applicationInfo.sourceDir).length() // Size in bytes
-                    appList.add(AppInfo(appName, packageName, versionName, versionCode, size))
+                    val size = File(packageInfo.applicationInfo!!.sourceDir).length() // Size in bytes
+                    appList.add(AppInfo(appName, packageName, versionName!!, versionCode, size))
                 }
 
             } catch (e: Exception) {
