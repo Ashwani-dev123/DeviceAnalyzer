@@ -1,8 +1,2 @@
 jdk:
   - openjdk21
-
-before_install:
-  - sdk install java 21.0.5-open || true
-  - sdk use java 21.0.5-open
-  - export JAVA_HOME="$HOME/.sdkman/candidates/java/21.0.5-open"
-  - echo "Using Java: $JAVA_HOME"
