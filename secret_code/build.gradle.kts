@@ -13,34 +13,34 @@ plugins {
 
 android {
     namespace = "com.example.githhubdemo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
 //        applicationId = "com.example.githhubdemo"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
 //        versionCode = 1
 //        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        externalNativeBuild {
-            cmake {
-                arguments += "-DANDROID_STL=c++_static"
-            }
-        }
+//        externalNativeBuild {
+//            cmake {
+//                arguments += "-DANDROID_STL=c++_static"
+//            }
+//        }
 
     }
 
-    externalNativeBuild {
-        cmake {
-//            path("src/main/cpp/CMakeLists.txt")
-//            path("../secret_code/src/main/cpp/CMakeLists.txt")
-            cmake {
-                path = file("../secret_code/src/main/cpp/CMakeLists.txt")
-                version = "3.22.1"
-            }
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+////            path("src/main/cpp/CMakeLists.txt")
+////            path("../secret_code/src/main/cpp/CMakeLists.txt")
+//            cmake {
+//                path = file("../secret_code/src/main/cpp/CMakeLists.txt")
+//                version = "3.22.1"
+//            }
+//        }
+//    }
 
     buildTypes {
         release {
@@ -74,7 +74,7 @@ android {
     externalNativeBuild {
         cmake {
 //            path("src/main/cpp/CMakeLists.txt")
-            path("../secret_code/src/main/cpp/CMakeLists.txt")
+//            path("../secret_code/src/main/cpp/CMakeLists.txt")
 
         }
     }
