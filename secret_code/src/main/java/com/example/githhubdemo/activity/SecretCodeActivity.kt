@@ -101,10 +101,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Samsung")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -138,10 +140,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Oppo")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -175,10 +179,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Xiaomi")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -212,10 +218,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Vivo")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -250,10 +258,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Htc")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -287,10 +297,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Realme")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -324,10 +336,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Asus")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -361,10 +375,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "iPhone")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -399,10 +415,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                         mInterstitialAd,
                         object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Sony")
+                            startActivity(intent)
+                        }
 
                             override fun onAdFailedToShow(adError: NarayanAdError?) {
                                 super.onAdFailedToShow(adError)
@@ -438,10 +456,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Huawei")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -476,10 +496,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Lg")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -515,10 +537,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "OnePlus")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -553,10 +577,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Acer")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -590,10 +616,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Lenovo")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -628,10 +656,12 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                            mInterstitialAd,
                            object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, SecretCodeListActivity::class.java)
+                            intent.putExtra("keys", "Zte")
+                            startActivity(intent)
+                        }
 
                                override fun onAdFailedToShow(adError: NarayanAdError?) {
                                    super.onAdFailedToShow(adError)
@@ -676,10 +706,10 @@ class SecretCodeActivity : AppCompatActivity(),View.OnClickListener {
                 mInterstitialAd,
                 object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            finish()
+                        }
 
                     override fun onAdFailedToShow(adError: NarayanAdError?) {
                         super.onAdFailedToShow(adError)

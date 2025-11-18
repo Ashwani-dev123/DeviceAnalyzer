@@ -105,10 +105,12 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
                     mInterstitialAd,
                     object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            val intent = Intent(applicationContext, MobileTrickDetailsActivity::class.java)
+                            intent.putExtra("keys", i)
+                            startActivity(intent)
+                        }
 
                         override fun onAdFailedToShow(adError: NarayanAdError?) {
                             super.onAdFailedToShow(adError)
@@ -165,10 +167,10 @@ class MobileTricksActivity : AppCompatActivity(), View.OnClickListener{
                 mInterstitialAd,
                 object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            finish()
+                        }
 
                     override fun onAdFailedToShow(adError: NarayanAdError?) {
                         super.onAdFailedToShow(adError)

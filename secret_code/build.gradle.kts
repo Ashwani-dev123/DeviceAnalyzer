@@ -95,13 +95,19 @@ android {
         exclude ("META-INF/DEPENDENCIES")
         jniLibs {
             useLegacyPackaging = false
+            excludes += listOf("**/libapplovin-native-crash-reporter.so")
         }
     }
 
     packagingOptions {
         jniLibs {
             useLegacyPackaging = false
+            excludes += listOf("**/libapplovin-native-crash-reporter.so")
         }
+    }
+
+    android {
+        ndkVersion = "27.0.12077973" // NDK r27b or newer
     }
 
     lint {
@@ -176,7 +182,7 @@ dependencies {
     implementation ("com.google.android.play:review-ktx:2.0.1")
     implementation ("org.apache.commons:commons-math3:3.6.1")
     implementation ("com.github.wendykierp:JTransforms:3.1")
-    implementation ("com.github.Ashwani-dev123:NarayanAds:1.2.4")
+    implementation ("com.github.Ashwani-dev123:NarayanAds:1.3.5")
     
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-analytics")

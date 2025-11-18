@@ -80,7 +80,7 @@ class SecretCodeApplication : Application(),KoinComponent/*, Configuration.Provi
 
     private fun initNativeCpuInfo() {
         try {
-            System.loadLibrary(LIB_NAME)  // Make sure LIB_NAME is correct
+//            System.loadLibrary(LIB_NAME)  // Make sure LIB_NAME is correct
            /* ReLinker.loadLibrary(this,
                 LIB_NAME
             ).thenCatching {

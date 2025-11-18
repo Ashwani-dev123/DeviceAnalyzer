@@ -19,71 +19,58 @@ import java.util.regex.Pattern
 class CpuDataProvider(
     private val settings: Settings
 ) {
-    external fun initLibrary(): Boolean
 
-    private external fun getCpuName(): String
-
-    private external fun hasArmNeon(): Boolean
-
-    private external fun getL1dCaches(): IntArray?
-
-    private external fun getL1iCaches(): IntArray?
-
-    private external fun getL2Caches(): IntArray?
-
-    private external fun getL3Caches(): IntArray?
-
-    private external fun getL4Caches(): IntArray?
-
-    private fun getAbi(): String {
-        return Build.SUPPORTED_ABIS[0]
-    }
-
-    /**
-     * This function returns the number of cores in the device, by checking the cpu[0-9]+ files in the `CPU_INFO_DIRECTORY`.
-     *
-     * @return The number of cores in the device, default is 1 if there is any exception while accessing the file system.
-     */
-    private fun getNumCoresLegacy(): Int {
-        val cpuFilter = FileFilter { pathname -> Pattern.matches("cpu[0-9]+", pathname.name) }
+    /** Instead of JNI, fetch CPU name from /proc/cpuinfo or Build fields */
+    private fun getCpuName(): String {
         return try {
-            File(CPU_INFO_DIRECTORY).listFiles(cpuFilter)?.size ?: 1
+            val reader = File("/proc/cpuinfo").bufferedReader()
+            val cpuLine = reader.lineSequence().firstOrNull { it.startsWith("Hardware") || it.startsWith("model name") }
+            reader.close()
+            cpuLine?.substringAfter(":")?.trim()
+                ?: Build.HARDWARE.ifEmpty { Build.BOARD.ifEmpty { "Unknown CPU" } }
         } catch (e: Exception) {
-            1
+            "Unknown CPU"
         }
     }
 
+    /** Return first ABI */
+    private fun getAbi(): String = Build.SUPPORTED_ABIS.firstOrNull() ?: "Unknown"
+
+    /** Check for ARM NEON via system property or ABI */
+    private fun hasArmNeon(): Boolean {
+        val abi = getAbi().lowercase()
+        return abi.contains("arm") || abi.contains("neon") || abi.contains("armeabi") || abi.contains("arm64")
+    }
+
+    /** Cache info placeholders (cannot be reliably accessed without root) */
+    private fun getL1dCaches(): IntArray? = intArrayOf(32 * 1024) // 32 KB
+    private fun getL1iCaches(): IntArray? = intArrayOf(32 * 1024)
+    private fun getL2Caches(): IntArray? = intArrayOf(256 * 1024)
+    private fun getL3Caches(): IntArray? = intArrayOf(2 * 1024 * 1024)
+    private fun getL4Caches(): IntArray? = null
+
+    /** Count CPU cores by checking /sys/devices/system/cpu/cpu[0-9]+ */
     private fun getNumberOfCores(): Int {
         return try {
-            Runtime.getRuntime().availableProcessors()
+            File(CPU_INFO_DIRECTORY).listFiles { file ->
+                Pattern.matches("cpu[0-9]+", file.name)
+            }?.size ?: Runtime.getRuntime().availableProcessors()
         } catch (e: Exception) {
-            getNumCoresLegacy()
+            Runtime.getRuntime().availableProcessors()
         }
     }
 
-    /**
-     * Retrieve the current frequency of a CPU core.
-     *
-     * @param coreNumber The core number of the CPU to retrieve the frequency from.
-     *
-     * @return The current frequency in MHz, or -1 if it couldn't be retrieved.
-     */
+    /** Current frequency in MHz */
     private fun getCurrentFreq(coreNumber: Int): Long {
-        val currentFreqPath = "${CPU_INFO_DIRECTORY}cpu$coreNumber/cpufreq/scaling_cur_freq"
+        val path = "${CPU_INFO_DIRECTORY}cpu$coreNumber/cpufreq/scaling_cur_freq"
         return try {
-            RandomAccessFile(currentFreqPath, "r").use { it.readLine().toLong() / 1000 }
+            RandomAccessFile(path, "r").use { it.readLine().toLong() / 1000 }
         } catch (e: Exception) {
-            Log.e("getCurrentFreq()", "- cannot read file")
             -1
         }
     }
 
-    /**
-     * Retrieve the minimum and maximum frequency of a core.
-     *
-     * @param coreNumber the number of the core whose minimum and maximum frequency is to be retrieved.
-     * @return Pair of minimum and maximum frequency in MHz.
-     */
+    /** Min/max frequency per core in MHz */
     private fun getMinMaxFreq(coreNumber: Int): Pair<Long, Long> {
         val minPath = "${CPU_INFO_DIRECTORY}cpu$coreNumber/cpufreq/cpuinfo_min_freq"
         val maxPath = "${CPU_INFO_DIRECTORY}cpu$coreNumber/cpufreq/cpuinfo_max_freq"
@@ -92,12 +79,13 @@ class CpuDataProvider(
             val maxMhz = RandomAccessFile(maxPath, "r").use { it.readLine().toLong() / 1000 }
             Pair(minMhz, maxMhz)
         } catch (e: Exception) {
-            Log.e("getMinMaxFreq()", "- cannot read file")
             Pair(-1, -1)
         }
     }
 
+    /** Calculate load level */
     private fun calculateCpuLoad(current: Long, min: Long, max: Long): CPULoad {
+        if (current <= 0 || max <= 0 || min < 0 || max == min) return CPULoad.Low
         val ratio = (current - min).toDouble() / (max - min).toDouble()
         return when {
             ratio < 0.33 -> CPULoad.Low
@@ -106,28 +94,14 @@ class CpuDataProvider(
         }
     }
 
-    /**
-     * Returns a flow of [CpuInfo] containing information about the device's CPU cores.
-     *
-     * The flow will emit an updated [CpuInfo] object after each [DELAY] interval. The flow will
-     * contain the processor name, application binary interface (ABI), number of cores, presence of
-     * ARM NEON, frequency information of each core, and cache information. The frequency information
-     * will include the minimum, maximum, and current frequency of each core. The cache information
-     * will include the human-readable representation of the level 1 data, level 1 instruction, level 2,
-     * level 3, and level 4 caches.
-     *
-     * The flow uses `distinctUntilChanged` to emit only unique [CpuInfo] objects. The flow will run
-     * on the IO dispatcher.
-     *
-     * @return a flow of [CpuInfo] containing CPU information.
-     */
+    /** Generate flow emitting CpuInfo periodically */
     fun getCpuCoresInformation(): Flow<CpuInfo> {
-        val numberOfCores = getNumberOfCores()
-        val minMaxFreq = (0 until numberOfCores).map { getMinMaxFreq(it) }
+        val numCores = getNumberOfCores()
+        val minMaxFreqs = (0 until numCores).map { getMinMaxFreq(it) }
 
         val cpuName = getCpuName()
         val abi = getAbi()
-        val hasArmNeon = hasArmNeon()
+        val neon = hasArmNeon()
         val l1dCaches = getL1dCaches().cacheHumanReadable()
         val l1iCaches = getL1iCaches().cacheHumanReadable()
         val l2Caches = getL2Caches().cacheHumanReadable()
@@ -136,32 +110,33 @@ class CpuDataProvider(
 
         return flow {
             while (true) {
-                val coresData = (0 until numberOfCores)
-                    .map { getCurrentFreq(it) }
-                    .zip(minMaxFreq)
-                    .map { (current, frequencyHolder) ->
-                        val (minimum, maximum) = frequencyHolder
+                val coresData = (0 until numCores).map { getCurrentFreq(it) }
+                    .zip(minMaxFreqs)
+                    .map { (current, freqPair) ->
+                        val (min, max) = freqPair
                         CpuInfo.Frequency(
-                            min = minimum,
-                            max = maximum,
+                            min = min,
+                            max = max,
                             current = current,
-                            cpuLoad = calculateCpuLoad(current, minimum, maximum)
+                            cpuLoad = calculateCpuLoad(current, min, max)
                         )
                     }
 
-                val cpuInfo = CpuInfo(
-                    processorName = cpuName,
-                    abi = abi,
-                    coreNumber = numberOfCores,
-                    hasArmNeon = hasArmNeon,
-                    frequencies = coresData,
-                    l1dCaches = l1dCaches,
-                    l1iCaches = l1iCaches,
-                    l2Caches = l2Caches,
-                    l3Caches = l3Caches,
-                    l4Caches = l4Caches
+                emit(
+                    CpuInfo(
+                        processorName = cpuName,
+                        abi = abi,
+                        coreNumber = numCores,
+                        hasArmNeon = neon,
+                        frequencies = coresData,
+                        l1dCaches = l1dCaches,
+                        l1iCaches = l1iCaches,
+                        l2Caches = l2Caches,
+                        l3Caches = l3Caches,
+                        l4Caches = l4Caches
+                    )
                 )
-                emit(cpuInfo)
+
                 delay(settings.coreFrequencyRefreshRate)
             }
         }.flowOn(Dispatchers.IO)

@@ -126,10 +126,10 @@ class DeviceInfoActivity : AppCompatActivity(), View.OnClickListener {
                 mInterstitialAd,
                 object : NarayanAdCallback() {
 
-//                        override fun onAdClosed() {
-//                            super.onAdClosed()
-//                            gotoNext(service)
-//                        }
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            finish()
+                        }
 
                     override fun onAdFailedToShow(adError: NarayanAdError?) {
                         super.onAdFailedToShow(adError)

@@ -53,7 +53,7 @@ object SecretCodeManager : KoinComponent {
 
     private fun initNativeCpuInfo(context: Context) {
         try {
-            System.loadLibrary(LIB_NAME)  // Make sure LIB_NAME is correct
+//            System.loadLibrary(LIB_NAME)  // Make sure LIB_NAME is correct
 
         }
         catch (u : UnsatisfiedLinkError) {

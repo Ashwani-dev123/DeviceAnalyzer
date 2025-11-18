@@ -139,6 +139,12 @@ class DeviceTestingActivity : AppCompatActivity() {
         } else {
             if(mInterstitialAd!=null && mInterstitialAd!!.isReady){
                 NarayanAd.getInstance().forceShowInterstitial(this,mInterstitialAd,object : NarayanAdCallback(){
+
+                    override fun onAdClosed() {
+                        super.onAdClosed()
+                        finish()
+                    }
+
                     override fun onNextAction() {
                         super.onNextAction()
                         finish()
