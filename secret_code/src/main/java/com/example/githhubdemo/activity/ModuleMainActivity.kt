@@ -87,37 +87,62 @@ class ModuleMainActivity : AppCompatActivity(),View.OnClickListener {
                 finish()
             }
             R.id.btnSecretCode -> {
+                binding.btnSecretCode.isClickable = false
                 val bundle = Bundle()
                 bundle.putString("DeviceAnalyzer","SecretCodeModule")
                 FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, SecretCodeActivity::class.java))
+                // Re-enable click after 500ms
+                binding.btnSecretCode.postDelayed({
+                    binding.btnSecretCode.isClickable = true
+                }, 500)
             }
 
             R.id.btnMobileTricks -> {
+                binding.btnMobileTricks.isClickable = false
                 val bundle = Bundle()
                 bundle.putString("DeviceAnalyzer","MobileTricksModule")
                 FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, MobileTricksActivity::class.java))
+                // Re-enable click after 500ms
+                binding.btnMobileTricks.postDelayed({
+                    binding.btnMobileTricks.isClickable = true
+                }, 500)
             }
             R.id.btnAndroidTips -> {
+                binding.btnAndroidTips.isClickable = false
                 val bundle = Bundle()
                 bundle.putString("DeviceAnalyzer","AndroidTipsModule")
                 FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, AndroidTipsActivity::class.java))
+                // Re-enable click after 500ms
+                binding.btnAndroidTips.postDelayed({
+                    binding.btnAndroidTips.isClickable = true
+                }, 500)
             }
 
             R.id.btnDeviceInfo -> {
+                binding.btnDeviceInfo.isClickable = false
                 val bundle = Bundle()
                 bundle.putString("DeviceAnalyzer","DeviceInfoModule")
                 FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, DeviceInfoActivity::class.java))
+                // Re-enable click after 500ms
+                binding.btnDeviceInfo.postDelayed({
+                    binding.btnDeviceInfo.isClickable = true
+                }, 500)
             }
 
             R.id.btnDeviceTesting -> {
+                binding.btnDeviceTesting.isClickable = false
                 val bundle = Bundle()
                 bundle.putString("DeviceAnalyzer","DeviceTestingModule")
                 FirebaseAnalytics.getInstance(applicationContext).logEvent(appName!!, bundle)
                 startActivity(Intent(this, DeviceTestingActivity::class.java))
+                // Re-enable click after 500ms
+                binding.btnDeviceTesting.postDelayed({
+                    binding.btnDeviceTesting.isClickable = true
+                }, 500)
             }
         }
     }
