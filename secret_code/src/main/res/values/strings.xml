@@ -5,6 +5,8 @@
     <string name="mobile_tricks">Mobile Tricks</string>
     <string name="android_tips">Android Tips</string>
 
+    <string name="skip">Skip</string>
+
     <string name="mobile_tricks_title">Mobile\ntricks</string>
     <string name="android_tips_title">Android\nTips</string>
     <string name="imei_checker">IMEI Checker</string>

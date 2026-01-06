@@ -40,14 +40,21 @@ class CodeListAdapter(private val arrayList: ArrayList<CodeModel>, private val c
         view.findViewById<TextView>(R.id.detals).text = codeModel.details
         
         view.findViewById<ImageView>(R.id.dialerimg).setOnClickListener {
-            val code: String = codeModel.code
-            Uri.parse("tel:+" + code.trim { it <= ' ' })
-            val intent = Intent("android.intent.action.DIAL")
-            intent.setData(Uri.parse("tel:" + Uri.encode(code)))
+            val code: String = codeModel.code.trim()
+
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:${Uri.encode(code)}")
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            }
+
             try {
                 context.startActivity(intent)
+            } catch (e: android.content.ActivityNotFoundException) {
+                Toast.makeText(context, "Cannot dial this code. No dialer app found.", Toast.LENGTH_SHORT).show()
             } catch (e: SecurityException) {
-                e.printStackTrace()
+                Toast.makeText(context, "Permission denied to make calls", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(context, "Cannot dial this code", Toast.LENGTH_SHORT).show()
             }
         }
         

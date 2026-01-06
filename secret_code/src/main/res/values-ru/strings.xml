@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Unlock Phone For All Network</string>
 
+    <string name="skip">пропускать</string>
     <string name="mobile_tricks_title">Мобильные\nтрюки</string>
     <string name="android_tips_title">Советы по\nAndroid</string>
     <string name="imei_checker">Проверка IMEI</string>
