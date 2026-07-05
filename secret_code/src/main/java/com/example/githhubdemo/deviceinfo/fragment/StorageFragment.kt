@@ -13,33 +13,32 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class StorageFragment : Fragment() {
 
     private var _binding: StorageFragmentBinding? = null
-    private val binding get() = _binding!!
     private val dataViewModel: DataViewModel by viewModel()
 
-    fun StorageFragment() {
-        // empty constructor
-    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = StorageFragmentBinding.inflate(layoutInflater)
+        val binding = StorageFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUIElements()
     }
 
     private fun setupUIElements() {
-        binding.tvFreeStorage.text = dataViewModel.internalStorageFree + " GB"
-        binding.tvTotalStorage.text = dataViewModel.internalStorageTotal + " GB"
-        binding.tvUsedStorage.text = dataViewModel.internalStorageUsed + " GB"
+        val currentBinding = _binding ?: return
+        currentBinding.tvFreeStorage.text = dataViewModel.internalStorageFree + " GB"
+        currentBinding.tvTotalStorage.text = dataViewModel.internalStorageTotal + " GB"
+        currentBinding.tvUsedStorage.text = dataViewModel.internalStorageUsed + " GB"
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }

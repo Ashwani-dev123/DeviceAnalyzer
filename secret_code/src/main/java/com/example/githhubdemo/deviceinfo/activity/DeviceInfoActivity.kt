@@ -103,7 +103,7 @@ class DeviceInfoActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when (v!!.id) {
+        when (v?.id) {
             R.id.btnBack -> {
                 onBackPressed()
             }
@@ -120,32 +120,45 @@ class DeviceInfoActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onBackPressed() {
-        if (mInterstitialAd != null && mInterstitialAd!!.isReady) {
-            NarayanAd.getInstance().forceShowInterstitial(
-                this,
-                mInterstitialAd,
-                object : NarayanAdCallback() {
+        if (isFinishing || isDestroyed) return
 
-                        override fun onAdClosed() {
-                            super.onAdClosed()
-                            finish()
+        val interstitialAd = mInterstitialAd
+        if (interstitialAd?.isReady == true) {
+            runCatching {
+                NarayanAd.getInstance().forceShowInterstitial(
+                    this,
+                    interstitialAd,
+                    object : NarayanAdCallback() {
+
+                            override fun onAdClosed() {
+                                super.onAdClosed()
+                                finishIfActive()
+                            }
+
+                        override fun onAdFailedToShow(adError: NarayanAdError?) {
+                            super.onAdFailedToShow(adError)
+                            finishIfActive()
                         }
 
-                    override fun onAdFailedToShow(adError: NarayanAdError?) {
-                        super.onAdFailedToShow(adError)
-                        finish()
-                    }
+                        override fun onNextAction() {
+                            super.onNextAction()
+                            finishIfActive()
+                        }
 
-                    override fun onNextAction() {
-                        super.onNextAction()
-                        finish()
-                    }
-
-                },
-                true
-            )
+                    },
+                    true
+                )
+            }.onFailure {
+                finishIfActive()
+            }
         } else {
             loadInterstitial()
+            finishIfActive()
+        }
+    }
+
+    private fun finishIfActive() {
+        if (!isFinishing && !isDestroyed) {
             finish()
         }
     }

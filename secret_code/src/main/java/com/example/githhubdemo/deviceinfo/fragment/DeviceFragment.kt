@@ -16,21 +16,17 @@ class DeviceFragment : Fragment(), KoinComponent {
 
     private val dataViewModel: DataViewModel by viewModel()
     private var _binding: DeviceFragmentBinding? = null
-    private val binding get() = _binding!!
-
-
-    fun DeviceFragment() {
-        // empty constructor
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = DeviceFragmentBinding.inflate(layoutInflater)
+        val binding = DeviceFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,8 +34,9 @@ class DeviceFragment : Fragment(), KoinComponent {
     }
 
     private fun setupUIElements() {
-        binding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
-        binding.listWithItems.withModels {
+        val currentBinding = _binding ?: return
+        currentBinding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
+        currentBinding.listWithItems.withModels {
             dataViewModel.deviceData.forEach {
                 information {
                     id(it.title)
@@ -49,8 +46,8 @@ class DeviceFragment : Fragment(), KoinComponent {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }

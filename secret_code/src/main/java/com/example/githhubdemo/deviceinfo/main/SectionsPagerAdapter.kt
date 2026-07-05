@@ -2,7 +2,6 @@ package com.example.githhubdemo.deviceinfo.main
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.githhubdemo.R
 import com.example.githhubdemo.deviceinfo.fragment.BatteryFragment
@@ -14,8 +13,8 @@ import com.example.githhubdemo.deviceinfo.fragment.SystemFrag
 
 class SectionsPagerAdapter(
     private val context: Context,
-    fm: FragmentActivity
-) : FragmentStateAdapter(fm) {
+    fragment: Fragment
+) : FragmentStateAdapter(fragment) {
     enum class TabType(val titleResId: Int, val fragment: () -> Fragment) {
         DASHBOARD(R.string.tab_text_1, ::Dashboard),
         DEVICE(R.string.tab_text_2, ::DeviceFragment),

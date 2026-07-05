@@ -14,6 +14,7 @@ import androidx.annotation.MenuRes
 import androidx.annotation.StringRes
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
@@ -74,7 +75,7 @@ fun Fragment.setupActionBar(
             itemSelected(menuItem)
             return true
         }
-    })
+    }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 }
 
 fun Fragment.nav(@IdRes id: Int?, directions: NavDirections, options: NavOptions? = null) =

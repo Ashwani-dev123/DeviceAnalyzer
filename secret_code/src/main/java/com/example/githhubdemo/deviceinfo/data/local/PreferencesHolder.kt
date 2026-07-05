@@ -67,7 +67,7 @@ private class StringPreference(
             when (persistDefaultIfNotExists) {
                 true -> {
                     thisRef.preferences.edit().putString(key, default).apply()
-                    thisRef.preferences.getString(key, null)!!
+                    thisRef.preferences.getString(key, default) ?: default
                 }
 
                 false -> default

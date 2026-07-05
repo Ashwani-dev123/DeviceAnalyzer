@@ -19,47 +19,56 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class CPU : Fragment() {
 
     private var _binding: CpuFragmentBinding? = null
-    private val binding get() = _binding!!
     private val dataViewModel: DataViewModel by viewModel()
 
-
-    fun CPU() {
-        // empty constructor
-    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = CpuFragmentBinding.inflate(layoutInflater)
+        val binding = CpuFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUIElements()
     }
 
     private fun setupUIElements() {
-        binding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
+        val currentBinding = _binding ?: return
+        currentBinding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
         launchAndCollectWithViewLifecycle(dataViewModel.cpuInfo) { result ->
-            binding.progressbar.isVisible = true
+            val latestBinding = _binding ?: return@launchAndCollectWithViewLifecycle
+            latestBinding.progressbar.isVisible = true
             Do exhaustive when (result) {
-                is UiResult.Error -> showToast(result.throwable.message.orEmpty())
-                is UiResult.Success -> binding.listWithItems.withModels {
-                    result.data.layoutInfo.forEach { information ->
-                        information {
-                            id(information.title)
-                            data(information)
+                is UiResult.Error -> {
+                    latestBinding.progressbar.isVisible = false
+                    if (isAdded) {
+                        showToast(result.throwable.message.orEmpty())
+                    }
+                    Unit
+                }
+
+                is UiResult.Success -> {
+                    val layoutInfo = result.data.layoutInfo
+                    latestBinding.listWithItems.withModels {
+                        layoutInfo.forEach { information ->
+                            information {
+                                id(information.title)
+                                data(information)
+                            }
                         }
                     }
-                    binding.progressbar.isVisible = false
+                    latestBinding.progressbar.isVisible = false
                 }
             }
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }

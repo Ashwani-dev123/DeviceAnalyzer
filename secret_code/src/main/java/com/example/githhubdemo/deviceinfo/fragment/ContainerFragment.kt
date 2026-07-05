@@ -19,7 +19,8 @@ import com.example.githhubdemo.utils.ShareModule
 class ContainerFragment : Fragment() {
 
     private var _binding: FragmentContainerBinding? = null
-    private val binding get() = _binding!!
+    private var tabSelectedListener: TabLayout.OnTabSelectedListener? = null
+    private var tabLayoutMediator: TabLayoutMediator? = null
 
     private val tabIcons = intArrayOf(
         R.drawable.ic_dashboard,
@@ -36,36 +37,41 @@ class ContainerFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentContainerBinding.inflate(layoutInflater)
+        val binding = FragmentContainerBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentContainerBinding.bind(view)
         setupViewPager()
     }
 
     private fun setupViewPager() {
-        val adapter = SectionsPagerAdapter(requireContext(), requireActivity())
-        with(binding) {
+        val currentBinding = _binding ?: return
+        val adapter = SectionsPagerAdapter(requireContext(), this)
+        with(currentBinding) {
             viewPager.adapter = adapter
-            TabLayoutMediator(tabs, viewPager) { tab, position ->
+            tabLayoutMediator = TabLayoutMediator(tabs, viewPager) { tab, position ->
                 tab.text = adapter.getPageTitle(position)
                 tab.setIcon(tabIcons[position])
-            }.attach()
+            }.also { mediator ->
+                mediator.attach()
+            }
         }
-        binding.viewPager.offscreenPageLimit = 5
+        currentBinding.viewPager.offscreenPageLimit = 5
 
-        binding.tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        val listener = object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                tab?.icon?.setColorFilter(
+                val selectedTab = tab ?: return
+                selectedTab.icon?.setColorFilter(
                     ContextCompat.getColor(requireContext(), R.color.white),
                     PorterDuff.Mode.SRC_IN
                 )
 
-                ShareModule.tabPosition =  tab!!.position
+                ShareModule.tabPosition = selectedTab.position
 
-                Log.e("CHECKFRAGMENT", "isSelected: " +  tab.position)
+                Log.e("CHECKFRAGMENT", "isSelected: " + selectedTab.position)
 
             }
 
@@ -79,17 +85,26 @@ class ContainerFragment : Fragment() {
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 // Do nothing
             }
-        })
+        }
+        tabSelectedListener = listener
+        currentBinding.tabs.addOnTabSelectedListener(listener)
 
-        val firstTab = binding.tabs.getTabAt(0)
+        val firstTab = currentBinding.tabs.getTabAt(0)
         firstTab?.icon?.setColorFilter(
             ContextCompat.getColor(requireContext(), R.color.white),
             PorterDuff.Mode.SRC_IN
         )
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        tabSelectedListener?.let { listener ->
+            _binding?.tabs?.removeOnTabSelectedListener(listener)
+        }
+        tabSelectedListener = null
+        tabLayoutMediator?.detach()
+        tabLayoutMediator = null
+        _binding?.viewPager?.adapter = null
         _binding = null
+        super.onDestroyView()
     }
 }

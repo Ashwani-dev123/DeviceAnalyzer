@@ -19,20 +19,17 @@ class BatteryFragment : Fragment(), KoinComponent {
 
     private val viewModel: DataViewModel by viewModel()
     private var _binding: BatteryFragmentBinding? = null
-    private val binding get() = _binding!!
 
-
-    fun BatteryFragment() {
-        // empty constructor
-    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = BatteryFragmentBinding.inflate(layoutInflater)
+        val binding = BatteryFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
@@ -41,9 +38,11 @@ class BatteryFragment : Fragment(), KoinComponent {
 
 
     private fun initViews() {
-        binding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
+        val currentBinding = _binding ?: return
+        currentBinding.listWithItems.layoutManager = LinearLayoutManager(requireContext())
         launchAndCollectWithViewLifecycle(viewModel.batteryInfo) { type ->
-            binding.listWithItems.withModels {
+            val latestBinding = _binding ?: return@launchAndCollectWithViewLifecycle
+            latestBinding.listWithItems.withModels {
                 type.data.forEach {
                     information {
                         id(it.details)
@@ -54,8 +53,8 @@ class BatteryFragment : Fragment(), KoinComponent {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }

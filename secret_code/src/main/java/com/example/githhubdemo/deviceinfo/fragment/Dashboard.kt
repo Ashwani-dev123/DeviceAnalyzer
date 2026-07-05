@@ -2,7 +2,6 @@ package com.example.githhubdemo.deviceinfo.fragment
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,25 +31,25 @@ class Dashboard : Fragment(), KoinComponent {
 
     private val dataViewModel: DataViewModel by viewModel()
     private var _binding: DashboardFragmentBinding? = null
-    private val binding get() = _binding!!
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = DashboardFragmentBinding.inflate(layoutInflater)
+        val binding = DashboardFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val currentBinding = _binding ?: return
 
-        binding.arcProgress.setRamValueAsync(dataViewModel.ramInfo)
-        binding.listView.addItemDecoration(GridSpacingItemDecoration(4, 12, true))
+        currentBinding.arcProgress.setRamValueAsync(dataViewModel.ramInfo)
+        currentBinding.listView.addItemDecoration(GridSpacingItemDecoration(4, 12, true))
         setupUIElements()
-        binding.listView.itemAnimator = null
+        currentBinding.listView.itemAnimator = null
 
         launchAndCollectWithViewLifecycle(dataViewModel.cpuInfo) {
             handleCpuInfoResult(it)
@@ -63,32 +62,36 @@ class Dashboard : Fragment(), KoinComponent {
         }
     }
 
-    private fun setupUIElements() = binding.apply {
-        systemStorage.setProgressAndText(dataViewModel.systemStoragePercentage, textView4)
+    private fun setupUIElements() {
+        val currentBinding = _binding ?: return
+        currentBinding.systemStorage.setProgressAndText(
+            dataViewModel.systemStoragePercentage,
+            currentBinding.textView4
+        )
       /*  internalProgress.setProgressAndText(
             dataViewModel.internalStoragePercentage,
             internalPercentage
         )*/
 
-        storageProgress.setProgressAndText(
+        currentBinding.storageProgress.setProgressAndText(
             dataViewModel.internalStoragePercentage,
-            tvPercentage
+            currentBinding.tvPercentage
         )
 
-        //binding.tvPercentage.text = dataViewModel.internalStoragePercentage.toString() + "%"
-        binding.tvFreeSpace.text = "Free: " + dataViewModel.internalStorageFree + " GB,"
-        binding.tvTotalSapce.text = "Total: " + dataViewModel.internalStorageTotal + " GB"
+        currentBinding.tvFreeSpace.text = "Free: " + dataViewModel.internalStorageFree + " GB,"
+        currentBinding.tvTotalSapce.text = "Total: " + dataViewModel.internalStorageTotal + " GB"
 
         launchAndCollectWithViewLifecycle(dataViewModel.batteryInfo) { type ->
-            val isCharging = type.data[6].details == "Charging"
-            batteryPercentage.text =
-                if (isCharging) "Charging ${type.data.first().details}" else type.data.first().details
-            batteryProgress.progress = type.data.first().details.parsePercentage()
-            Log.e("TEst", type.data.first().details)
-            batteryProgress.isIndeterminate = isCharging
+            val latestBinding = _binding ?: return@launchAndCollectWithViewLifecycle
+            val firstBatteryInfo = type.data.firstOrNull() ?: return@launchAndCollectWithViewLifecycle
+            val isCharging = type.data.getOrNull(6)?.details == "Charging"
+            latestBinding.batteryPercentage.text =
+                if (isCharging) "Charging ${firstBatteryInfo.details}" else firstBatteryInfo.details
+            latestBinding.batteryProgress.progress = firstBatteryInfo.details.parsePercentage()
+            latestBinding.batteryProgress.isIndeterminate = isCharging
         }
 
-        binding.topBar.setOnClickListener(::animatedMovement)
+        currentBinding.topBar.setOnClickListener(::animatedMovement)
     }
 
     private fun ProgressBar.setProgressAndText(percentage: Int, textView: TextView) {
@@ -98,16 +101,19 @@ class Dashboard : Fragment(), KoinComponent {
 
     private fun handleCpuInfoResult(uiResult: UiResult<CpuData>) {
         when (uiResult) {
-            is UiResult.Error -> showToast(uiResult.throwable.message.orEmpty())
+            is UiResult.Error -> if (isAdded) {
+                showToast(uiResult.throwable.message.orEmpty())
+            }
             is UiResult.Success -> updateCpuInfoList(uiResult)
         }
     }
 
     private fun updateCpuInfoList(uiResult: UiResult.Success<CpuData>) {
-        binding.listView.withModels {
+        val currentBinding = _binding ?: return
+        currentBinding.listView.withModels {
             uiResult.data.frequencies.forEachIndexed { index, frequency ->
                 cpuProgress {
-                    id(uiResult.data.coreNumber)
+                    id("cpu_core_$index")
                     position(index + 1)
                     cpuInfo(frequency)
                     //clickListener(::animatedMovement)
@@ -129,11 +135,14 @@ class Dashboard : Fragment(), KoinComponent {
 
     private fun handleRamValueResult(result: UiResult<RamData>) {
         when (result) {
-            is UiResult.Error -> showToast(result.throwable.message.orEmpty())
+            is UiResult.Error -> if (isAdded) {
+                showToast(result.throwable.message.orEmpty())
+            }
             is UiResult.Success -> {
-                binding.arcProgress.animate(result.data.percentageAvailable)
-                binding.ramLoad = result.data.ramLoad
-                binding.ramTxt.text = resources.getString(
+                val currentBinding = _binding ?: return
+                currentBinding.arcProgress.animate(result.data.percentageAvailable)
+                currentBinding.ramLoad = result.data.ramLoad
+                currentBinding.ramTxt.text = resources.getString(
                     R.string.ram_text,
                     result.data.available,
                     result.data.total
@@ -148,8 +157,8 @@ class Dashboard : Fragment(), KoinComponent {
         ObjectAnimator.ofInt(this, "progress", percentageAvailable).setDuration(1000).start()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }

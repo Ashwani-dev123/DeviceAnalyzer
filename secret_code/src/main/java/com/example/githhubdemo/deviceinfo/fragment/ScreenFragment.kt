@@ -11,26 +11,23 @@ import com.example.githhubdemo.databinding.ScreenFragmentBinding
 class ScreenFragment : Fragment() {
 
     private var _binding: ScreenFragmentBinding? = null
-    private val binding get() = _binding!!
-
-    fun ScreenFragment() {
-        // empty constructor
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = ScreenFragmentBinding.inflate(layoutInflater)
+        val binding = ScreenFragmentBinding.inflate(inflater, container, false)
+        _binding = binding
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
         _binding = null
+        super.onDestroyView()
     }
 }
